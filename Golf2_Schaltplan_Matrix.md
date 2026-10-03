@@ -2,9 +2,9 @@
 
 **Ziel:** Alle Schaltpläne für VW Golf 2 (jede Ausführung, Variante, Bauteil) weltweit recherchieren und dokumentieren.
 
-**Stand:** 03.10.2026, 15:10 Uhr
+**Stand:** 03.10.2026, 15:15 Uhr
 
-**Durchläufe:** 3/10 abgeschlossen
+**Durchläufe:** 7/10 abgeschlossen
 
 ---
 
@@ -167,6 +167,48 @@
 - **Ergebnis:** Detaillierte CE2-Belegung (24 Sicherungen, 24 Relais, 8 Stecker), 77+ Motor-Schaltpläne, Digifant-Diagramme
 - **Quellen:** vwgolfmk2.co.uk, vwmanual.ru, a2resource.com, scribd.com, github.com/saGa-ecm, club8090.co.uk, kfz-verlag.de, doppel-wobber.de, originalanleitungen.de, vag-hub.com, onlymanuals.com
 - **Besonderheiten:** CE2-Sicherungen 1-22, CE2-Relais 1-24, CE2-Anschlüsse A1-G1, Modelljahr-Änderungen 87-90
+
+### Durchlauf 5 — Russische und polnische Quellen (Subagent sa-0-53cd6836)
+- **Datum:** 03.10.2026, 15:05
+- **Aktion:** Web-Suche auf Russisch und Polnisch, Begriffe: Гольф 2 электросхема, Гольф 2 монтажная схема, Golf 2 schemat elektryczny, Golf 2 okablowanie
+- **Ergebnis:** 20+ Quellen gefunden, 23 Schaltpläne (vwmanual.ru), Sicherungs- und Relais-Schaltpläne (Typ 1 + Typ 2)
+- **Quellen:** vwmanual.ru, vwts.ru, autogener.ru, autoprospect.ru, drive2.ru, gyroscooter-izhevsk.ru, parts66.ru, automend.ru, auto.ru, avtika.lada-43.ru, volkswagen.kyiv.ua, ride-classic.com, autoiwc.ru, vwportal.cc, vag-hub.com, bezpieczniki24.pl, w-samochodzie.pl, bezpieczniki.net, autobezpieczniki.pl, schematy24.pl, selected.pl, elektroda.pl, forum.vwgolf.pl, autodocs.com.ua, scribd.com
+- **Besonderheiten:** 23 Schaltpläne (Generator/Akku/Anlasser, Lüfter, Vorwärm, Zündung, Kraftstoff, Instrumente, Bremsen, Innenlicht, Scheinwerfer, Blinker, Lichtschalter, Heckscheibenheizung, Nebelscheinwerfer, Scheibenwischer, Heckwischer, Mono-Jetronic, Digifant), Sicherungsblock Typ 1 (bis 08.1987, 22 Pos.) und Typ 2 (ab 08.1987, 21 Pos.), Relais-Belegung I-XXIX, Farbcodierung 10A=rot, 15A=blau, 20A=gelb, 30A=grün
+
+### Durchlauf 6 — Chinesische und japanische Quellen (Subagent sa-1-0cbb5ffc)
+- **Datum:** 03.10.2026, 15:05
+- **Aktion:** Web-Suche auf Chinesisch (vereinfacht + traditionell) und Japanisch
+- **Ergebnis:** Keine vollständigen originalen Golf 2 Schaltpläne in chinesischen Quellen; Japanische Quellen mit detaillierten Sicherungs- und Relais-Informationen
+- **Quellen:** icauto.com.cn, pcauto.com.cn, autohome.com.cn, dongcheyun.com, kknews.cc, vwportal.cc, biggo.com.tw, shopee.tw, world.taobao.com, westeurotrade.com.ua, vwgolf-mk2.com, mixi.jp, minkara.carview.co.jp, 4car.fun, cartune.co.jp, takamaru-flow.com, jp.mercari.com, i-love-wagen.net, gea-pak.com, b-cles.jp, meisha.co.jp
+- **Besonderheiten:** Japanische Relais-Tabelle mit Teilnummern (13=171 959 141A, 18=191 937 503, 19=321 955 531A, 21=111 953 227D, 32=357 906 381, 53=141 951 253B, 67/80=191 906 383, 72=191 955 529), 4car.fun kostenlose Service-Manuals, gea-pak.com Service-Manual (¥1740)
+
+### Durchlauf 7 — Koreanische und thailändische Quellen (Subagent sa-2-c2a6e2cd)
+- **Datum:** 03.10.2026, 15:05
+- **Aktion:** Web-Suche auf Koreanisch und Thailändisch
+- **Ergebnis:** Sehr wenige relevante Treffer; keine direkten Golf 2 Schaltpläne in koreanischen/thailändischen Quellen
+- **Quellen:** westeurotrade.com.ua/ko, blog.naver.com, vwcafe.net, iFixit, startmycar.com, tkmanual.com, pantip.com, bossgoo.com, elecduraparts.com, kdp.co.th
+- **Besonderheiten:** Koreanische Quellen konzentrieren sich auf neuere Modelle (Golf 5/7); Thailändische Quellen oft Golf Carts; westeurotrade.com.ua als beste Quelle für Sicherungs- und Relais-Diagramme
+
+### Durchlauf 8 — Spezifische Ausführungen (Subagent sa-3-aa4421d6)
+- **Datum:** 03.10.2026, 15:10
+- **Aktion:** Recherche für GTI, GTD, TDI, Syncro, Cabrio, VR6, G60, Rallye, Country, Limited
+- **Ergebnis:** Alle Ausführungen abgedeckt, S-01 bis S-40+ Schaltpläne, CE2-Farbcodes, VR6-Wiring-Guide
+- **Quellen:** vwmanual.ru, a2resource.com, club8090.co.uk, vwgolfmk2.co.uk, clubgti.com, thesamba.com, vwvortex.com, scribd.com, archive.org
+- **Besonderheiten:** VR6-Wiring-Guide (vwvortex.com), G60-Kompressor-Relais (F/04, G1/07), Syncro-Freewheel-Lock, Cabrio-Verdeck-Elektrik
+
+### Durchlauf 9 — Detaillierte Bauteile (Subagent sa-4-4455f147)
+- **Datum:** 03.10.2026, 15:10
+- **Aktion:** Recherche für Motor (1.6, 1.8, 1.8 16V, 2.0, VR6, TDI, GTD), Getriebe, ABS, Klima, ZE, Kombiinstrument, Relais, Sicherungen
+- **Ergebnis:** 77+ Schaltpläne (S-01 bis S-77), CE1/CE2-Sicherungen und Relais, Motor-Verdrahtung, Getriebe, ABS, Klima, Kombiinstrument
+- **Quellen:** vwmanual.ru, a2resource.com, clubgti.com, vwts.ru, vwgolfmk2.co.uk, vwvortex.com, scribd.com, club8090.co.uk
+- **Besonderheiten:** CE1-Sicherungen 1-18, CE2-Sicherungen 1-18, Motor-Schaltpläne S-01 bis S-77, VR6-Motronic-Steuerung, Digifant II Pinout, Kombiinstrument-T28
+
+### Durchlauf 10 — Gesamtsammlung (Subagent sa-5-738edd3e)
+- **Datum:** 03.10.2026, 15:10
+- **Aktion:** Sammlung aller Schaltpläne, Werkstatthandbücher, Reparaturanleitungen
+- **Ergebnis:** KFZ-VERLAG (Originale VW Werkstatthandbücher), Originalanleitungen.de, Ebay, Doppel-WOBber, ClubGTI, vwgolfmk2.co.uk, Club8090, Samba, VWVortex, vwts.ru, vag-hub.com, Scribd, archive.org, Amazon, motor-talk.de, vwmanual.ru, a2resource.com
+- **Quellen:** kfz-verlag.de, originalanleitungen.de, ebay.de, doppel-wobber.de, clubgti.com, vwgolfmk2.co.uk, club8090.co.uk, thesamba.com, vwvortex.com, vwts.ru, vag-hub.com, scribd.com, archive.org, amazon.de, motor-talk.de, vwmanual.ru, a2resource.com
+- **Besonderheiten:** KFZ-VERLAG Originale VW Werkstatthandbücher (Elektrische Anlage, KE-Jetronic, Digijet, Digifant, K-Jetronic), Originalanleitungen.de (179 Seiten Elektrische Anlage), Ebay Schaltplan-PDFs, Doppel-WOBber Stromlaufplan Nr. 35 (16V), ClubGTI K-Jet CE1/CE2 Wiring Scans, vwgolfmk2.co.uk CE1/CE2 Fusebox
 
 ---
 

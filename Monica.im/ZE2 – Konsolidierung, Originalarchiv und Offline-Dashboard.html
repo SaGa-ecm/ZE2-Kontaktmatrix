@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZE2 · Konsolidierung R1</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,sans-serif;background:#edf2f6;color:#172b40}
+body{max-width:1150px;margin:auto;padding:24px}
+h1{margin-bottom:6px}h2{font-size:1.3rem}
+.panel{background:white;padding:22px;border-radius:12px;margin:18px 0;border:1px solid #d5dfe8}
+.warn{border-left:5px solid #cf8623;background:#fff8e9}
+.ok{color:#17613e}.muted{color:#546879}
+button,input{font:inherit}button{padding:10px 15px;border:0;border-radius:7px;background:#174d76;color:white;cursor:pointer;margin:5px}
+button:disabled{opacity:.45;cursor:not-allowed}
+input[type=search]{box-sizing:border-box;width:100%;padding:12px;border:1px solid #a8bac8;border-radius:7px}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+td,th{text-align:left;vertical-align:top;padding:9px;border-bottom:1px solid #dce4eb;overflow-wrap:anywhere}
+th{background:#edf3f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.87rem}
+details{margin:12px 0}summary{cursor:pointer;font-weight:600}
+nav a{display:inline-block;margin:5px 15px 5px 0;color:#174d76}
+.scroll{overflow-x:auto}.badge{display:inline-block;padding:7px 12px;background:#e5eef5;border-radius:20px;margin:5px}
+@media print{button,input,.operation{display:none}body{padding:0}.panel{break-inside:avoid}}
+</style>
+</head>
+<body>
+<h1>ZE2 / CE2 · Konsolidierung R1</h1>
+<p>Zielgrundträger <strong>357 937 039</strong> · Originalerhalt und technische Freigabe sind getrennte Prüfungen.</p>
+<nav>
+<a href="#bestand">Originalbestand</a><a href="#kern">Arbeitsstand</a>
+<a href="#register">Register</a><a href="#suche">Originaltextsuche</a>
+</nav>
+<section class="panel warn">
+<strong>Keine freigegebene elektrische Vollmatrix.</strong>
+<p>Keine neuen Messungen, Bildprüfungen oder Webabrufe bei dieser Konsolidierung.
+Quellenlektüre in älteren Gesprächsexporten ist ein übernommener Recherchebericht,
+keine neue Originallektüre durch diese Anwendung.</p>
+<p>Die verkürzten Upload-Vorschauen sind kein Ersatz für die Originaldateien.
+Insbesondere werden daraus keine 3×3-Sockelgeometrie, Sicherungsseiten oder festen Netze übernommen.</p>
+</section>
+<section id="bestand" class="panel">
+<h2>1 · Bestand sichern und prüfen</h2>
+<p>Erwartet: 16 Dateien, 755.238 Bytes. Alle Originale auswählen, einschließlich
+gespräch1.md, gespräch187.md und gespräch218.md. Keine automatische Löschung von Dubletten.</p>
+<div class="operation">
+<input id="files" type="file" multiple accept=".md,.html">
+<button id="process">Ausgewählte Originale prüfen</button>
+<button id="bundle" disabled>Gesamtpaket ZIP erstellen</button>
+</div>
+<p id="status" role="status">Noch kein Originalbestand in diese Oberfläche geladen.</p>
+<p class="muted">Prüfung: Größe und bekannter SHA-256-Präfix gegen den analysierten Bestand;
+vollständige SHA-256-Prüfsummen werden beim Import berechnet.
+ZIP-Prüfung vor Download: Einträge, CRC32 und byteweiser Vergleich der archivierten Inhalte.
+Dies ist keine unabhängige Prüfung mit einem zweiten ZIP-Programm.</p>
+<div id="filetable" class="scroll"></div>
+</section>
+<section id="kern" class="panel">
+<h2>2 · Konsolidierter Arbeitsstand</h2>
+<div><span class="badge">65 berichtete Tabellenzeilen</span>
+<span class="badge">2 interne Quellenreferenzen</span>
+<span class="badge">0 freigegebene feste Kanten</span></div>
+<div id="core"></div>
+<h3>Teilmatrix – keine Durchgangsfreigabe</h3>
+<table><thead><tr><th>Kontakt</th><th>E/02</th><th>U2/01</th><th>F/02</th><th>G1/01</th></tr></thead>
+<tbody>
+<tr><th>E/02</th><td>—</td><td>Q1</td><td>?</td><td>?</td></tr>
+<tr><th>U2/01</th><td>Q1</td><td>—</td><td>?</td><td>?</td></tr>
+<tr><th>F/02</th><td>?</td><td>?</td><td>—</td><td>Q2</td></tr>
+<tr><th>G1/01</th><td>?</td><td>?</td><td>Q2</td><td>—</td></tr>
+</tbody></table>
+<p>Symmetrie bedeutet nicht, dass beide Tabellenrichtungen gelesen wurden.
+Unbekannt bedeutet nicht elektrisch offen.</p>
+</section>
+<section id="register" class="panel">
+<h2>3 · Anforderungen, Belege, Ereignisse und Aufgaben</h2>
+<p>Die folgenden Register sind fachlich konsolidierte Kerneinträge.
+Sie ersetzen nicht sämtliche Einzelpassagen der Originale.</p>
+<div id="registers"></div>
+</section>
+<section id="suche" class="panel">
+<h2>4 · Originaltextsuche</h2>
+<p>Nach dem Import: Suche in sämtlichen Originaltexten einschließlich HTML-/JavaScript-Quelltext.
+Gefundene Stellen bleiben mit Dateiname und Zeilennummer nachvollziehbar.
+Quellcode wird als Text angezeigt, nicht ausgeführt.</p>
+<input id="query" type="search" placeholder="Zum Beispiel U2/01, 907721 oder Weź dowolny">
+<p id="hits"></p><div id="results"></div>
+</section>
+<section class="panel">
+<h2>5 · Grenzen und Weiterarbeit</h2>
+<ul>
+<li>Byteerhalt und vollständige Segmentzuordnung können technisch geprüft werden.
+Eine lückenlose fachliche Bewertung jedes Satzes ist damit nicht nachgewiesen.</li>
+<li>Alle Originaltexte werden zusätzlich verlustfrei in Zeilensegmente aufgeteilt.
+Nicht fachlich erschlossene Passagen bleiben ausdrücklich unbewertet.</li>
+<li>Historische Mehrfachuploads der beiden gleichnamigen HTML-/Matrixdateien sind nicht
+als getrennte Uploadvorkommen rekonstruierbar. Gesichert wird der tatsächlich verfügbare Bestand.</li>
+<li>Externe Webseiten, Bilder und CDN-Bibliotheken der alten HTML-Dateien sind nicht mitgesichert.
+Das neue Dashboard selbst benötigt keine externen Bibliotheken.</li>
+<li>Neue Rechercheereignisse ergänzen; frühere Abrufgrenzen und Korrekturen nicht überschreiben.
+Keine Kontaktkennung stillschweigend normalisieren oder vervollständigen.</li>
+</ul>
+</section>
+<script id="saved-state" type="application/json">null</script>
+<script>
+"use strict";
+const expected=[
+["Monica – Elektroda-Antworten lokalisieren und offene Suchsprachen bearbeiten.md",4695,"702b450c3aa4facf"],
+["Monica – Kontaktliste im Original und Sicherungspfad prüfen.md",3981,"a42191fbf381bbb4"],
+["Monica – Originalbeleg für Sockel 12 erschließen.md",3830,"cb543f83b32f60b4"],
+["Monica – japanischen Planhinweis prüfen und technische Suche eingrenzen.md",5115,"ecbbf3d7bec52ea2"],
+["Monica – nächster Rechercheauftrag zur ZE2-Matrix.md",3547,"2560cbbc38541990"],
+["Monica – technische Quellen statt weiterer Teileangebote priorisieren.md",5045,"45b654485cc4a115"],
+["Monica – technische Suche mit Fahrzeugbezug und Dokumentherkunft.md",4437,"8ee90db9dbc0d318"],
+["Rechercheauftrag – vollständige interne ZE2-Kontaktmatrix.md",11303,"39aeeddde2b8944d"],
+["ZE2 357 937 039 – Kontaktmatrix, belegter Arbeitsstand.md",7483,"e6ad37ed7068ea8f"],
+["ZE2 – Mindmap und Mermaid des gesamten Gesprächs.html",21075,"03857095d56b6ead"],
+["ZE2 – Mindmap, Mermaid und Kontaktmatrix.html",30466,"2f9c32ea98404db9"],
+["ZE2 – aktualisierte Mindmap und Mermaid-Topologie.html",33365,"0c45dbfe15cf435d"],
+["ZE2 – interne Kontaktmatrix _ transparenter Belegstand.html",16620,"078a9b192765cdf6"],
+["gespräch1.md",190883,"a80142bb3a196514"],
+["gespräch187.md",190883,"a80142bb3a196514"],
+["gespräch218.md",222510,"0dc0195153760ea8"]
+];
+const base={
+revision:"ZE2-KONSOLIDIERUNG-R1",
+scope:"Dokumentkonsolidierung; keine neue elektrische Verifizierung",
+target:{part_number:"357 937 039",index:null,manufacturer:null,physical_inventory_verified:false},
+examination_state:"Ohne Relais, Sicherungen, Kabelbaum und herausnehmbare Brücken; feste interne Bauteile separat.",
+coverage:{reported_complete_table_rows:65,partial_row:"G1/05",source_no_pin:"F/10",
+physical_count:null,fuse_positions_to_investigate:22,fuse_sides_to_investigate:44,
+confirmed_internal_edges:[],confirmed_open_pairs:[],confirmed_complete_nets:[]},
+requirements:[
+{id:"REQ-01",text:"Alle rückseitigen Kontakte, Einzelanschlüsse, Relaissockelkammern und beide Sicherungshalterseiten inventarisieren.",ref:"Rechercheauftrag – vollständige interne ZE2-Kontaktmatrix.md, Abschnitt 1"},
+{id:"REQ-02",text:"Originalkennung, Arbeitskennung, physische Position, Blickrichtung, DIN-Klemme und Listenposition getrennt führen.",ref:"gespräch218.md:147–171"},
+{id:"REQ-03",text:"1 nur für physisch nachgewiesene feste Verbindung; 0 nur für geeignet nachgewiesenes Fehlen; sonst ?.",ref:"gespräch218.md:1594–1603"},
+{id:"REQ-04",text:"Originalwortlaut, Übersetzung, Ableitung, Abrufbericht, Bildprüfung und Messung getrennt erhalten.",ref:"gespräch218.md:147–171;3727–3734"},
+{id:"REQ-05",text:"Keine Transitivrelationen über gesteckte Bauteile oder äußere Alternativleitungen bilden.",ref:"ZE2 357 937 039 – Kontaktmatrix, belegter Arbeitsstand.md:55–88"},
+{id:"REQ-06",text:"Abhängige Tabellenwiedergaben nicht als unabhängige Bestätigungen zählen.",ref:"gespräch218.md:2128–2137;3795–3801"},
+{id:"REQ-07",text:"Gescheiterte Abrufe mit Grenze dokumentieren; nicht unverändert wiederholen.",ref:"Rechercheauftrag – vollständige interne ZE2-Kontaktmatrix.md, Abschnitt 5"}
+],
+evidence:[
+{id:"Q1",text:"E/02 ↔ U2/01. Quellenreferenz: Inside Fusebox nennt U2/1. Gegenzeile bleibt offen.",ref:"Arbeitsstand.md:50; gespräch218.md:2115–2137",status:"übernommener Quellenbericht; nicht physisch verifiziert"},
+{id:"Q2",text:"F/02 ↔ G1/01. Gegenseitige Quellenreferenzen G1/1 und F/2.",ref:"ZE2 – aktualisierte Mindmap und Mermaid-Topologie.html:402;gespräch218.md:1587",status:"übernommener Quellenbericht; nicht physisch verifiziert"},
+{id:"EV-R12",text:"Neuner-Liste im Corrado-Thread 75097, Kommentar 907721; Moshiko Levi, 26.10.2014. Keine Geometrie und kein DIN-Abgleich.",ref:"gespräch218.md:1933–1976",status:"im Export als Originallektüre berichtet"},
+{id:"EV-JP",text:"357_937_039 im japanischen Bericht genannt. Lötstellenfehler betrifft herausnehmbares Relais 32; kein nackter Grundträgerbefund.",ref:"gespräch218.md:3526–3578",status:"im Export als Originallektüre berichtet"},
+{id:"EV-U2",text:"xjamiex als neuer Tabellenzugang; U2/01 nur im Suchauszug. Vollständige Originalzeile nicht gelesen.",ref:"gespräch218.md:3748–3801",status:"Suchhinweis laut Export"},
+{id:"EV-GTI",text:"Club GTI 284415, #2, rubjonny, 03.10.2016: äußere Instrumentenverkabelung. U1/4 nicht mit U2/01 gleichsetzen.",ref:"gespräch218.md:3803–3834",status:"im Export als Originallektüre berichtet"}
+],
+events:[
+{id:"EVT-01",text:"SEATCUPRA-Abrufgrenze von B/03 auf E/05 erweitert; F/01 abgeschnitten. Keine neue Zielteilkante.",ref:"gespräch218.md:1980–2000;2101–2137"},
+{id:"EVT-02",text:"Japanischer Teilebezug und Relais-32-Befund später ausdrücklich gelesen; ältere fehlende Teilezuordnung ist historisch.",ref:"gespräch218.md:3107–3186;3514–3578"},
+{id:"EVT-03",text:"Japanische Motor-/Elektrik-Unterseiten zunächst offen, zuletzt teilweise gelesen; kein Plan erschlossen.",ref:"gespräch218.md:3573–3578;3841–3857"},
+{id:"EVT-04",text:"Traditionell-chinesische Zeitüberschreitung später durch auswertbaren Suchlauf ergänzt; kein geeigneter Plan.",ref:"gespräch218.md:3520;3867–3880"},
+{id:"EVT-05",text:"Scribd 455337376 und 718081032 zuletzt nur Browserprüfseiten; kein technischer Planinhalt.",ref:"gespräch218.md:3859–3865"},
+{id:"EVT-06",text:"Letzter übernommener Stand: keine Inventar- oder Kantenänderung; U2/01, R12-Geometrie und S18-Seiten offen.",ref:"gespräch218.md:3882–3900"}
+],
+corrections:[
+{id:"COR-01",text:"Upload-Kurzfassung behauptet vollständige Matrix und feste Netze. Nicht übernehmen: tatsächlicher Export dokumentiert weiterhin fehlende Leiterbelege.",ref:"Upload-Vorschau gegenüber gespräch187.md Schluss;gespräch218.md:3892–3897",status:"Vorschau als Beleg ausgeschlossen"},
+{id:"COR-02",text:"0 bedeutet nachgewiesenes Fehlen einer Verbindung, nicht bloß fehlenden Verbindungsnachweis.",ref:"ZE2 357 937 039 – Kontaktmatrix, belegter Arbeitsstand.md:23 gegenüber gespräch218.md:1598–1603",status:"aktuelle Formulierung präzisiert"},
+{id:"COR-03",text:"65 vollständige Tabellenzeilen sind keine physische Kontaktzählung; G1/05 bleibt Teilzeile, F/10 nur Quellen-Nichtbestückungsangabe.",ref:"ZE2 – aktualisierte Mindmap und Mermaid-Topologie.html:442",status:"Abgrenzung beibehalten"},
+{id:"COR-04",text:"R12-Listenpositionen 1–9 sind nicht automatisch Sockelkammern oder standardisierte 3×3-Geometrie.",ref:"gespräch218.md:1964–1976",status:"Geometrie offen"},
+{id:"COR-05",text:"Sechs frühere Funktionsgruppen sind Hypothesen, keine bestätigten Netze.",ref:"ZE2 – aktualisierte Mindmap und Mermaid-Topologie.html, Frühere Ableitungen",status:"nicht freigegeben"},
+{id:"COR-06",text:"Interne 30–30B-Variante bleibt unbestätigt. Keine Modelljahresgrenze und keine interne Brücke ergänzen.",ref:"ZE2 – aktualisierte Mindmap und Mermaid-Topologie.html:422;457",status:"Variantenhinweis offen"},
+{id:"COR-07",text:"171 941 821 D nicht pauschal über eine modellübergreifende CE1-/CE2-Gleichsetzung einordnen.",ref:"ZE2 – aktualisierte Mindmap und Mermaid-Topologie.html:430",status:"Hardwareabgrenzung offen"},
+{id:"COR-08",text:"Projektweite 755 Pin-Referenzen sind keine ZE2-Inventar- oder Vollständigkeitsquote.",ref:"ZE2 – Mindmap, Mermaid und Kontaktmatrix.html:301",status:"unzulässige Übertragung ausgeschlossen"}
+],
+tasks:[
+{id:"TASK-01",priority:1,text:"Vollständige U2/01-Zeile samt Spaltenüberschriften über den dokumentierten xjamiex-Zugang erschließen; genaue Adresse aus Originalfundstelle sichern, nicht erfinden.",done_when:"Originalzeile und Herkunft dokumentiert; elektrische Freigabe separat.",ref:"gespräch218.md:3757–3801;3900"},
+{id:"TASK-02",priority:1,text:"Herkunft, Blickrichtung und Nummerierung von R12-LIST-907721 belegen.",done_when:"Orientierte Kammerabbildung, Hardwarebezug und DIN-Abgleich vorhanden.",ref:"gespräch218.md:1966–1976"},
+{id:"TASK-03",priority:1,text:"Beide S18-Halterkontakte getrennt bestimmen; J17, M/02, G1/03, -Z1 und -30B nur mit passender Topologie zuordnen.",done_when:"Physische Seiten und Gegenkontakte belegt; eingesetzte Sicherung separat.",ref:"gespräch218.md:3730;3894"},
+{id:"TASK-04",priority:2,text:"Elektroda-Antwort mit Weź dowolny schemat VW lokalisieren; a,b-Passage nur mit eigener Threadzuordnung übernehmen.",done_when:"Antwortautor, Datum, Beitragskennung und ggf. Originalanhang dokumentiert.",ref:"gespräch218.md:3724–3725"},
+{id:"TASK-05",priority:2,text:"Hardwareindex, Hersteller, orientierte Ansichten und vollständiges physisches Inventar beschaffen.",done_when:"Jede vorhandene Kammer und beide Sicherungsseiten bildlich zugeordnet.",ref:"Rechercheauftrag – vollständige interne ZE2-Kontaktmatrix.md"},
+{id:"TASK-06",priority:2,text:"Q1/Q2 am identifizierten, vollständig isolierten und spannungsfreien Grundträger prüfen.",done_when:"Messpunktpaare, Widerstände, Geräte-/Messbedingungen und Bauteilzustand dokumentiert.",ref:"gespräch218.md:1594–1603"},
+{id:"TASK-07",priority:3,text:"Noch nicht atomar fachlich erschlossene Originalsegmente prüfen und Registereinträgen zuordnen.",done_when:"Alle fachlichen Passagen einzeln bewertet; Archiv-/Codepassagen separat klassifiziert.",ref:"Konsolidierung R1"}
+],
+languages:{
+mandatory:["Deutsch","Englisch","Russisch","Polnisch","Chinesisch","Japanisch","Koreanisch","Thai"],
+chinese_scripts:["vereinfacht","traditionell"],
+original_additional:["Tschechisch","Französisch","Spanisch","Portugiesisch"],
+note:"Zusatzsprachen nicht ausdrücklich aufgehoben; acht Sprachen aktueller verbindlicher Kern. Keine abgeschlossene weltweite Recherche.",
+ref:"Rechercheauftrag – vollständige interne ZE2-Kontaktmatrix.md:95;gespräch218.md:2830–2834;3867–3880"
+},
+external_connections:[
+["X01","-30","-30B","Außenverbindung; interne Variantenbehauptung separat"],
+["X02","B/01","B/02","Außenverbindung"],
+["X03","B/03","D/04","Alternative direkt zum Lichtschalter"],
+["X04","B/04","C/03","Alternative direkt an Masse"],
+["X05","B/05","Y/02","Außenverbindung"],
+["X06","E/02","D/11","Alternative Instrumentenversorgung"],
+["X07","E/02","D/08","Alternative zu X06; D/08 nennt A3"]
+],
+relay_list:{
+id:"R12-LIST-907721",ref:"gespräch218.md:1950–1976",geometry_verified:false,
+rows:[
+["1","Main Fusebox Starter Power (not used)"],
+["2","Main Fusebox Start/Run Power"],
+["3","To ECU (Fuel Pump Turn-On)"],
+["4","To Fuse 18, Fuel Pump, Oxygen Sensor Heater"],
+["5","G2/6 (not used)"],
+["6","Main Fusebox Battery Power From 30B"],
+["7","G2/7, T1 (not used)"],
+["8","Main Fusebox Ground (not used)"],
+["9","M/4, U1/8, G2/5 (not used)"]
+],
+note:"Originalwortlaut laut Export. Diagnosezusätze verbleiben in den Originalsegmenten; keine Geometrie oder Leiterkante abgeleitet."
+},
+limitations:[
+"Kernregister fachlich konsolidiert, nicht jede Originalaussage atomar bewertet.",
+"Vollständiger Byteerhalt gilt erst nach erfolgreich ausgeführtem Dateiimport und Archivtest.",
+"Keine neuen Webabrufe, Bildprüfungen oder Messungen.",
+"Historische Uploadvorkommen gleichnamiger Dateien nicht vollständig rekonstruierbar.",
+"Verlinkte externe Ressourcen nicht archiviert; Original-HTML kann CDN benötigen."
+]};
+let state=JSON.parse(document.getElementById("saved-state").textContent)||{
+knowledge:base,manifest:[],duplicates:[],segments:[],audit:null};
+let imported=[];
+const $=id=>document.getElementById(id);
+const enc=new TextEncoder();
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm=s=>s.replace(/\r\n/g,"\n");
+function table(headers,rows){return "<table><thead><tr>"+headers.map(x=>"<th>"+esc(x)+"</th>").join("")+"</tr></thead><tbody>"+rows.map(r=>"<tr>"+r.map(x=>"<td>"+esc(x??"")+"</td>").join("")+"</tr>").join("")+"</tbody></table>"}
+function render(){
+const k=state.knowledge;
+$("core").innerHTML=table(["Bereich","Status"],[
+["Inventar","65 vollständige Tabellenzeilen berichtet; keine physische Vollzählung. G1/05 teilweise."],
+["Sicherungen","22 Plätze und 44 zu erfassende Halterseiten; physische Zuordnung offen."],
+["Q1 / Q2","Nur Quellenreferenzen. Keine neuen 1 oder 0."],
+["R12","Neun Listenpositionen; Geometrie unbekannt."],
+["S18","Beide Halterseiten und feste Gegenkontakte offen."]]);
+const names={requirements:"Anforderungen",evidence:"Belege",events:"Rechercheereignisse",
+corrections:"Widersprüche und Korrekturen",tasks:"Aufgaben"};
+$("registers").innerHTML=Object.entries(names).map(([key,label])=>
+"<details><summary>"+label+" · "+k[key].length+"</summary>"+
+table(["ID","Inhalt","Fundstelle / Grenze"],k[key].map(r=>[r.id,r.text,[r.ref,r.status,r.done_when].filter(Boolean).join(" · ")]))+"</details>").join("")+
+"<details><summary>Sprachumfang</summary><pre>"+esc(JSON.stringify(k.languages,null,2))+"</pre></details>"+
+"<details><summary>R12 – Original-Listenangaben</summary>"+table(["Listenposition","Wortlaut laut Export"],k.relay_list.rows)+"<p>"+esc(k.relay_list.note)+"</p></details>"+
+"<details><summary>Äußere Verbindungen</summary>"+table(["ID","A","B","Grenze"],k.external_connections)+"</details>"+
+"<details><summary>Prüfbericht und Wiederholungen</summary><pre>"+esc(JSON.stringify({audit:state.audit,duplicates:state.duplicates},null,2))+"</pre></details>";
+$("filetable").innerHTML=state.manifest.length?table(["ID","Datei","Bytes","SHA-256"],state.manifest.map(m=>[m.id,m.name,m.bytes,m.sha256])):
+table(["Erwartete Datei","Bytes","SHA-256-Präfix"],expected);
+}
+async function sha(b){if(!globalThis.crypto?.subtle)throw Error("SHA-256 ist in dieser Browserumgebung nicht verfügbar. Datei in einem aktuellen Browser öffnen.");return [...new Uint8Array(await crypto.subtle.digest("SHA-256",b))].map(x=>x.toString(16).padStart(2,"0")).join("")}
+function linesExact(t){return t.match(/[^\n]*\n|[^\n]+$/g)||[]}
+function search(){
+const q=$("query").value.trim().toLocaleLowerCase("de");$("results").innerHTML="";$("hits").textContent="";
+if(q.length<2)return;
+let count=0,shown=0,out=[];
+for(const s of state.segments){
+let line=s.line_start;
+for(const l of linesExact(s.text)){
+if(l.toLocaleLowerCase("de").includes(q)){
+count++;if(shown++<150)out.push("<details><summary>"+esc(s.file_name)+" · Zeile "+line+"</summary><pre>"+esc(l)+"</pre></details>");
+}line++;
+}}
+$("hits").textContent=count+" Treffer; maximal 150 angezeigt. Volltext bleibt in ZE2_DATEN.json und im Originalarchiv.";
+$("results").innerHTML=out.join("");
+}
+$("query").addEventListener("input",search);
+$("process").onclick=async()=>{
+$("bundle").disabled=true;$("status").textContent="Import und Prüfsummenberechnung …";
+try{
+const chosen=[...$("files").files];
+if(chosen.length!==expected.length)throw Error("Bitte genau die 16 erwarteten Originaldateien auswählen; aktuell "+chosen.length+".");
+if(new Set(chosen.map(f=>f.name)).size!==chosen.length)throw Error("Dateinamen mehrfach ausgewählt.");
+const next={knowledge:state.knowledge,manifest:[],duplicates:[],segments:[],audit:null};
+const loaded=[];
+for(let i=0;i<expected.length;i++){
+const [name,size,prefix]=expected[i],f=chosen.find(x=>x.name===name);
+if(!f)throw Error("Fehlt: "+name);
+const bytes=new Uint8Array(await f.arrayBuffer()),hash=await sha(bytes);
+if(bytes.length!==size||!hash.startsWith(prefix))throw Error("Abweichende Fassung: "+name+". Kein stillschweigender Austausch.");
+const text=new TextDecoder("utf-8",{fatal:true,ignoreBOM:true}).decode(bytes);
+if(!equal(enc.encode(text),bytes))throw Error("UTF-8-Rückvergleich fehlgeschlagen: "+name);
+const id="F"+String(i+1).padStart(3,"0");
+const meta={id,name,bytes:bytes.length,sha256:hash,archive_path:"originale/"+id+"/"+name,encoding:"UTF-8"};
+next.manifest.push(meta);loaded.push({...meta,bytesRaw:bytes,text});
+const lines=linesExact(text);let offset=0;
+for(let j=0;j<lines.length;j+=50){
+const slice=lines.slice(j,j+50).join(""),len=enc.encode(slice).length;
+next.segments.push({id:id+"-L"+(j+1),file_id:id,file_name:name,line_start:j+1,
+line_end:Math.min(j+50,lines.length),byte_start:offset,byte_end:offset+len,
+classification:"Originalsegment; fachlich nicht vollständig atomar erschlossen",text:slice});
+offset+=len;
+}
+if(offset!==bytes.length)throw Error("Segmentabdeckung fehlerhaft: "+name);
+}
+for(let i=0;i<loaded.length;i++)for(let j=i+1;j<loaded.length;j++){
+const a=loaded[i],b=loaded[j];
+if(a.sha256===b.sha256)next.duplicates.push({type:"byteidentisch",a:a.id,b:b.id});
+}
+for(const a of loaded)for(const b of loaded){
+if(a.id===b.id||a.sha256===b.sha256||a.text.length>=b.text.length)continue;
+const needle=norm(a.text),hay=norm(b.text),pos=hay.indexOf(needle);
+if(pos>=0)next.duplicates.push({type:"vollständig enthalten nach CRLF-zu-LF-Normalisierung",
+contained:a.id,container:b.id,container_start_line:hay.slice(0,pos).split("\n").length,
+note:"Originalbytes unverändert separat erhalten."});
+}
+for(const f of loaded){
+const joined=next.segments.filter(s=>s.file_id===f.id).map(s=>s.text).join("");
+if(!equal(enc.encode(joined),f.bytesRaw))throw Error("Segment-Rückbau fehlgeschlagen: "+f.name);
+}
+next.audit={imported_files:loaded.length,total_bytes:loaded.reduce((n,f)=>n+f.bytes,0),
+unique_sha256:new Set(loaded.map(f=>f.sha256)).size,
+expected_size_and_hash_prefix_match:true,utf8_roundtrip:true,
+segment_roundtrip:true,segments:next.segments.length,
+semantic_review_complete:false,archive_test:"noch nicht ausgeführt",
+timestamp:new Date().toISOString()};
+state=next;imported=loaded;render();$("bundle").disabled=false;
+$("status").textContent="16 Originale geprüft. Vollständige Prüfsummen und verlustfreie Segmentzuordnung erstellt. ZIP jetzt erzeugen.";
+}catch(e){$("status").textContent="Abbruch: "+e.message;}
+};
+function equal(a,b){return a.length===b.length&&a.every((v,i)=>v===b[i])}
+const crcTable=Array.from({length:256},(_,n)=>{for(let k=0;k<8;k++)n=(n&1)?0xedb88320^(n>>>1):n>>>1;return n>>>0});
+function crc32(b){let c=0xffffffff;for(const v of b)c=crcTable[(c^v)&255]^(c>>>8);return(c^0xffffffff)>>>0}
+function join(parts){const b=new Uint8Array(parts.reduce((n,p)=>n+p.length,0));let o=0;for(const p of parts){b.set(p,o);o+=p.length}return b}
+function zip(entries){
+let locals=[],centrals=[],offset=0;
+for(const e of entries){
+const name=enc.encode(e.name),b=e.bytes,c=crc32(b);
+const h=new Uint8Array(30),v=new DataView(h.buffer);
+v.setUint32(0,0x04034b50,true);v.setUint16(4,20,true);v.setUint16(6,0x800,true);
+v.setUint16(12,33,true);v.setUint32(14,c,true);v.setUint32(18,b.length,true);
+v.setUint32(22,b.length,true);v.setUint16(26,name.length,true);
+locals.push(h,name,b);
+const d=new Uint8Array(46),w=new DataView(d.buffer);
+w.setUint32(0,0x02014b50,true);w.setUint16(4,20,true);w.setUint16(6,20,true);
+w.setUint16(8,0x800,true);w.setUint16(14,33,true);w.setUint32(16,c,true);
+w.setUint32(20,b.length,true);w.setUint32(24,b.length,true);w.setUint16(28,name.length,true);
+w.setUint32(42,offset,true);centrals.push(d,name);offset+=h.length+name.length+b.length;
+}
+const center=join(centrals),end=new Uint8Array(22),z=new DataView(end.buffer);
+z.setUint32(0,0x06054b50,true);z.setUint16(8,entries.length,true);z.setUint16(10,entries.length,true);
+z.setUint32(12,center.length,true);z.setUint32(16,offset,true);
+return join([...locals,center,end]);
+}
+function verifyZip(b,entries){
+const v=new DataView(b.buffer,b.byteOffset,b.byteLength);let o=0;
+for(const e of entries){
+if(v.getUint32(o,true)!==0x04034b50)throw Error("ZIP-Signaturfehler");
+const size=v.getUint32(o+18,true),nl=v.getUint16(o+26,true),xl=v.getUint16(o+28,true);
+const name=new TextDecoder().decode(b.slice(o+30,o+30+nl));
+const start=o+30+nl+xl,payload=b.slice(start,start+size);
+if(name!==e.name||!equal(payload,e.bytes)||crc32(payload)!==v.getUint32(o+14,true))throw Error("ZIP-Rückvergleich fehlgeschlagen: "+e.name);
+o=start+size;
+}
+if(v.getUint32(o,true)!==0x02014b50)throw Error("ZIP-Verzeichnis fehlt");
+return true;
+}
+const jsonBytes=x=>enc.encode(JSON.stringify(x,null,2));
+function master(){
+const k=state.knowledge;
+let out="# ZE2 / CE2 – MASTER R1\n\nZielgrundträger: 357 937 039\n\n"+
+"**Unvollständige elektrische Rekonstruktion. Keine Verdrahtungsfreigabe.**\n\n"+
+"## Datengrundlage\n\n16 Originaldateien; 755.238 Bytes. gespräch187.md und gespräch1.md byteidentisch. "+
+"gespräch218.md ist eine eigenständige Fassung. Beide Inhalte bleiben erhalten.\n\n"+
+"Originalarchive bewahren Bytes. Fachliche Kernregister sind konsolidiert; nicht jede Passage ist atomar bewertet.\n\n"+
+"## Aktueller Stand\n\n65 vollständige Tabellenzeilen berichtet, nicht 65 physisch bestätigte Kontakte. "+
+"G1/05 teilweise; F/10 laut Quelle ohne Pin. 22 Sicherungsplätze mit 44 zu untersuchenden Seiten. "+
+"Q1: E/02–U2/01. Q2: F/02–G1/01. Keine freigegebenen festen Kanten oder nachgewiesenen offenen Paare.\n\n"+
+"R12-Neuner-Liste ohne verifizierte Kammergeometrie. Beide S18-Halterseiten offen.\n\n";
+for(const [key,label]of Object.entries({requirements:"Anforderungen",evidence:"Belege",
+events:"Ereignisse",corrections:"Korrekturen",tasks:"Nächste Aufgaben"})){
+out+="## "+label+"\n\n";
+for(const r of k[key])out+="- **"+r.id+"**: "+r.text+"\n  Fundstelle: "+r.ref+
+(r.done_when?"\n  Abschluss: "+r.done_when:"")+"\n";
+out+="\n";
+}
+out+="## Sprachen\n\nVerbindlicher Kern: "+k.languages.mandatory.join(", ")+
+". Chinesisch getrennt nach Schriftvarianten.\n\nZusätzlich im ursprünglichen Auftrag: "+
+k.languages.original_additional.join(", ")+". Nicht stillschweigend aufgehoben.\n\n"+
+"## Pflege\n\nZE2_DATEN.json enthält Kernregister, Manifest, Wiederholungen und Originalsegmente. "+
+"Änderungen als neue Revision führen. Quellenereignisse ergänzen, nicht überschreiben. "+
+"Originale nicht bearbeiten. Dashboard ist eine erzeugte Momentaufnahme, keine zweite Datenwahrheit.\n\n"+
+"## Prüfgrenzen\n\n"+k.limitations.map(x=>"- "+x).join("\n")+"\n\n"+
+"**Elektrische Kantenliste unverändert.**\n";
+return out;
+}
+function dashboard(){
+const clone=document.documentElement.cloneNode(true);
+clone.querySelector("#saved-state").textContent=JSON.stringify(state).replace(/</g,"\\u003c");
+clone.querySelector("#results").innerHTML="";clone.querySelector("#query").setAttribute("value","");
+clone.querySelector("#bundle").setAttribute("disabled","");
+clone.querySelector("#status").textContent="Archivierte Dashboard-Momentaufnahme. Originaltexte für die Suche eingebettet. Für neues ZIP Originaldateien erneut auswählen.";
+return enc.encode("<!doctype html>\n"+clone.outerHTML);
+}
+function download(name,bytes){
+const url=URL.createObjectURL(new Blob([bytes],{type:"application/zip"}));
+const a=document.createElement("a");a.href=url;a.download=name;a.click();
+setTimeout(()=>URL.revokeObjectURL(url),60000);
+}
+$("bundle").onclick=async()=>{
+try{
+if(imported.length!==16)throw Error("Originale zunächst importieren.");
+$("status").textContent="Archive werden erstellt und byteweise rückgeprüft …";
+const originals=imported.map(f=>({name:f.archive_path,bytes:f.bytesRaw}));
+const test=zip(originals);verifyZip(test,originals);
+state.audit.archive_test="Originaleinträge aus ZIP-Speicherstruktur gelesen: CRC32 und Bytevergleich bestanden";
+state.audit.external_zip_implementation_tested=false;
+const archiveEntries=[...originals,
+{name:"MANIFEST.json",bytes:jsonBytes(state.manifest)},
+{name:"WIEDERHOLUNGEN.json",bytes:jsonBytes(state.duplicates)},
+{name:"PRUEFBERICHT.json",bytes:jsonBytes(state.audit)}];
+const archive=zip(archiveEntries);verifyZip(archive,archiveEntries);
+const items=[
+{name:"ZE2_MASTER.md",bytes:enc.encode(master())},
+{name:"ZE2_DATEN.json",bytes:jsonBytes(state)},
+{name:"ZE2_ORIGINALARCHIV.zip",bytes:archive},
+{name:"ZE2_DASHBOARD.html",bytes:dashboard()}];
+const packageBytes=zip(items);verifyZip(packageBytes,items);
+render();download("ZE2_KONSOLIDIERUNG_R1.zip",packageBytes);
+$("status").textContent="Gesamtpaket erzeugt und intern rückgeprüft. Download enthält vier Arbeitsdateien; Originalarchiv enthält alle 16 unveränderten Dateien.";
+}catch(e){$("status").textContent="Abbruch: "+e.message;}
+};
+render();
+</script>
+</body>
+</html>
