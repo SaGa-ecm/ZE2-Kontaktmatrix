@@ -1,0 +1,21 @@
+{
+  "revision": "2026-10-03-direct-research",
+  "target": {"part_number": "357 937 039", "index": null, "manufacturer": null, "physical_views_verified": false},
+  "state": {"relays": false, "fuses": false, "removable_bridges": false, "harness": false, "fixed_internal_components": "unknown"},
+  "internal_references": [
+    {"a":"E/02","b":"U2/01","source":"https://www.a2resource.com/electrical/CE2.html","original":{"E/02":"U2/1"},"reciprocal_checked":false,"source_text_checked":true,"target_topology_verified":false},
+    {"a":"F/02","b":"G1/01","source":"https://www.a2resource.com/electrical/CE2.html","original":{"F/02":"G1/1","G1/01":"F/2"},"reciprocal_checked":true,"source_text_checked":true,"target_topology_verified":false}
+  ],
+  "external_edges": [
+    {"a":"-30","b":"-30B"},{"a":"B/01","b":"B/02"},{"a":"B/03","b":"D/04","alternative":"direct to Headlight Switch"},
+    {"a":"B/04","b":"C/03","alternative":"direct to Ground"},{"a":"B/05","b":"Y/02"},
+    {"a":"E/02","b":"D/11","alternative_group":"cluster_supply"},{"a":"E/02","b":"D/08","alternative_group":"cluster_supply","variant_note":"A3 in D/08"}
+  ],
+  "socket_register":{"source_slot":"12","source_contact_labels":["2","4","6"],"complete":false,"view":null,"verified_rear_connections":[]},
+  "variant_claim":{"description":"Alleged internal bridge change","reported_read_by_other_chat":true,"last_own_fetch_reached_post":false,"endpoints":null,"part_number":null,"confirmed":false},
+  "confirmed_complete_internal_nets":[],
+  "confirmed_target_socket_edges":[],
+  "confirmed_physical_fuse_side_assignments":[],
+  "excluded_inferences":["six_previous_function_groups","VSS_signal_graph","uncontextualized_search_snippets"],
+  "semantics":{"unknown_is_open_circuit":false,"repeated_fetch_is_independent_source":false}
+}

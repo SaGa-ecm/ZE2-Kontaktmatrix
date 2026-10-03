@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZE2 – Mindmap und Topologie</title>
+<style>
+  :root{color-scheme:dark;--bg:#0c1421;--card:#162335;--border:#34465e;--text:#e7eef8;--muted:#aec0d5;--accent:#91ceff;--warn:#ffd089}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,sans-serif}
+  main{max-width:1450px;margin:auto;padding:24px 20px 60px}
+  h1{font-size:clamp(26px,4vw,40px);line-height:1.2}h2{font-size:23px}h3{font-size:17px}
+  a{color:var(--accent);overflow-wrap:anywhere}
+  p{margin:10px 0}.muted,small{color:var(--muted)}
+  .panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin:18px 0}
+  .warn{border-left:5px solid var(--warn)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+  .stat{background:var(--card);border:1px solid var(--border);padding:16px;border-radius:10px}
+  .stat strong{display:block;font-size:28px}.stat span{font-size:13px;color:var(--muted)}
+  nav,.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+  button,input,textarea{font:inherit;color:var(--text);background:#101c2c;border:1px solid var(--border);border-radius:7px;padding:10px 12px}
+  button{cursor:pointer}button[aria-selected=true]{background:#245074;border-color:var(--accent)}
+  button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  input{width:100%;margin:10px 0}
+  textarea{display:block;width:100%;min-height:340px;font:13px/1.5 ui-monospace,monospace;resize:vertical}
+  details{margin:16px 0}summary{cursor:pointer;color:var(--accent);font-weight:600}
+  pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 ui-monospace,monospace}
+  .graph{background:#f8fafc;border-radius:9px;padding:16px;overflow:auto;min-height:180px;color:#172033}
+  .graph svg{display:block;max-width:none!important}
+  .graph.full svg{width:100%!important;height:auto!important;max-width:100%!important}
+  .scroll{overflow:auto}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th,td{padding:11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border)}
+  th{color:var(--muted)}.wide{min-width:850px}
+  code{color:#c7e2ff}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+  li{margin:7px 0}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;font-size:13px;margin:15px 0}
+  .legend span{border-radius:6px;padding:6px 10px}
+  .amber{background:#593c1e;color:#ffe2b5}.blue{background:#193f69;color:#c5e3ff}
+  .purple{background:#463063;color:#eed6ff}.gray{background:#304054;color:#dae4f0}
+  [hidden]{display:none!important}
+  footer{margin-top:30px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <p class="muted">VW · ZE2 / CE2 · Zielgrundträger 357 937 039 · Stand 03.10.2026</p>
+  <h1>Mindmap & interne Kontakt-Topologie</h1>
+  <div class="panel warn">
+    <strong>Vollständiger dokumentierter Recherchestand – unvollständige elektrische Rekonstruktion.</strong>
+    <p>Keine bestätigten vollständigen internen Netze für den konkreten Zielgrundträger. Keine bestätigte Zuordnung einer physischen Relaissockelkammer zu einem rückseitigen Anschluss. Keine vollständig physisch zugeordneten Sicherungshalter.</p>
+    <p>Untersuchungszustand: ohne Relais, Sicherungen, herausnehmbare Brücken und Kabelbaum. Fest eingebaute interne Bauteile sowie Grundträgerindex und Hersteller sind ungeklärt.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong>65</strong><span>vollständig erfasste Tabellenpositionen; keine physische Vollzählung</span></div>
+    <div class="stat"><strong>1</strong><span>Position laut Quelle ohne Pin: F/10</span></div>
+    <div class="stat"><strong>2</strong><span>explizite interne Kontaktpaare; eines gegenseitig referenziert</span></div>
+    <div class="stat"><strong>7</strong><span>externe Verbindungsdatensätze, teils alternative Ausführungen</span></div>
+    <div class="stat"><strong>0</strong><span>für das Zielteil bestätigte physische Sockelkanten</span></div>
+  </div>
+
+  <nav role="tablist" aria-label="Ansichten">
+    <button id="tab-mind" role="tab" aria-controls="mind" aria-selected="true" data-tab="mind">Mindmap</button>
+    <button id="tab-net" role="tab" aria-controls="net" aria-selected="false" data-tab="net">Mermaid-Topologie</button>
+    <button id="tab-evidence" role="tab" aria-controls="evidence" aria-selected="false" data-tab="evidence">Belege & Register</button>
+    <button id="tab-sources" role="tab" aria-controls="sources" aria-selected="false" data-tab="sources">Quellen & Prüflücken</button>
+  </nav>
+
+  <section id="mind" role="tabpanel" aria-labelledby="tab-mind">
+    <h2>Mindmap des gesamten Arbeitsstands</h2>
+    <p>Die Äste strukturieren Erkenntnisse und Aufgaben. Sie sind keine elektrischen Leitungen.</p>
+    <div class="toolbar">
+      <button data-fit="mindGraph">Ansicht einpassen / Originalgröße</button>
+      <span id="mindState" class="muted" aria-live="polite">Textansicht wird vorbereitet.</span>
+    </div>
+    <div id="mindGraph" class="graph"></div>
+    <details class="panel">
+      <summary>Vollständiger Mermaid-Quelltext der Mindmap</summary>
+      <p>Eigenständige Datei vorgeschlagen: <code>docs/ze2-mindmap.mermaid</code>. Bestehende XDF-Mindmaps nicht überschreiben.</p>
+      <textarea id="mindCode" readonly spellcheck="false" aria-label="Mindmap-Quelltext"></textarea>
+    </details>
+  </section>
+
+  <section id="net" role="tabpanel" aria-labelledby="tab-net" hidden>
+    <h2>Kontaktreferenzen, äußere Leitungen und Sockellücken</h2>
+    <div class="legend">
+      <span class="amber">Orange: interne Quellenreferenz, Zielteil nicht verifiziert</span>
+      <span class="blue">Blau: externe Verbindung / Variante</span>
+      <span class="purple">Violett: Funktion oder Dokumentationsbezug</span>
+      <span class="gray">Grau: offen, ausgeschlossen oder nicht bestückt</span>
+    </div>
+    <p><strong>Alle Linien sind ungerichtet.</strong> Gestrichelte interne Referenzen sind keine als gemessen freigegebenen Leiterkanten. Funktionsbezüge sind ausdrücklich als solche beschriftet.</p>
+    <div class="toolbar">
+      <button data-fit="netGraph">Ansicht einpassen / Originalgröße</button>
+      <span id="netState" class="muted" aria-live="polite"></span>
+    </div>
+    <div id="netGraph" class="graph"></div>
+    <details class="panel">
+      <summary>Vollständiger Mermaid-Quelltext der Topologie</summary>
+      <p>Eigenständige Datei vorgeschlagen: <code>docs/ze2-topologie-arbeitsstand.mermaid</code>.</p>
+      <textarea id="netCode" readonly spellcheck="false" aria-label="Topologie-Quelltext"></textarea>
+    </details>
+    <div class="panel warn">
+      <strong>Keine Ableitung über nicht eingesetzte Komponenten:</strong>
+      <p>-30B, -Z1 und G1/03 bleiben getrennte Anschlüsse. Aus ihrer Zuordnung zum Kraftstoffpumpenrelais entsteht kein gemeinsames Netz. Auch D/08 und D/11 werden über ihre alternativen äußeren Anschlüsse an E/02 nicht untereinander verbunden.</p>
+    </div>
+  </section>
+
+  <section id="evidence" role="tabpanel" aria-labelledby="tab-evidence" hidden>
+    <h2>Quellenreferenzen und externe Datensätze</h2>
+    <input id="filter" type="search" aria-label="Datensätze filtern" placeholder="Kontakt, Status oder Fundstelle suchen …">
+    <div class="panel scroll">
+      <table class="wide">
+        <thead><tr><th>Kontakte / Position</th><th>Art</th><th>Quellenaussage / Fundstelle</th><th>Grenze</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+
+    <h2>Inventarumfang – Position ist nicht gleich Kontakt</h2>
+    <div class="panel">
+      <p><strong>65 vollständige Positionszeilen:</strong> 4 Einzelanschlusszeilen, A1: 8, A2: 8, B: 6, C: 8, D: 12, E: 5, F: 10 und G1: 4.</p>
+      <ul>
+        <li><strong>F/10:</strong> „(no pin)“; nicht als vorhandenen elektrischen Kontakt zählen.</li>
+        <li><strong>G1/05:</strong> Abruf endet innerhalb der Zeile; kein vollständiger Datensatz.</li>
+        <li><strong>U2/01 und Y/02:</strong> bisher nur als Gegenreferenzen erfasst, nicht als vollständig geprüfte eigene Tabellenzeilen.</li>
+        <li>Der Außen-Spalteneintrag „-“ bei F/02 und G1/01 ist kein Nachweis fehlender Metallkontakte.</li>
+        <li>65 Zeilen minus eine Nichtbestückung beweisen nicht 64 physisch vorhandene Kontakte am Zielteil.</li>
+        <li>Normalisierte IDs und Originalschreibweise getrennt halten: U2/01 ↔ „U2/1“, Y/02 ↔ „Y/2“.</li>
+        <li>Führende Bindestriche bei -30, -30B, -Z1 und -Z2 stammen aus der Quelle; Gehäusebeschriftungen sind nicht visuell geprüft.</li>
+      </ul>
+    </div>
+
+    <h2>Relaissockelregister</h2>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Quellenbezeichnung</th><th>Belegstand</th><th>Noch fehlend</th></tr></thead>
+        <tbody>
+          <tr><td>J17 → Steckplatz 12, rechts unten</td><td>T4-Wiki ausdrücklich; T4-Bezug</td><td>Hardwareübertragbarkeit und Kontaktansicht des Zielteils</td></tr>
+          <tr><td>Steckplatz 12 / Kontakt 2</td><td>T4-Prüfbericht, Literaturverweis „So wird’s gemacht“</td><td>Blickrichtung, Kammerabbildung, interne Gegenkontakte</td></tr>
+          <tr><td>Steckplatz 12 / Kontakt 4</td><td>T4-Prüfbericht, Literaturverweis „So wird’s gemacht“</td><td>Blickrichtung, Kammerabbildung, interne Gegenkontakte</td></tr>
+          <tr><td>Steckplatz 12 / Kontakt 6</td><td>T4-Prüfbericht, Literaturverweis „So wird’s gemacht“</td><td>Blickrichtung, Kammerabbildung, interne Gegenkontakte</td></tr>
+        </tbody>
+      </table>
+      <p>Die drei Nummern sind kein vollständiges Kammerinventar. „Kontakt 6 gegen 4“ ist eine Prüfbezeichnung, keine direkte Leiterverbindung. „Pin 3“ aus VWVortex bleibt eine separate, nicht abgeglichene Nummerierungsangabe.</p>
+    </div>
+
+    <h2>Variantenregister</h2>
+    <div class="panel warn">
+      <strong>Behauptete interne Änderung – weder bestätigt noch widerlegt.</strong>
+      <p>Wolfsburg Edition, Beitrag #5: Eine ZE sei intern geändert worden; bei einer Ausführung sei die Brücke intern vorhanden. Das Zitat wurde im übergebenen Recherchebericht als unmittelbar gelesen gemeldet. Der letzte eigene Abruf erreichte diesen Beitrag nicht.</p>
+      <ul>
+        <li>Teilenummer, Index, Kontaktendpunkte und Messprotokoll fehlen.</li>
+        <li>Keine interne Kante 30 ↔ 30B daraus erzeugen.</li>
+        <li>Die äußeren Einspeisungswege aus Beitrag #2 separat erhalten.</li>
+        <li>Die allgemeine VWVortex-Aussage zur Austauschbarkeit aller CE2-Grundkästen ist ebenfalls kein Nachweis identischer Kontaktplatten.</li>
+      </ul>
+    </div>
+
+    <h2>Frühere Ableitungen: ausdrücklich nicht bestätigt</h2>
+    <div class="panel">
+      <p>Die früheren sechs Gruppen bleiben als Suchansätze erhalten, werden aber weder als Netze noch als zusätzliche Kontaktpaare gezählt:</p>
+      <ul>
+        <li>Masse-Teilgruppe: -Z2, A1/03, A2/05, C/03, C/04, C/05.</li>
+        <li>Linkes Abblendlicht / Sicherung 1: A1/01 und D/02.</li>
+        <li>Drehzahlsignal: A2/06 und D/06.</li>
+        <li>Generator-Erregung: A2/01 und D/01; zusätzlich funktional interpretiert.</li>
+        <li>Run-Versorgung / Sicherung 4: D/03 und D/05.</li>
+        <li>Start/Run-Versorgung / Sicherung 14: D/09 und D/11.</li>
+      </ul>
+      <p>Gleiche Funktionsbeschreibung ist kein ausreichender Nachweis einer direkten, bauteilfreien Verbindung. Diese Listen sind keine vollständigen Funktionsgruppen.</p>
+    </div>
+  </section>
+
+  <section id="sources" role="tabpanel" aria-labelledby="tab-sources" hidden>
+    <h2>Quellenregister mit tatsächlichen Grenzen</h2>
+    <div id="sourceList"></div>
+    <h2>Priorisierte Prüflücken</h2>
+    <div class="grid">
+      <div class="panel">
+        <h3>1 · Schaltbild visuell auswerten</h3>
+        <p>J17/G23-Original liegt als Bildlink vor. Bildinhalt und Pinziffern sind nicht geprüft.</p>
+        <p><a href="https://www.t4-wiki.de/w/images/Elektrik_Pumpe_Kraftstoff_G23_Schaltbild_neu.jpg" target="_blank" rel="noopener noreferrer">Originalbild, 1000 × 714 Pixel</a></p>
+        <p>Relaisanschlüsse, ZE-Grenzen, Sicherungspfad und Rückseitenbezeichnungen lesen; keine Geometrie aus einem Funktionsschaltbild erfinden.</p>
+      </div>
+      <div class="panel">
+        <h3>2 · Nummerierte Sockelansicht</h3>
+        <p>Steckplatz 12 mit vollständiger Kammernummerierung und eindeutiger Blickrichtung finden. „So wird’s gemacht“: Ausgabe, Seite und Prüfbild bislang nicht identifiziert.</p>
+        <p>DIN-Klemmenzahl, Sockelkammer, Relaisaufdruck und Steckplatznummer getrennt erfassen.</p>
+      </div>
+      <div class="panel">
+        <h3>3 · Gegenkontakte und Varianten</h3>
+        <p>-30B, -Z1 und G1/03 getrennt zur jeweiligen Sockelkammer verfolgen. Grundträgernummer, Index, Hersteller und interne/äußere Brückenausführung belegen.</p>
+      </div>
+      <div class="panel">
+        <h3>4 · Restliches Inventar</h3>
+        <p>A2Resource ab G1/05 weiter erfassen; insbesondere Gegenzeile U2/01. Alle übrigen Relaissockel sowie beide Kontakte sämtlicher Sicherungshalter fehlen weiterhin.</p>
+      </div>
+    </div>
+    <details class="panel">
+      <summary>Maschinenlesbare Übergabe des aktualisierten Kernstands</summary>
+      <textarea id="jsonCode" readonly spellcheck="false" aria-label="JSON Übergabe"></textarea>
+    </details>
+  </section>
+
+  <footer>
+    Keine Änderungen am GitHub-Repository ausgeführt. Keine Messergebnisse ergänzt.
+    Quellenprüfung und physische Verifikation werden getrennt geführt.
+    Durchgangs- und Widerstandsmessungen nur spannungsfrei und an ausreichend isolierten Stromkreisen.
+    Mermaid lädt über ein CDN; ohne Bibliothek bleiben vollständige Quelltexte und Register lesbar.
+  </footer>
+</main>
+
+<script>
+const mindSource = `mindmap
+  root((ZE2 CE2 — 357 937 039))
+    Untersuchungsziel
+      Alle festen internen Netze
+      Alle rueckseitigen Kontakte
+      Alle physischen Relaissockelkammern
+      Beide Seiten aller Sicherungen
+      Einzelanschluesse und Einspeisungen
+    Grundzustand
+      Ohne Relais und Sicherungen
+      Ohne herausnehmbare Bruecken
+      Ohne Kabelbaum
+      Fest interne Bauteile unbekannt
+    Hardwareabgrenzung
+      Teilenummer als Zielvorgabe
+      Index und Hersteller offen
+      CE2 Modellbezeichnung allein reicht nicht
+      T3 171 941 821 D nicht gleichsetzen
+      T4 Uebertragbarkeit separat pruefen
+      Variantenbehauptung
+        Wolfsburg Edition Beitrag 5
+        Interne Bruecke behauptet
+        Nur uebergebener Lesebeleg fuer Beitrag 5
+        Endpunkte und Teilenummer fehlen
+        Keine interne 30 zu 30B Kante
+    Tabelleninventar
+      65 vollstaendige Positionszeilen
+        Einzelanschluesse 4
+        A1 und A2 je 8
+        B 6 und C 8
+        D 12 und E 5
+        F 10 und G1 4
+      F10 laut Quelle ohne Pin
+      G1_05 abgeschnitten
+      U2_01 und Y02 nur Gegenreferenzen
+      Keine physische Kontaktzaehlung
+      Blickrichtungen nicht verifiziert
+    Explizite interne Referenzen
+      E02 zu U2_01
+        Eine Richtung gelesen
+        Gegenzeile offen
+      F02 zu G1_01
+        Gegenseitig gelesen
+        Eine technische Quelle
+      Zielteil und bauteilfreie Topologie offen
+      Null bestaetigte vollstaendige Netze
+    Sieben externe Datensaetze
+      30 zu 30B
+      B01 zu B02
+      B03 zu D04
+        Alternative direkt zum Lichtschalter
+      B04 zu C03
+        Alternative direkt an Masse
+      B05 zu Y02
+      E02 zu D11
+      E02 zu D08
+        D08 und D11 alternative Varianten
+      Nicht in nackte Grundtraegermatrix uebernehmen
+    Relaissockel 12
+      J17 laut T4 Wiki rechts unten
+      Kontakte 2 und 4 und 6 im Pruefbericht
+      Kein vollstaendiges Kammerinventar
+      Blickrichtung fehlt
+      Rueckseitenzuordnung fehlt
+      Getrennte Ansatzpunkte
+        30B Relais Eingang
+        Z1 Relais Ausgang
+        G1_03 ECU Ansteuerung
+      VWVortex Pin 3 nicht abgeglichen
+      Relaisnummern 67 80 167 keine Kammern
+      191 906 383 C ist Relais Teilenummer
+    Sicherungshalter
+      Beide physischen Seiten fehlen
+      Funktionsangabe bestimmt keine Kammer
+      Eingesetzte Sicherung separat modellieren
+    Ausgeschlossene Ableitungen
+      Sechs alte Funktionsgleichheitsgruppen
+        Masse Teilgruppe
+        Linkes Abblendlicht F1
+        Drehzahlsignal
+        Generator Erregung
+        Run Versorgung F4
+        Start Run Versorgung F14
+      VSS Graph kein interner Kupferplan
+      XDF Mindmaps eigenes Thema
+      Suchauszuege keine Leiterbelege
+    Quellen
+      A2Resource bis G1_04 vollstaendig
+      T4 Wiki J17 Text gelesen
+      J17 G23 Bild nur lokalisiert
+      T4 Pruefbericht mit Buchverweis
+      Wolfsburg Edition aeussere Einspeisung
+      Corrado Beitrag unvollstaendig
+      Passat35i Zugriff 403
+      Golf1 info Zugriff 403
+      GitHub grosse JS Dateien unvollstaendig
+      Scribd keine visuelle Seitenpruefung
+    Naechste Pruefungen
+      Originalschaltbild visuell lesen
+      Nummerierte Sockelansicht beschaffen
+      Buchausgabe und Seite identifizieren
+      30B Z1 G1_03 einzeln zuordnen
+      Variantenbehauptung konkretisieren
+      A2Resource ab G1_05 fortsetzen
+      U2_01 Gegenzeile lesen
+      Alle Sockel und Sicherungsseiten inventarisieren
+    Belegregeln
+      Original und Normalisierung getrennt
+      Quellenwortlaut und Ableitung getrennt
+      Eigener Abruf und fremder Bericht getrennt
+      Unbekannt bedeutet nicht offen
+      Wiederholter Abruf ist keine Zweitquelle
+      Keine behaupteten Bildpruefungen
+      Keine Durchgangspruefung unter Spannung`;
+
+const netSource = `flowchart TB
+  subgraph I["1 · Explizite interne Referenzen aus A2Resource — Zielteil nicht physisch verifiziert"]
+    E02["E/02"] -.-|"Inside: U2/1; Gegenzeile offen"| U201["U2/01"]
+    F02["F/02"] -.-|"F/02: G1/1 und G1/01: F/2"| G101["G1/01"]
+    F10["F/10: laut Quelle kein Pin"]
+  end
+
+  subgraph X["2 · Externe Verbindungen — im nackten Grundzustand entfernt"]
+    P30["-30"] ---|"extern; Outside-Spalte"| P30B["-30B"]
+    B01["B/01"] ---|"extern"| B02["B/02"]
+    B03["B/03"] ---|"extern; alternativ direkt zum Lichtschalter"| D04["D/04"]
+    B04["B/04"] ---|"extern; alternativ direkt an Masse"| C03["C/03"]
+    B05["B/05"] ---|"extern"| Y02["Y/02"]
+    D11["D/11"] ---|"externe Variante; alternativ zu D/08"| E02
+    D08["D/08"] ---|"externe Variante A3; alternativ zu D/11"| E02
+  end
+
+  subgraph R["3 · Relaisrecherche — folgende Linien sind KEINE Leiterkanten"]
+    Z1["-Z1"]
+    G103["G1/03"]
+    INPUT["Funktion: Kraftstoffpumpenrelais-Eingang"]
+    OUTPUT["Funktion: Kraftstoffpumpen- / Vorgluehrelais-Ausgang"]
+    CONTROL["Funktion aussen: ECU Fuel Pump Relay Turn-On, Benzin"]
+    P30B -.-|"A2Resource-Funktionsangabe"| INPUT
+    Z1 -.-|"A2Resource-Funktionsangabe"| OUTPUT
+    G103 -.-|"A2Resource-Funktionsangabe; innen mehrdeutig Power"| CONTROL
+    J17["J17 auf Steckplatz 12, T4-Wiki"]
+    PRUEF["T4-Pruefbericht: Steckplatz 12"]
+    K2["Kontakt 2 laut Pruefbericht"]
+    K4["Kontakt 4 laut Pruefbericht"]
+    K6["Kontakt 6 laut Pruefbericht"]
+    PRUEF -.-|"im Bericht genannt"| K2
+    PRUEF -.-|"im Bericht genannt"| K4
+    PRUEF -.-|"im Bericht genannt"| K6
+    GAP["OFFEN: physische Kammeransicht und Zuordnung zu -30B, -Z1, G1/03"]
+    PIN3["VWVortex: pin 3 — Nummerierung nicht abgeglichen"]
+    BOOK["So wird's gemacht — Ausgabe, Seite und Pruefbild unbekannt"]
+    IMG["J17/G23-Schaltbild lokalisiert, nicht visuell geprueft"]
+  end
+
+  subgraph V["4 · Variantenfrage — keine elektrische Kante abgeleitet"]
+    EXT["Wolfsburg Edition #2: alternative aeussere Einspeisungen"]
+    CLAIM["Beitrag #5: interne Aenderung behauptet; uebermitteltes Zitat"]
+    UNK["Teilenummer, Index und betroffene Endpunkte unbekannt"]
+    BLOCK["Keine interne Verbindung 30 zu 30B daraus erzeugen"]
+  end
+
+  subgraph O["5 · Ausserhalb der bestaetigten Topologie"]
+    GROUPS["Sechs alte Funktionsgleichheitsgruppen: nur Suchansaetze"]
+    VSS["Repository-VSS: Signalweg, kein Kupferplan"]
+    XDF["Repository-Mindmaps: XDF-Thema getrennt"]
+    FUSES["Alle Sicherungsseiten: physische Zuordnung offen"]
+    OTHER["Uebrige Relaissockel: vollstaendiges Inventar offen"]
+    STATE["0 bestaetigte vollstaendige Netze / 0 bestaetigte physische Sockelkanten"]
+  end
+
+  classDef candidate fill:#fff3d6,stroke:#c47c17,color:#54340a
+  classDef external fill:#e7f1ff,stroke:#2869b4,color:#143966
+  classDef reference fill:#f1e8ff,stroke:#8552b8,color:#492765
+  classDef unknown fill:#edf1f5,stroke:#738295,color:#28384a
+  class E02,U201,F02,G101 candidate
+  class P30,P30B,B01,B02,B03,D04,B04,C03,B05,Y02,D11,D08 external
+  class Z1,G103,INPUT,OUTPUT,CONTROL,J17,PRUEF,K2,K4,K6,EXT reference
+  class F10,GAP,PIN3,BOOK,IMG,CLAIM,UNK,BLOCK,GROUPS,VSS,XDF,FUSES,OTHER,STATE unknown
+  linkStyle 0,1 stroke:#c47c17,stroke-width:2px
+  linkStyle 2,3,4,5,6,7,8 stroke:#2869b4,stroke-width:2px
+  linkStyle 9,10,11,12,13,14 stroke:#8552b8,stroke-width:1.5px`;
+
+const a2="https://www.a2resource.com/electrical/CE2.html";
+const rows=[
+  ["E/02 ↔ U2/01","Explizite interne Referenz","E/02 · Inside: U2/1","Gegenzeile U2/01 fehlt; Zielteil und direkte Leiterführung ungeprüft"],
+  ["F/02 ↔ G1/01","Gegenseitige interne Referenz","F/02 · Inside: G1/1; G1/01 · Inside: F/2","Eine technische Quelle, keine unabhängige Zweitbestätigung; Zielteil ungeprüft"],
+  ["F/10","Nichtbestückungsangabe","F/10 · Inside: (no pin)","Keine physische Gehäuseprüfung"],
+  ["-30 ↔ -30B","Extern","Outside: gegenseitige Referenz","Variantenbehauptung über interne Brücke separat und unbestätigt"],
+  ["B/01 ↔ B/02","Extern","Outside: gegenseitige Referenz","Nicht intern vereinigen"],
+  ["B/03 ↔ D/04","Extern / Alternative","B/03 · Outside: To D/4 … or direct to Headlight Switch","Alternative direkt zum Lichtschalter"],
+  ["B/04 ↔ C/03","Extern / Alternative","B/04 · Outside: To C/3 … or direct to Ground","Alternative direkt an Masse"],
+  ["B/05 ↔ Y/02","Extern","B/05 · Outside: To Y/2 (Battery Power)","Y/02 nur als Gegenreferenz geprüft"],
+  ["E/02 ↔ D/11","Extern / Variante","E/02 und D/11 · Outside","Alternative zu D/08; nicht gleichzeitig als gemeinsame Brücke modellieren"],
+  ["E/02 ↔ D/08","Extern / Variante","E/02 und D/08 · Outside; D/08 nennt A3","Alternative zu D/11"],
+  ["-30B","Funktionsreferenz","Inside: Fuel Pump Relay Input","Sockelkammer unbekannt"],
+  ["-Z1","Funktionsreferenz","Inside: Fuel Pump/Glow Plug Relay Output","Sockelkammer unbekannt; Varianten beachten"],
+  ["G1/03","Funktionsreferenz","Outside u. a.: ECU- Fuel Pump Relay Turn-On (gas); Inside: Fuel Pump Relay Power","Keine Gleichsetzung mit Lastversorgung oder einer bestimmten Kammer"]
+];
+const sources=[
+  ["A2Resource CE2",a2,"Bis G1/04 vollständig im eigenen Abruf sichtbar, G1/05 abgeschnitten. Tabellenpositionen, interne Referenzen und Außenverbindungen; kein physisch verifiziertes Gesamtinventar."],
+  ["T4-Wiki · Relais J17","https://www.t4-wiki.de/wiki/Relais_J17_(Kraftstoffpumpe)","Text bestätigt J17 auf Steckplatz 12 rechts unten und ECU-Ansteuerung nach Masse. 191 906 383 C ist eine Relaisteilenummer, nicht die Grundträgernummer. Übertragbarkeit offen."],
+  ["T4-Wiki · Schaltbild-Dateiseite","https://www.t4-wiki.de/wiki/Datei:Elektrik_Pumpe_Kraftstoff_G23_Schaltbild_neu.jpg","Dateiseite und Originaladresse geprüft; 1000 × 714 Pixel. Keine visuelle Prüfung, keine Pinziffern daraus übernommen."],
+  ["T4-Wiki · Einbauort-Dateiseite","https://www.t4-wiki.de/wiki/Datei:Elektrik_Relais_Kraftstoffpumpe_J17_Einbauort.jpg","Bildquelle lokalisiert. Nicht visuell geprüft; Kammernummerierung nicht behauptet."],
+  ["T4Forum · Prüfbericht","https://www.t4forum.de/forum/index.php?thread/155951-2-5l-85kw-115ps-benziner-bj97-springt-an-und-geht-nach-2min-aus-elektr-problem/","Im bisherigen Rechercheverlauf gelesener Prüfbericht nennt Steckplatz 12 sowie 2, 4, 6 und So wird’s gemacht. Motortyp im Bericht unsicher. Keine Übernahme als Messanleitung."],
+  ["Wolfsburg Edition · äußere Einspeisung","https://www.wolfsburg-edition.info/wbb5/thread/91958-leitungsverbinder-an-die-2er-ze/?postID=816999","Beitrag #2 im eigenen Abruf: externe Einspeisungsalternativen zur Lastversorgung auf Steckplatz 12. Keine eindeutigen Endpunktnummern, Bilder ungeprüft."],
+  ["Wolfsburg Edition · Variantenbehauptung","https://www.wolfsburg-edition.info/wbb5/thread/91958-leitungsverbinder-an-die-2er-ze/?postID=817226","Beitrag #5 im übergebenen Bericht als gelesen gemeldet. Letzter eigener Abruf erreichte ihn nicht. Behauptete interne Änderung ohne Teilenummer, Endpunkte und Messbeleg."],
+  ["VWVortex · Golf GTI VR6 fuse box","https://www.vwvortex.com/threads/golf-gti-vr6-fuse-box.9254819/","Hinweise auf Pins 2/6 teilweise nur Suchauszüge. Allgemeine Austauschbarkeitsaussage im übergebenen Bericht; kein Nachweis identischer Kontaktplatten."],
+  ["VWVortex · Beitrag #22","https://www.vwvortex.com/threads/golf-gti-vr6-fuse-box.9254819/page-2","Eigener Abruf bestätigt Beschreibung eines kurzzeitig massegeschalteten ECU-Signals an pin 3. Keine feste Massekante und keine gesicherte Kammeransicht. Durchgangsprüfung bei eingeschalteter Zündung nicht übernehmen."],
+  ["Corrado · 2E springt nicht an","https://vwcorrado.de/forum/thread/151079-2-0-8v-2e-motor-springt-nicht-mehr-an/","Suchhinweis auf Steckplatz 12 und abgeschnittene Kontaktkombination. Originalabruf erreichte die entscheidende Passage nicht. Keine Ergänzung der fehlenden Ziffer."],
+  ["Passat35i · Seite 6","https://www.passat35i.de/threads/94999-ADZ-Motor-hat-ab-und-an-leichte-Startprobleme/page6","Suchhinweis auf Steckplatz 12/Pin6. Originalabruf HTTP 403; keine Verbindung übernommen."],
+  ["Wolfsburg Edition · 1.8T-Ansteuerung","https://www.wolfsburg-edition.info/wbb5/thread/85249-ansteuerung-kraftstoffpumpenrelais-1-8t-speziell-apy-und-apx/?pageNo=2","Übergebener Recherchebericht: Suchhinweis auf Kontakt 6 und rote Verbindung; geöffneter Ausschnitt erreichte die relevante Passage nicht."],
+  ["Golf1.info · Relaisvergleich","https://www.golf1.info/forum/index.php?thread/102048-kraftstoffpumpenrelais-321906059d-gleich-321906059e-1-2-sekunden-anlaufen-bei-z%C3%BC/","HTTP 403 im übergebenen Bericht; Inhalt und Hardwarekompatibilität ungeprüft."],
+  ["SAGA-ECM · Repository","https://github.com/saga-ecm/VW-Golf-MK2-VR6-AAA-ZE2-ABS-Custom-Wheelspeed","Bisheriger Bericht: VSS-Mermaid keine Grundträgermatrix; Mindmaps behandeln XDF. sg-daten.js und graph-kanten.js nur teilweise erfasst. Vollständige Historien- und Bildprüfung offen."],
+  ["T3-Pedia · Zentralelektrik","https://www.t3-pedia.de/index.php?title=Zentralelektrik","T3-Generationsbezeichnung und 171 941 821 D nicht auf 357 937 039 übertragen."],
+  ["Club 80–90 · Internal Wiring Diagram","https://club8090.co.uk/forum/viewtopic.php?t=175168","Threadanfang im bisherigen Recherchebericht; Diagramm und Hardwarezuordnung nicht verifiziert."],
+  ["Scribd · fuse box ce2","https://www.scribd.com/document/520017984/fuse-box-ce2","Teilweise Tabellen-/Suchauszüge. Keine visuelle Gesamtprüfung; KI-Beschreibung kein technischer Beleg."],
+  ["Mk2 Owners Club · CE2","https://www.vwgolfmk2.co.uk/clubforum/index.php?topic=57.0","Früherer Teilabruf mit Funktionen; keine vollständige interne Topologie extrahiert."],
+  ["Club GTI · Fusebox FAQ","https://www.clubgti.com/forums/index.php?threads/fusebox-faq.219775/page-10","Teilabruf im übergebenen Bericht. Keine vollständige Seiten- oder Topologieprüfung."],
+  ["T4Forum UK · interne Verbindungen","https://www.vwt4forum.co.uk/threads/fusebox-connections-how-does-it-actually-connect.451643/","Früherer Threadanfang; Frage nach G1 und internen Verbindungen, kein vollständiger Matrixbeleg."]
+];
+
+const data={
+  revision:"Recherchekonsolidierung 2026-10-03",
+  target:{part_number:"357 937 039",index:null,manufacturer:null,physical_views_verified:false},
+  state:{relays:false,fuses:false,removable_bridges:false,harness:false,fixed_internal_components:"unknown"},
+  coverage:{complete_table_positions:65,explicit_no_pin_positions:["F/10"],partial_row:"G1/05",complete_physical_inventory:false},
+  internal_references:[
+    {a:"E/02",b:"U2/01",source:a2,original:{"E/02":"U2/1"},reciprocal_checked:false,source_text_checked:true,target_topology_verified:false},
+    {a:"F/02",b:"G1/01",source:a2,original:{"F/02":"G1/1","G1/01":"F/2"},reciprocal_checked:true,source_text_checked:true,target_topology_verified:false}
+  ],
+  external_edges:[
+    {a:"-30",b:"-30B"},
+    {a:"B/01",b:"B/02"},
+    {a:"B/03",b:"D/04",alternative:"direct to Headlight Switch"},
+    {a:"B/04",b:"C/03",alternative:"direct to Ground"},
+    {a:"B/05",b:"Y/02"},
+    {a:"E/02",b:"D/11",alternative_group:"cluster_supply"},
+    {a:"E/02",b:"D/08",alternative_group:"cluster_supply",variant_note:"A3 in D/08"}
+  ],
+  socket_register:{source_slot:"12",source_contact_labels:["2","4","6"],complete:false,view:null,verified_rear_connections:[]},
+  variant_claim:{description:"Alleged internal bridge change",reported_read_by_other_chat:true,last_own_fetch_reached_post:false,endpoints:null,part_number:null,confirmed:false},
+  confirmed_complete_internal_nets:[],
+  confirmed_target_socket_edges:[],
+  confirmed_physical_fuse_side_assignments:[],
+  excluded_inferences:["six_previous_function_groups","VSS_signal_graph","uncontextualized_search_snippets"],
+  sources:sources.map(([name,url,status])=>({name,url,status})),
+  semantics:{unknown_is_open_circuit:false,repeated_fetch_is_independent_source:false}
+};
+
+function el(tag,text){const n=document.createElement(tag);n.textContent=text;return n;}
+document.getElementById("mindCode").value=mindSource;
+document.getElementById("netCode").value=netSource;
+document.getElementById("jsonCode").value=JSON.stringify(data,null,2);
+function table(){
+  const q=document.getElementById("filter").value.toLowerCase();
+  const body=document.getElementById("rows");body.replaceChildren();
+  rows.filter(r=>r.join(" ").toLowerCase().includes(q)).forEach(r=>{
+    const tr=document.createElement("tr");r.forEach(t=>tr.append(el("td",t)));body.append(tr);
+  });
+}
+table();document.getElementById("filter").addEventListener("input",table);
+sources.forEach(([name,url,status])=>{
+  const card=document.createElement("div");card.className="panel";
+  const a=el("a",name);a.href=url;a.target="_blank";a.rel="noopener noreferrer";
+  card.append(a,el("p",status));document.getElementById("sourceList").append(card);
+});
+
+let library=null,serial=0;
+const rendered=new Set(),busy=new Set();
+const specs={mind:{id:"mindGraph",state:"mindState",code:mindSource},net:{id:"netGraph",state:"netState",code:netSource}};
+function fallback(spec){
+  const box=document.getElementById(spec.id);box.replaceChildren(el("pre",spec.code));
+  document.getElementById(spec.state).textContent="Vollständige Textansicht; grafische Darstellung lädt bei verfügbarem CDN.";
+}
+Object.values(specs).forEach(fallback);
+async function draw(tab){
+  const spec=specs[tab];if(!spec||!library||rendered.has(tab)||busy.has(tab))return;
+  busy.add(tab);
+  try{
+    const result=await library.render("ze2_diagram_"+(++serial),spec.code);
+    document.getElementById(spec.id).innerHTML=result.svg;
+    if(result.bindFunctions)result.bindFunctions(document.getElementById(spec.id));
+    rendered.add(tab);
+    document.getElementById(spec.state).textContent="Diagramm gerendert. Bei Bedarf scrollen oder einpassen.";
+  }catch(error){
+    fallback(spec);
+    document.getElementById(spec.state).textContent="Grafik nicht verfügbar; vollständiger Mermaid-Quelltext bleibt lesbar.";
+  }finally{busy.delete(tab);}
+}
+function activate(tab){
+  document.querySelectorAll("[data-tab]").forEach(b=>{
+    const selected=b.dataset.tab===tab;b.setAttribute("aria-selected",String(selected));b.tabIndex=selected?0:-1;
+  });
+  document.querySelectorAll('[role="tabpanel"]').forEach(s=>s.hidden=s.id!==tab);
+  draw(tab);
+}
+const tabs=Array.from(document.querySelectorAll("[data-tab]"));
+tabs.forEach((b,i)=>{
+  b.addEventListener("click",()=>activate(b.dataset.tab));
+  b.addEventListener("keydown",e=>{
+    if(e.key!=="ArrowRight"&&e.key!=="ArrowLeft")return;
+    e.preventDefault();const next=tabs[(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length];
+    next.focus();activate(next.dataset.tab);
+  });
+});
+document.querySelectorAll("[data-fit]").forEach(b=>b.addEventListener("click",()=>document.getElementById(b.dataset.fit).classList.toggle("full")));
+activate("mind");
+import("https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs").then(m=>{
+  library=m.default;
+  library.initialize({startOnLoad:false,securityLevel:"strict",theme:"neutral",flowchart:{useMaxWidth:false,htmlLabels:false},mindmap:{useMaxWidth:false}});
+  draw(document.querySelector('[data-tab][aria-selected="true"]').dataset.tab);
+}).catch(()=>{
+  Object.values(specs).forEach(s=>document.getElementById(s.state).textContent="CDN nicht erreichbar; Mermaid-Quelltext vollständig verfügbar.");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+contact_a,contact_b,connection_type,hardware_variant,component_state,source_url,source_locator,evidence_status,notes
+E/02,U2/01,inside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Inside Fusebox column E/02",source_documented,reciprocal_check_not_read
+F/02,G1/01,inside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Inside Fusebox column F/02",source_documented_reciprocal,reciprocal_also_read
+F/10,,no_pin,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Inside Fusebox column F/10",source_documentation,no_pin_not_contacts
+-30,30B,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column -30",source_documented,not_internal_bridge
+B/01,B/02,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column B/01",source_documented,not_internal_bridge
+B/03,D/04,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column B/03",source_documented,alternate_direct_to_headlight_switch
+B/04,C/03,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column B/04",source_documented,alternate_direct_to_ground
+B/05,Y/02,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column B/05",source_documented,battery_power
+E/02,D/11,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column E/02",source_documented,alternate_variant_A
+E/02,D/08,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column E/02",source_documented,alternate_variant_B_note_A3

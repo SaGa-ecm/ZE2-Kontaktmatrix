@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZE2 Kontaktmatrix – Rechercheergebnis 03.10.2026</title>
+<style>
+  :root{color-scheme:dark;--bg:#0c1421;--card:#162335;--border:#34465e;--text:#e7eef8;--muted:#aec0d5;--accent:#91ceff;--warn:#ffd089;--green:#6ee7b7;--red:#fca5a5}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,sans-serif}
+  main{max-width:1600px;margin:auto;padding:20px 16px 60px}
+  h1{font-size:clamp(22px,3vw,32px);line-height:1.2}h2{font-size:20px}h3{font-size:16px}
+  a{color:var(--accent);overflow-wrap:anywhere}
+  p{margin:8px 0}.muted,small{color:var(--muted)}
+  .panel{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;margin:14px 0}
+  .warn{border-left:4px solid var(--warn)}.ok{border-left:4px solid var(--green)}.info{border-left:4px solid var(--accent)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .stat{background:var(--card);border:1px solid var(--border);padding:14px;border-radius:8px;text-align:center}
+  .stat strong{display:block;font-size:26px}.stat span{font-size:12px;color:var(--muted)}
+  nav,.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}
+  button,input,textarea{font:inherit;color:var(--text);background:#101c2c;border:1px solid var(--border);border-radius:6px;padding:8px 10px}
+  button{cursor:pointer}button[aria-selected=true]{background:#245074;border-color:var(--accent)}
+  button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  input{width:100%;margin:8px 0}
+  textarea{display:block;width:100%;min-height:200px;font:12px/1.4 ui-monospace,monospace;resize:vertical}
+  details{margin:12px 0}summary{cursor:pointer;color:var(--accent);font-weight:600}
+  pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.5 ui-monospace,monospace;background:#0d1520;padding:12px;border-radius:6px;overflow:auto}
+  .graph{background:#f8fafc;border-radius:8px;padding:12px;overflow:auto;min-height:160px;color:#172033}
+  .graph svg{display:block;max-width:none!important}
+  .graph.full svg{width:100%!important;height:auto!important;max-width:100%!important}
+  .scroll{overflow:auto;max-height:400px}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{padding:8px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border)}
+  th{color:var(--muted);position:sticky;top:0;background:var(--card);z-index:1}
+  .wide{min-width:900px}
+  code{color:#c7e2ff;font-size:12px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+  li{margin:5px 0}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;margin:12px 0}
+  .legend span{border-radius:5px;padding:5px 8px}
+  .amber{background:#593c1e;color:#ffe2b5}.blue{background:#193f69;color:#c5e3ff}
+  .purple{background:#463063;color:#eed6ff}.gray{background:#304054;color:#dae4f0}
+  .green{background:#1a3a2a;color:#a7f3d0}.red{background:#4a1a1a;color:#fecaca}
+  [hidden]{display:none!important}
+  footer{margin-top:24px;font-size:12px;color:var(--muted)}
+  .badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:600}
+  .badge-src{background:#193f69;color:#c5e3ff}.badge-open{background:#593c1e;color:#ffe2b5}
+  .badge-ok{background:#1a3a2a;color:#a7f3d0}.badge-x{background:#4a1a1a;color:#fecaca}
+</style>
+</head>
+<body>
+<main>
+  <p class="muted">VW · ZE2 / CE2 · Zielgrundträger 357 937 039 · Recherche direkt 03.10.2026 · Quelle: A2Resource + GitHub + Club8090</p>
+  <h1>ZE2 interne Kontaktmatrix – Rechercheergebnis</h1>
+
+  <div class="panel warn">
+    <strong>Recherchestand – unvollständige elektrische Rekonstruktion.</strong>
+    <p>Keine bestaetigten vollständigen internen Netze fuer den konkreten Zielgrundtraeger. Keine bestaetigte Zuordnung einer physischen Relaissockelkammer zu einem Rueckseitenanschluss. Keine vollständig physisch zugeordneten Sicherungshalter.</p>
+    <p>Untersuchungszustand: ohne Relais, Sicherungen, herausnehmbare Bruecken und Kabelbaum. Fest eingebaute interne Bauteile sowie Grundtraegerindex und Hersteller sind ungeklaert.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong>65+</strong><span>Tabellenpositionen A2Resource</span></div>
+    <div class="stat"><strong>2</strong><span>explizite interne Kontaktpaare</span></div>
+    <div class="stat"><strong>7</strong><span>externe Verbindungsdatensaetze</span></div>
+    <div class="stat"><strong>13</strong><span>Relais mit Pinbelegung</span></div>
+    <div class="stat"><strong>22</strong><span>Sicherungen mit Ampere</span></div>
+    <div class="stat"><strong>0</strong><span>bestaetigte vollständige interne Netze</span></div>
+  </div>
+
+  <nav role="tablist" aria-label="Ansichten">
+    <button id="tab-inv" role="tab" aria-selected="true" data-tab="inv">Kontaktinventar</button>
+    <button id="tab-rel" role="tab" aria-selected="false" data-tab="rel">Relais + Sicherungen</button>
+    <button id="tab-net" role="tab" aria-selected="false" data-tab="net">Mermaid-Topologie</button>
+    <button id="tab-csv" role="tab" aria-selected="false" data-tab="csv">CSV/JSON</button>
+    <button id="tab-gap" role="tab" aria-selected="false" data-tab="gap">Prüflücken</button>
+  </nav>
+
+  <section id="inv" role="tabpanel" aria-labelledby="tab-inv">
+    <h2>Kontaktinventar – A2Resource CE2 (eigener Abruf)</h2>
+    <div class="toolbar"><button data-fit="invTable">Ansicht einpassen</button></div>
+    <div class="scroll"><table class="wide" id="invTable">
+      <thead><tr><th>Position</th><th>Aussenstelle</th><th>Inside (intern)</th><th>Farbe</th><th>Funktion</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>E/02</td><td>Klemme 15</td><td>U2/1</td><td>Schwarz</td><td>Zündungsplus für Tacho</td><td><span class="badge badge-src">Quelle</span> Gegenzeile offen</td></tr>
+        <tr><td>F/02</td><td>-</td><td>G1/1</td><td>-</td><td>(kein Pin laut Quelle)</td><td><span class="badge badge-src">Quelle</span> Gegenseitig gelesen</td></tr>
+        <tr><td>F/10</td><td>-</td><td>(no pin)</td><td>-</td><td>Kein Pin</td><td><span class="badge badge-x">Kein Kontakt</span></td></tr>
+        <tr><td>-30</td><td>30B</td><td>-</td><td>Rot</td><td>Kraftstoffpumpe Power</td><td><span class="badge badge-blue">Aussen</span> Nicht intern</td></tr>
+        <tr><td>B/01</td><td>B/2</td><td>-</td><td>Gruen/Rot</td><td>Waschpumpe Power</td><td><span class="badge badge-blue">Aussen</span></td></tr>
+        <tr><td>B/03</td><td>D/4</td><td>-</td><td>Weiss/Schwarz</td><td>Scheinwerferschalter Pin 56</td><td><span class="badge badge-blue">Aussen</span> Alternativ Lichtschalter</td></tr>
+        <tr><td>B/04</td><td>C/3</td><td>-</td><td>Braun</td><td>Scheinwerferwaschrelais</td><td><span class="badge badge-blue">Aussen</span> Alternativ Masse</td></tr>
+        <tr><td>B/05</td><td>Y/2</td><td>-</td><td>Rot</td><td>Battery Power</td><td><span class="badge badge-blue">Aussen</span></td></tr>
+        <tr><td>E/02</td><td>D/11</td><td>-</td><td>Schwarz</td><td>Tempomat/Spiegelschalter</td><td><span class="badge badge-blue">Aussen</span> Variante A</td></tr>
+        <tr><td>E/02</td><td>D/08</td><td>-</td><td>Schwarz</td><td>Automatikgetriebe Schaltsperre</td><td><span class="badge badge-blue">Aussen</span> Variante B (A3)</td></tr>
+        <tr><td>G1/03</td><td>-</td><td>-</td><td>Rot/Gelb</td><td>K-Pumpenrelais Trigger (Benzin)</td><td><span class="badge badge-open">Offen</span> Sockelkammer unbekannt</td></tr>
+        <tr><td>-Z1</td><td>-</td><td>-</td><td>Rot/Schwarz</td><td>Fuel Pump/Glow Plug Relay Output</td><td><span class="badge badge-open">Offen</span> Sockelkammer unbekannt</td></tr>
+        <tr><td>-30B</td><td>-</td><td>-</td><td>Rot</td><td>Fuel Pump Relay Input</td><td><span class="badge badge-open">Offen</span> Sockelkammer unbekannt</td></tr>
+        <tr><td>G1/11</td><td>-</td><td>-</td><td>Weiss/Blau</td><td>★ VSS Verteilung → ECU Pin 65 / GALA / Tempomat</td><td><span class="badge badge-src">Quelle</span> Von W-Zelle</td></tr>
+        <tr><td>G1/12</td><td>-</td><td>-</td><td>Gruen/Schwarz</td><td>★ VR6 Drehzahlsignal → U1/06 → T28/17</td><td><span class="badge badge-src">Quelle</span> Von W-Zelle</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="rel" role="tabpanel" aria-labelledby="tab-rel" hidden>
+    <h2>Relaissockel + Sicherungen</h2>
+    <div class="panel scroll">
+      <h3>Relais (A2Resource)</h3>
+      <table class="wide">
+        <thead><tr><th>Nr.</th><th>Typ</th><th>Pin 1</th><th>Pin 2</th><th>Pin 3</th><th>Pin 4</th><th>Pin 5</th><th>Pin 6</th><th>Pin 7</th><th>Pin 8</th></tr></thead>
+        <tbody>
+          <tr><td>3</td><td>Digifant-Steuergeraet</td><td>Masse</td><td>Drehzahl</td><td>Zündungsplus +3</td><td>Batterie +4</td><td>ECU Zündung Ein</td><td>ECU+Elektronik</td><td>-</td><td>Masse</td></tr>
+          <tr><td>7</td><td>ABS-Hauptrelais (43)</td><td>Masse</td><td>ABS-Ausgang</td><td>ABS-Eingang</td><td>Batterie +4</td><td>-</td><td>Batterie von 30B</td><td>G2/7, T1</td><td>Masse</td></tr>
+          <tr><td>8</td><td>Wash/Wisch/Intermittent</td><td>Masse</td><td>Intermittent-Schalter</td><td>Laufzeit +5</td><td>Park/Low</td><td>Wiper Low</td><td>Wash Switch</td><td>-</td><td>-</td></tr>
+          <tr><td>9</td><td>Gurtwarnleuchte (4/29)</td><td>Masse</td><td>Gurtschalter</td><td>Tuerschalter</td><td>Gurtlampe</td><td>Zündungsplus SU</td><td>Zündungsplus Run</td><td>Aussenspiegel</td><td>-</td></tr>
+          <tr><td>10</td><td>Nebelscheinwerfer (110/53)</td><td>Standlicht Power</td><td>Lichtschalter High/Low</td><td>Nebel-Schalter Si.10</td><td>Batterie</td><td>Masse</td><td>Abblendlicht Power</td><td>-</td><td>-</td></tr>
+          <tr><td>12</td><td>Kraftstoffpumpenrelais (80/67/167)</td><td>Batterie+ (ungenuezt)</td><td>Zündungsplus Run</td><td>ECU Pumpen-ZEin</td><td>Kraftstoffpumpe, Saugrohrbeluefter</td><td>G2/6 (ungenuezt)</td><td>Batterie von 30B</td><td>G2/7, T1 (ungenuezt)</td><td>Masse (ungenuezt)</td></tr>
+          <tr><td>13</td><td>Glow Plug (102/104)</td><td>Batterie+</td><td>Zündungsplus Run</td><td>Kuehlersensor Vorwaermen</td><td>Glow Plugs (Z1)</td><td>G2/6 (ungenuezt)</td><td>Batterie von 30B</td><td>G2/7, T1 (ungenuezt)</td><td>Masse</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel scroll">
+      <h3>Sicherungen (A2Resource)</h3>
+      <table class="wide">
+        <thead><tr><th>Nr.</th><th>Versorgung</th><th>Ampere</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Abblendlicht links, Dimmer/Flasher Pin 56b</td><td>10A</td></tr>
+          <tr><td>2</td><td>Abblendlicht rechts, Dimmer/Flasher Pin 56b</td><td>10A</td></tr>
+          <tr><td>3</td><td>Kennzeichen, Dash Lights, Headlight Pin 58</td><td>10A</td></tr>
+          <tr><td>4</td><td>Rueckfenster-Wischer, Handschuhfach</td><td>15A</td></tr>
+          <tr><td>5</td><td>Wischer/Waschanlage</td><td>15A</td></tr>
+          <tr><td>6</td><td>Frischluftgeblaese, Klimaanlage</td><td>20A</td></tr>
+          <tr><td>7</td><td>Standlicht rechts, Headlight Pin 58R</td><td>10A</td></tr>
+          <tr><td>8</td><td>Standlicht links, Headlight Pin 58L</td><td>10A</td></tr>
+          <tr><td>9</td><td>Rueckfenster-Entuemer</td><td>20A</td></tr>
+          <tr><td>10</td><td>Nebelscheinwerfer</td><td>15A</td></tr>
+          <tr><td>11</td><td>Fernlicht links</td><td>10A</td></tr>
+          <tr><td>12</td><td>Fernlicht rechts</td><td>10A</td></tr>
+          <tr><td>13</td><td>Hupe</td><td>10A</td></tr>
+          <tr><td>14</td><td>Ruecklichter</td><td>10A</td></tr>
+          <tr><td>15</td><td>Motorsteuerung (Klopfsensor etc.)</td><td>10A</td></tr>
+          <tr><td>16</td><td>Warnleuchten, Voltmeter, Aussenspiegel (Corrado)</td><td>10A</td></tr>
+          <tr><td>17</td><td>Turnsignale</td><td>10A</td></tr>
+          <tr><td>18</td><td>Kraftstoffpumpe, Saugrohrbeluefter</td><td>20A</td></tr>
+          <tr><td>19</td><td>Klimaanlage, Kuehlerluefter-Nachlauf</td><td>30A</td></tr>
+          <tr><td>20</td><td>Bremsleuchten</td><td>10A</td></tr>
+          <tr><td>21</td><td>Kofferraumleuchte, Diagnose, Innenraum, Kombi (MFA/Uhr)</td><td>15A</td></tr>
+          <tr><td>22</td><td>Radio, Diagnose</td><td>10A</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="net" role="tabpanel" aria-labelledby="tab-net" hidden>
+    <h2>Mermaid-Topologie</h2>
+    <div class="legend">
+      <span class="amber">Orange: interne Quellenreferenz</span>
+      <span class="blue">Blau: externe Verbindung</span>
+      <span class="purple">Violett: Funktion/Bezug</span>
+      <span class="gray">Grau: offen/nicht bestückt</span>
+      <span class="green">Grün: bestätigt</span>
+    </div>
+    <div class="graph" id="netGraph"></div>
+    <details><summary>Mermaid-Quelltext</summary><pre id="netCode"></pre></details>
+  </section>
+
+  <section id="csv" role="tabpanel" aria-labelledby="tab-csv" hidden>
+    <h2>Maschinenlesbare Daten</h2>
+    <details open><summary>CSV – Kontaktpaare</summary><textarea id="csvCode" readonly spellcheck="false"></textarea></details>
+    <details open><summary>JSON – Kernkontaktmatrix</summary><textarea id="jsonCode" readonly spellcheck="false"></textarea></details>
+    <p class="muted">Download: <a href="ZE2_Kontaktmatrix.csv">ZE2_Kontaktmatrix.csv</a> · <a href="ZE2_Kontaktmatrix.json">ZE2_Kontaktmatrix.json</a></p>
+  </section>
+
+  <section id="gap" role="tabpanel" aria-labelledby="tab-gap" hidden>
+    <h2>Prüflücken</h2>
+    <div class="grid">
+      <div class="panel info"><h3>1 · Schaltbild visuell</h3><p>J17/G23-Original (1000×714px) noch nicht geprueft. Pinziffern, ZE-Grenzen, Sicherungspfad lesen.</p></div>
+      <div class="panel info"><h3>2 · Sockelansicht</h3><p>Steckplatz 12 mit Kammernummerierung und Blickrichtung fehlt. „So wird's gemacht": Ausgabe/Seite offen.</p></div>
+      <div class="panel info"><h3>3 · Gegenkontakte</h3><p>-30B, -Z1, G1/03 einzeln zuordnen. Grundtraegernummer/Index/Hersteller belegen.</p></div>
+      <div class="panel info"><h3>4 · Restliches Inventar</h3><p>A2Resource ab G1/05 fortsetzen. U2/01-Gegenzeile. Alle Relaissockel. Beide Sicherungsseiten.</p></div>
+      <div class="panel warn"><h3>5 · Varianten</h3><p>Wolfsburg Edition #5: Teilenummer, Endpunkte, Messbeleg fehlen.</p></div>
+      <div class="panel info"><h3>6 · Breitere Quellen</h3><p>Scribd, Mk2 Owners Club, Club GTI, T3-Pedia, mehrsprachige Suche.</p></div>
+      <div class="panel info"><h3>7 · Messprotokoll</h3><p>Durchgaenge/Widerstaende spongungsfrei an isolierten Stromkreisen.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    Keine Änderungen am GitHub-Repository ausgeführt. Keine Messergebnisse ergänzt.
+    Recherche direkt 03.10.2026 · A2Resource + GitHub + Club8090 · Quellenprüfung und physische Verifikation getrennt geführt.
+  </footer>
+</main>
+
+<script>
+const netSource = `flowchart TB
+  subgraph I["Explizite interne Referenzen — Zielteil nicht physisch verifiziert"]
+    E02["E/02"] -.-|"Inside: U2/1; Gegenzeile offen"| U201["U2/01"]
+    F02["F/02"] -.-|"Inside: G1/1; G1/01: F/2"| G101["G1/01"]
+    F10["F/10: kein Pin"]
+  end
+
+  subgraph X["Externe Verbindungen — nackter Grundzustand"]
+    P30["-30"] -. "Aussenstelle" .- P30B["-30B"]
+    B01["B/01"] -. "Aussen" .- B02["B/02"]
+    B03["B/03"] -. "Alternativ Lichtschalter" .- D04["D/04"]
+    B04["B/04"] -. "Alternativ Masse" .- C03["C/03"]
+    B05["B/05"] -. "Aussen" .- Y02["Y/02"]
+    E02 -. "Variante A" .- D11["D/11"]
+    E02 -. "Variante B" .- D08["D/08"]
+  end
+
+  subgraph R["Relais — Sockelkammer offen"]
+    G103["G1/03: K-Pumpenrelais Trigger"]
+    Z1["-Z1: Relay Output"]
+    X30B["30B: Relay Input"]
+    J17["J17 Steckplatz 12 — T4-Wiki"]
+    GAP["OFFEN: Kammerzuordnung"]
+  end
+
+  subgraph V["Varianten — nicht bestaetigt"]
+    WW["Wolfsburg #5: interne Aenderung"]
+    BLOCK["Keine interne 30-30B Kante"]
+  end
+
+  classDef src fill:#ffedd5,stroke:#ea580c,color:#7c2d12
+  classDef ext fill:#dbeafe,stroke:#2563eb,color:#1e3a8a
+  classDef open fill:#f1f5f9,stroke:#64748b,color:#334155
+  class E02,U201,F02,G101 src
+  class P30,P30B,B01,B02,B03,D04,B04,C03,B05,Y02,D11,D08 ext
+  class G103,Z1,X30B,J17,GAP,WW,BLOCK open
+  linkStyle 0,1 stroke:#ea580c,stroke-width:2px
+  linkStyle 2,3,4,5,6,7 stroke:#2563eb,stroke-width:2px,stroke-dasharray:6 4`;
+
+const csvSource = `contact_a,contact_b,connection_type,hardware_variant,component_state,source_url,source_locator,evidence_status,notes
+E/02,U2/01,inside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Inside Fusebox column E/02",source_documented,reciprocal_check_not_read
+F/02,G1/01,inside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Inside Fusebox column F/02",source_documented_reciprocal,reciprocal_also_read
+F/10,,no_pin,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Inside Fusebox column F/10",source_documentation,no_pin_not_contacts
+-30,30B,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column -30",source_documented,not_internal_bridge
+B/01,B/02,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column B/01",source_documented,not_internal_bridge
+B/03,D/04,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column B/03",source_documented,alternate_direct_to_headlight_switch
+B/04,C/03,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column B/04",source_documented,alternate_direct_to_ground
+B/05,Y/02,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column B/05",source_documented,battery_power
+E/02,D/11,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column E/02",source_documented,alternate_variant_A
+E/02,D/08,outside_fusebox,CE2 357 937 039,naked_base_stator,https://www.a2resource.com/electrical/CE2.html,"Outside Fusebox column E/02",source_documented,alternate_variant_B_note_A3`;
+
+const jsonSource = `{"revision":"2026-10-03-direct-research","target":{"part_number":"357 937 039","index":null,"manufacturer":null,"physical_views_verified":false},"state":{"relays":false,"fuses":false,"removable_bridges":false,"harness":false,"fixed_internal_components":"unknown"},"internal_references":[{"a":"E/02","b":"U2/01","source":"https://www.a2resource.com/electrical/CE2.html","original":{"E/02":"U2/1"},"reciprocal_checked":false,"source_text_checked":true,"target_topology_verified":false},{"a":"F/02","b":"G1/01","source":"https://www.a2resource.com/electrical/CE2.html","original":{"F/02":"G1/1","G1/01":"F/2"},"reciprocal_checked":true,"source_text_checked":true,"target_topology_verified":false}],"external_edges":[{"a":"-30","b":"-30B"},{"a":"B/01","b":"B/02"},{"a":"B/03","b":"D/04","alternative":"direct to Headlight Switch"},{"a":"B/04","b":"C/03","alternative":"direct to Ground"},{"a":"B/05","b":"Y/02"},{"a":"E/02","b":"D/11","alternative_group":"cluster_supply"},{"a":"E/02","b":"D/08","alternative_group":"cluster_supply","variant_note":"A3 in D/08"}],"socket_register":{"source_slot":"12","source_contact_labels":["2","4","6"],"complete":false,"view":null,"verified_rear_connections":[]},"variant_claim":{"description":"Alleged internal bridge change","reported_read_by_other_chat":true,"last_own_fetch_reached_post":false,"endpoints":null,"part_number":null,"confirmed":false},"confirmed_complete_internal_nets":[],"confirmed_target_socket_edges":[],"confirmed_physical_fuse_side_assignments":[],"excluded_inferences":["six_previous_function_groups","VSS_signal_graph","uncontextualized_search_snippets"],"semantics":{"unknown_is_open_circuit":false,"repeated_fetch_is_independent_source":false}}`;
+
+document.getElementById("netCode").textContent = netSource;
+document.getElementById("csvCode").textContent = csvSource;
+document.getElementById("jsonCode").textContent = jsonSource;
+
+function activate(tab){
+  document.querySelectorAll("[data-tab]").forEach(b=>{
+    const selected=b.dataset.tab===tab;b.setAttribute("aria-selected",String(selected));b.tabIndex=selected?0:-1;
+  });
+  document.querySelectorAll('[role="tabpanel"]').forEach(s=>s.hidden=s.id!==tab);
+  if(tab==="net"&&typeof mermaid!=="undefined"){
+    try{mermaid.render("ze2_net_diagram",netSource).then(r=>{document.getElementById("netGraph").innerHTML=r.svg;}).catch(()=>{document.getElementById("netGraph").textContent=netSource;});}
+    catch(e){document.getElementById("netGraph").textContent=netSource;}
+  }else if(tab==="net"){
+    document.getElementById("netGraph").textContent=netSource;
+  }
+}
+const tabs=Array.from(document.querySelectorAll("[data-tab]"));
+tabs.forEach((b,i)=>{
+  b.addEventListener("click",()=>activate(b.dataset.tab));
+  b.addEventListener("keydown",e=>{
+    if(e.key!=="ArrowRight"&&e.key!=="ArrowLeft")return;
+    e.preventDefault();const next=tabs[(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length];
+    next.focus();activate(next.dataset.tab);
+  });
+});
+document.querySelectorAll("[data-fit]").forEach(b=>b.addEventListener("click",()=>document.getElementById(b.dataset.fit).classList.toggle("full")));
+activate("inv");
+import("https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs").then(m=>{m.default.initialize({startOnLoad:false,securityLevel:"strict",theme:"neutral",flowchart:{useMaxWidth:false,htmlLabels:false}});activate("inv");}).catch(()=>{});
+</script>
+</body>
+</html>
