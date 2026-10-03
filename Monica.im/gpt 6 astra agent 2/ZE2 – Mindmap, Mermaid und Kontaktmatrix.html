@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZE2 · Kontaktmatrix · Rechercheausbau</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1420;--card:#172334;--line:#35465c;--text:#e8eef7;--muted:#aabbd0;--blue:#88caff;--yellow:#ffd18a;--green:#8de1be}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,sans-serif}
+main{max-width:1380px;margin:auto;padding:26px 20px 60px}
+h1{font-size:clamp(26px,4vw,40px);line-height:1.2}
+h2{font-size:23px}h3{font-size:17px}
+a{color:var(--blue);overflow-wrap:anywhere}
+.muted,small{color:var(--muted)}
+.eyebrow{color:var(--blue);letter-spacing:.13em;font-size:12px}
+.panel{background:var(--card);border:1px solid var(--line);padding:20px;border-radius:12px;margin:18px 0}
+.warning{border-left:4px solid var(--yellow)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.stats .panel{margin:0}.big{display:block;font-size:29px;font-weight:750}
+nav,.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+button,input,select,textarea{font:inherit;color:var(--text);background:#101b29;border:1px solid var(--line);border-radius:7px;padding:10px 12px}
+button{cursor:pointer}button[aria-selected=true]{background:#214b6c;border-color:var(--blue)}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+input{width:100%;margin-bottom:12px}
+textarea{width:100%;min-height:290px;font:13px/1.5 ui-monospace,monospace;resize:vertical}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 ui-monospace,monospace}
+code{color:#c3deff}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}
+.scroll{overflow:auto}
+.wide{min-width:860px}
+.badge{font-size:12px;padding:3px 7px;border-radius:5px;background:#343027;color:var(--yellow)}
+.graph{background:#f5f7fb;color:#152338;overflow:auto;border-radius:9px;min-height:180px;padding:18px}
+.graph svg{display:block;margin:auto;max-width:none!important}
+.fallback{white-space:pre-wrap;color:#213247}
+.matrix th,.matrix td{text-align:center;white-space:nowrap;padding:7px;min-width:48px}
+.matrix th:first-child{position:sticky;left:0;background:var(--card)}
+.candidate{background:#57452c;color:#ffe0a9;font-weight:bold}
+.unknown{color:#8091a7}
+.self{background:#24344a}
+details{margin:12px 0}summary{cursor:pointer;color:var(--blue)}
+.tree,.tree ul{list-style:none;padding-left:20px}
+.tree ul{border-left:1px solid var(--line);margin-left:6px}
+.tree li{padding:5px 0}
+li{margin:5px 0}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+[hidden]{display:none!important}
+footer{font-size:13px;color:var(--muted);margin-top:30px}
+@media print{nav,.toolbar{display:none}section[hidden]{display:block!important}body{background:white;color:black}.panel{background:white}.scroll{overflow:visible}}
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">GOLF 2 · ZE2 / CE2 · ZIELGRUNDTRÄGER 357 937 039</div>
+  <h1>Interne Kontakte statt Verbraucherlisten</h1>
+  <p class="muted">Überarbeiteter Recherchearbeitsstand · 03.10.2026 · Mindmap und Mermaid mit gemeinsamer Datengrundlage</p>
+  <div class="panel warning">
+    <strong>Teilrekonstruktion, keine vollständige oder freigegebene Verdrahtungsmatrix.</strong>
+    <p>Neu erfasst sind 16 quellenbelegte Kontaktbeschreibungen in sechs internen Zuordnungsgruppen sowie vier ausdrücklich externe Verbindungen. Physische Relaissockelkammern und Sicherungskontaktseiten sind damit noch nicht vollständig bestimmt.</p>
+    <p>Die Quelle belegt die jeweilige Beschreibung. Eine daraus abgeleitete Kontaktpaarverbindung bleibt ein <strong>Kandidat</strong>, bis Topologie, Bauteilzustand und Hardwarevariante eindeutig belegt sind.</p>
+  </div>
+  <div class="stats">
+    <div class="panel"><span class="big">16</span>extrahierte interne Zuordnungen</div>
+    <div class="panel"><span class="big">6</span>Beschreibungsgleichheitsgruppen</div>
+    <div class="panel"><span class="big">4</span>separierte externe Verbindungen</div>
+    <div class="panel"><span class="big">0</span>hier eindeutig belegte Relaissockel-Kontaktpaare</div>
+  </div>
+  <nav role="tablist" aria-label="Arbeitsansichten">
+    <button role="tab" id="t-mind" aria-controls="mind" aria-selected="true" data-tab="mind">Mindmap</button>
+    <button role="tab" id="t-net" aria-controls="net" aria-selected="false" data-tab="net">Mermaid-Netz</button>
+    <button role="tab" id="t-matrix" aria-controls="matrix" aria-selected="false" data-tab="matrix">Kontaktmatrix</button>
+    <button role="tab" id="t-evidence" aria-controls="evidence" aria-selected="false" data-tab="evidence">Einzelbelege</button>
+    <button role="tab" id="t-external" aria-controls="external" aria-selected="false" data-tab="external">Extern ≠ intern</button>
+    <button role="tab" id="t-research" aria-controls="research" aria-selected="false" data-tab="research">Quellen & Ausbau</button>
+  </nav>
+
+  <section id="mind" role="tabpanel" aria-labelledby="t-mind">
+    <h2>Mindmap: Ziel, Erkenntnisse und offene Kontakte</h2>
+    <p>Die Mindmap beschreibt den Arbeitsumfang. Ihre Äste sind keine elektrischen Leitungen.</p>
+    <div id="mindGraph" class="graph"><p class="fallback">Mermaid wird geladen. Die Textansicht darunter funktioniert auch ohne externe Bibliothek.</p></div>
+    <details open class="panel">
+      <summary>Mindmap als unabhängig lesbare Textstruktur</summary>
+      <ul class="tree">
+        <li><strong>ZE2 / CE2 · 357 937 039</strong>
+          <ul>
+            <li>Grundträger identifizieren
+              <ul><li>Teilenummer laut Zielvorgabe; Index und Hersteller offen</li><li>T3-Generationsbezeichnung nicht ungeprüft übertragen</li><li>Kontaktansicht und physische Kammernummern erforderlich</li></ul>
+            </li>
+            <li>Interne Zuordnungen aus A2Resource
+              <ul><li>Masse: sechs erfasste Anschlüsse</li><li>Abblendlicht links / Sicherung 1: zwei Anschlüsse</li><li>Drehzahlsignal: zwei Anschlüsse</li><li>Generator-Erregung: zwei Anschlüsse, Zuordnung abgeleitet</li><li>Run-Versorgung / Sicherung 4: zwei Anschlüsse</li><li>Start/Run-Versorgung / Sicherung 14: zwei Anschlüsse</li></ul>
+            </li>
+            <li>Topologie noch offen
+              <ul><li>Relaissockelkontakt ↔ rückseitiger Kontakt</li><li>Beide Seiten jeder Sicherung</li><li>Vollständige Versorgungsschienen</li><li>Vollständiges physisches Kontaktinventar</li></ul>
+            </li>
+            <li>Abgrenzungen
+              <ul><li>Externe B-Stecker-Verbindungen separat</li><li>VSS-Pfad aus Repository: unbestätigte Signalkette, keine Kupfermatrix</li><li>XDF-Mindmaps bleiben eigenes Archivthema</li></ul>
+            </li>
+            <li>Verifikation
+              <ul><li>Fundstelle pro Kontakt und Verbindung</li><li>Schaltzustände und bestückte Bauteile separat</li><li>Isolierten Grundträger spannungsfrei vermessen</li><li>Unbekannt nicht mit offen gleichsetzen</li></ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary>Mermaid-Quelltext der ZE2-Mindmap</summary>
+      <p class="muted">Vorgeschlagener eigener Repository-Pfad: <code>docs/ze2-mindmap.mermaid</code>. Die bestehenden XDF-Mindmaps nicht stillschweigend überschreiben.</p>
+      <textarea id="mindCode" aria-label="Mindmap Mermaid Quelltext" readonly spellcheck="false"></textarea>
+    </details>
+  </section>
+
+  <section id="net" role="tabpanel" aria-labelledby="t-net" hidden>
+    <h2>Mermaid: interne Zuordnungsgruppen</h2>
+    <p><strong>Gestrichelt = Beschreibung / Zuordnung, nicht nachgewiesene Kupferbrücke.</strong> Die Gruppenknoten sind Arbeitsbezeichnungen, keine eingeprägten Kontakte und kein vollständiges Netzverzeichnis.</p>
+    <div id="netGraph" class="graph"></div>
+    <details class="panel">
+      <summary>Warum keine durchgezogenen Kontaktverbindungen?</summary>
+      <p>A2Resource benennt beispielsweise für A1/01 und D/02 dieselbe interne Funktion „Headlight, Left, Fuse 1“. Das liefert einen konkreten Prüfansatz. Es ersetzt jedoch noch nicht die Identifizierung der physischen Sicherungsseite und einen direkten Nachweis der Verbindung am bezeichneten Grundträger.</p>
+      <p>Die Generator-Gruppe ist zusätzlich funktional abgeleitet: A2/01 beschreibt die Leitung vom Generator zur Batteriekontrollleuchte, D/01 nennt intern die Generator-Erregung. Deshalb ist auch die Gruppenzugehörigkeit eine zu prüfende Interpretation.</p>
+    </details>
+    <details>
+      <summary>Mermaid-Quelltext</summary>
+      <p class="muted">Vorgeschlagener Pfad: <code>docs/ze2-interne-zuordnungen.mermaid</code></p>
+      <textarea id="netCode" aria-label="Mermaid Netz Quelltext" readonly spellcheck="false"></textarea>
+    </details>
+  </section>
+
+  <section id="matrix" role="tabpanel" aria-labelledby="t-matrix" hidden>
+    <h2>Kandidatenmatrix aus dem extrahierten Teilbestand</h2>
+    <div class="panel warning">
+      <strong>K = gemeinsamer Zuordnungskandidat · ? = unbekannt · — = gleicher Kontakt.</strong>
+      <p>Es gibt in dieser Ansicht keine als gemessen oder vollständig schaltplanbelegt freigegebene „1“. Unterschiedliche Gruppen beweisen keine elektrische Trennung. Die Matrix umfasst nur 16 erfasste Kontakte, nicht alle Kontakte der ZE2.</p>
+    </div>
+    <div class="scroll panel"><table id="matrixTable" class="matrix"></table></div>
+    <p class="muted">Die Paarbildung wird automatisch aus denselben Gruppen wie das Mermaid-Diagramm erzeugt. Dadurch bleiben Darstellung und Datengrundlage konsistent. Transitive Verbindungen über eingesetzte Sicherungen, Relais oder externe Kabel werden nicht erzeugt.</p>
+  </section>
+
+  <section id="evidence" role="tabpanel" aria-labelledby="t-evidence" hidden>
+    <h2>Einzelbelege: originaler Wortlaut und Interpretation</h2>
+    <p>Quelle S1: <a href="https://www.a2resource.com/electrical/CE2.html" target="_blank" rel="noopener noreferrer">A2Resource / Central Electric 2 / Tabelle „Fuse Box“</a>. Die Kontaktzeile zusammen mit dem Spaltennamen bildet hier die genaue Fundstelle.</p>
+    <label for="filter">Nach Kontakt, Originaltext oder Gruppe filtern</label>
+    <input id="filter" type="search" placeholder="Zum Beispiel: C/03, Ground, Fuse 14">
+    <p id="filterCount" class="muted" aria-live="polite"></p>
+    <div class="scroll panel">
+      <table class="wide">
+        <thead><tr><th>Kontakt / Fundstelle</th><th>„Outside Fusebox“</th><th>„Inside Fusebox“</th><th>Arbeitsgruppe / Einschränkung</th></tr></thead>
+        <tbody id="evidenceRows"></tbody>
+      </table>
+    </div>
+    <div class="panel">
+      <h3>Was die Quellenangabe nicht belegt</h3>
+      <ul>
+        <li>Die Kabelfarbe ist kein Beweis für eine interne Verbindung und kein Identifikator einer Stromschiene.</li>
+        <li>Eine Funktionsbezeichnung „Fuse 1“ bestimmt noch keine physische Sicherungshalterkammer.</li>
+        <li>Die erfasste Quelle behandelt CE2 modellübergreifend. Der konkrete Grundträgerindex bleibt separat zu prüfen.</li>
+        <li>Eine Quellenbeschreibung kann belastbar zitiert werden, ohne dass ihre gesamte Topologie bereits unabhängig bestätigt ist.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="external" role="tabpanel" aria-labelledby="t-external" hidden>
+    <h2>Explizit externe Verbindungen</h2>
+    <p>Diese Angaben stehen bei A2Resource in der Spalte <strong>„Outside Fusebox“</strong>. Sie werden deshalb aus der nackten Grundträgermatrix ausgeschlossen.</p>
+    <div class="scroll panel">
+      <table class="wide">
+        <thead><tr><th>Verbindung</th><th>Fundstelle S1 / Originalwortlaut</th><th>Einordnung</th></tr></thead>
+        <tbody>
+          <tr><td>B/01 ↔ B/02</td><td>B/01: „To B/2 (Washer Pump Power)“<br>B/02: „To B/1“</td><td>Externe Verbindung laut Quelle. Keine interne Brücke daraus erzeugen.</td></tr>
+          <tr><td>B/03 ↔ D/04</td><td>B/03: „To D/4 (Headlight power) or direct to Headlight Switch“</td><td>Externe Ausführung mit Alternative direkt zum Lichtschalter.</td></tr>
+          <tr><td>B/04 ↔ C/03</td><td>B/04: „To C/3 (Ground) or direct to Ground“</td><td>Externe Masseanbindung; Alternative direkt zur Masse.</td></tr>
+          <tr><td>B/05 ↔ Y/02</td><td>B/05: „To Y/2 (Battery Power)“</td><td>Externe Versorgung. Y/02 hier nur als Ziel dieser Quellenzeile erfasst.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel warning">
+      <strong>Konkrete Fehlervermeidung:</strong> Werden „Outside“ und „Inside“ vermischt, entsteht eine falsche Durchgangsmatrix. Ebenso darf aus der Versorgung eines Relais keine Verbindung zwischen dessen Spulen- und Lastkontakten konstruiert werden.
+    </div>
+    <h3>Bestehendes VSS-Mermaid aus dem Repository</h3>
+    <p>Der abgerufene Originaltext behauptet folgende gerichtete Signalkette. Sie ist hier dokumentiert, aber nicht als korrekte Pinbelegung oder direkte elektrische Verbindung freigegeben:</p>
+    <pre class="panel">Geber (GALA-Hall / ABS-VR)
+      → G1/11 → U1/11 → T28/27
+      → T28/07 → U2/02 → ECU Pin 65</pre>
+    <ul>
+      <li>Ein Signalweg durch das Kombiinstrument ist keine interne ZE2-Brücke.</li>
+      <li>Hall-Geber und induktiver ABS-Geber dürfen ohne belegte Signalaufbereitung nicht als austauschbare Quelle behandelt werden.</li>
+      <li>Die genannten Steckerpins müssen gegen das konkrete Kombiinstrument, Steuergerät und den Stromlaufplan geprüft werden.</li>
+      <li>Die Farb- und Pinangaben aus dieser Datei wurden nicht in die interne Kandidatenmatrix übernommen.</li>
+    </ul>
+  </section>
+
+  <section id="research" role="tabpanel" aria-labelledby="t-research" hidden>
+    <h2>Quellenregister – tatsächlicher Abrufstatus</h2>
+    <div id="sources"></div>
+    <h2>Weiter ausgearbeitet: Daten- und Prüfstruktur</h2>
+    <div class="two">
+      <div class="panel">
+        <h3>1 · Physisches Kontaktinventar</h3>
+        <ul>
+          <li>Teilenummer, Index, Hersteller und Grundträgerfotos.</li>
+          <li>Alle vorhandenen rückseitigen Kontaktkammern.</li>
+          <li>Alle physischen Kammern jedes integrierten Relaissockels.</li>
+          <li>Beide Kontaktseiten jedes Sicherungshalters.</li>
+          <li>Einzelanschlüsse und vorhandene interne Bauteile.</li>
+        </ul>
+        <p>DIN-Klemmenzahl, Relaisaufdruck, Steckplatznummer und physische Sockelkammer bleiben getrennte Felder.</p>
+      </div>
+      <div class="panel">
+        <h3>2 · Verbindungen erfassen</h3>
+        <ul>
+          <li><code>internal_fixed</code>: feste Leiterverbindung im Träger.</li>
+          <li><code>internal_component</code>: Verbindung durch vorhandenes internes Bauteil.</li>
+          <li><code>fuse_inserted</code>: gesteckte Sicherung, zustandsabhängig.</li>
+          <li><code>relay_contact</code>: gestecktes Relais, schaltzustandsabhängig.</li>
+          <li><code>external_wire</code>: außerhalb des Grundträgers.</li>
+          <li><code>description_candidate</code>: vorläufige Quelleninterpretation.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>3 · Belegfelder pro Verbindung</h3>
+        <ul>
+          <li>Kontakt A, Kontakt B beziehungsweise Netzmitglieder.</li>
+          <li>Verbindungsart und erforderlicher Bauteilzustand.</li>
+          <li>Quelle mit exakter Zeile, Seite oder Abbildung.</li>
+          <li>Geltungsbereich: Grundträger und Variante.</li>
+          <li>Originalaussage getrennt von eigener Ableitung.</li>
+          <li>Messwert und Messbedingungen, falls gemessen.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>4 · Vollständigkeit prüfen</h3>
+        <ul>
+          <li>Kontaktinventar vollständig und bildlich referenziert?</li>
+          <li>Jeder Kontakt einem nachgewiesenen Netz oder einem belegten offenen Zustand zugeordnet?</li>
+          <li>Externe Verbindungen von internen Netzen getrennt?</li>
+          <li>Alle gesteckten Bauteile separat modelliert?</li>
+          <li>Widersprüche und Varianten aufgelöst?</li>
+        </ul>
+        <p><strong>Erst danach</strong> ist eine belastbare Vollständigkeitsquote möglich.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Gezielt noch zu recherchieren</h3>
+      <ol>
+        <li>Rest der A2Resource-Tabelle vollständig erfassen; der hier verfügbare Text endet im D-Steckerbereich.</li>
+        <li>Relaissockel-Kammerpläne zur 357 937 039 finden und mit den rückseitigen Kontaktzeilen verknüpfen.</li>
+        <li>Stromlaufplanseiten nach internen festen Verbindungen und Sicherungskontaktseiten auswerten.</li>
+        <li>Club-80–90-Thread samt Abbildungen auf tatsächlichen Grundträger prüfen; keine Übertragung allein aufgrund „late fuse box“.</li>
+        <li>Repository-Daten und deren Ursprungsquellen auswerten, ohne den VSS-Graphen als vollständige Grundträgermatrix zu behandeln.</li>
+        <li>Weitere Sprachräume und Foren systematisch erschließen. Diese Recherche ist bislang nicht abgeschlossen.</li>
+      </ol>
+    </div>
+    <details>
+      <summary>Maschinenlesbare Arbeitsdaten – JSON, nur Anzeige</summary>
+      <textarea id="jsonData" aria-label="JSON Arbeitsdaten" readonly spellcheck="false"></textarea>
+    </details>
+  </section>
+  <footer>
+    Kein GitHub-Commit ausgeführt. Keine Messergebnisse erfunden. Kein unbekanntes Kontaktpaar als offen bewertet.
+    Mermaid wird über ein öffentliches CDN geladen; bei fehlendem Netzwerk bleiben Tabellen, Mindmap-Text und Quelltexte benutzbar.
+    Messungen nur am vollständig isolierten, spannungsfreien Grundträger; Topologie ist kein Strombelastbarkeitsnachweis.
+  </footer>
+</main>
+<script>
+const sourceURL="https://www.a2resource.com/electrical/CE2.html";
+const groups=[
+  {id:"GND",label:"Hauptmasse – Teilbestand",note:"Gleiche interne Beschreibung; vollständige Netzmitgliedschaft nicht erfasst."},
+  {id:"F1",label:"Abblendlicht links / F1",note:"Sicherungskontaktseite noch nicht physisch bestimmt."},
+  {id:"TACH",label:"Drehzahlsignal",note:"Beschreibungsgleichheit; Variantenhinweis bei A2/06."},
+  {id:"ALT",label:"Generator-Erregung",note:"Funktional abgeleitete Gruppierung; nicht identischer Wortlaut."},
+  {id:"F4",label:"Run-Versorgung / F4",note:"Sicherungskontaktseite noch nicht physisch bestimmt."},
+  {id:"F14",label:"Start/Run-Versorgung / F14",note:"Sicherungskontaktseite noch nicht physisch bestimmt."}
+];
+const contacts=[
+  {pin:"-Z2",group:"GND",outside:"Battery Ground",inside:"Main Fusebox Ground"},
+  {pin:"A1/03",group:"GND",outside:"-",inside:"Main Fusebox Ground"},
+  {pin:"A2/05",group:"GND",outside:"Ground for Lights, Right Front",inside:"Main Fusebox Ground"},
+  {pin:"C/03",group:"GND",outside:"From B/4",inside:"Main Fusebox Ground"},
+  {pin:"C/04",group:"GND",outside:"Radiator Cooling Fan After-Run Control Unit (Corrado)",inside:"Main Fusebox Ground"},
+  {pin:"C/05",group:"GND",outside:"Low Coolant Level Sender",inside:"Main Fusebox Ground"},
+  {pin:"A1/01",group:"F1",outside:"Headlight, Left",inside:"Headlight, Left, Fuse 1"},
+  {pin:"D/02",group:"F1",outside:"-",inside:"Headlight, Left, Fuse 1"},
+  {pin:"A2/06",group:"TACH",outside:"Alternator (W Terminal, Diesel only)",inside:"Tachometer"},
+  {pin:"D/06",group:"TACH",outside:"-",inside:"Tachometer"},
+  {pin:"A2/01",group:"ALT",outside:"Alternator (Exciter Wire) (Mk2, others 1990 only)",inside:"Battery Light"},
+  {pin:"D/01",group:"ALT",outside:"-",inside:"Alternator (Exciter Wire)"},
+  {pin:"D/03",group:"F4",outside:'Heated Outside Mirrors (models with "always on" mirrors)',inside:"Main Fusebox Run Power, Fuse 4"},
+  {pin:"D/05",group:"F4",outside:"Glove Compartment Light, Power Sunroof Switch",inside:"Main Fusebox Run Power, Fuse 4"},
+  {pin:"D/09",group:"F14",outside:"Heated Washer Nozzles, Heated Seats, Power Window Relay",inside:"Main Fusebox Start/Run Power, Fuse 14"},
+  {pin:"D/11",group:"F14",outside:"Cruise Control Switch (manual transmission only), Power Mirror Switch, E/2 (Cluster Power, 1991+ Corrado, Passat, all other models)",inside:"Main Fusebox Start/Run Power, Fuse 14"}
+];
+const external=[
+  {a:"B/01",b:"B/02",type:"external_wire",source:"S1, Outside Fusebox, B/01 und B/02"},
+  {a:"B/03",b:"D/04",type:"external_wire",alternative:"direct to Headlight Switch",source:"S1, Outside Fusebox, B/03"},
+  {a:"B/04",b:"C/03",type:"external_wire",alternative:"direct to Ground",source:"S1, Outside Fusebox, B/04"},
+  {a:"B/05",b:"Y/02",type:"external_wire",source:"S1, Outside Fusebox, B/05"}
+];
+const sources=[
+  ["S1 · A2Resource · Central Electric 2",sourceURL,"Teiltext abgerufen: vom Tabellenanfang bis in den D-Steckerbereich. 16 Kontaktbeschreibungen und vier externe Verbindungen oben nachvollziehbar extrahiert. Kein vollständiger Relaissockelplan aus diesem Ausschnitt."],
+  ["S2 · SAGA-ECM · Live-App","https://saga-ecm.github.io/VW-Golf-MK2-VR6-AAA-ZE2-ABS-Custom-Wheelspeed/","Startseitentext abgerufen. Nennt 27 Steuergeräte, 755 Pins, 467 Knoten und 135 Kanten. Diese Angaben beschreiben den Projektumfang, nicht die Vollständigkeit der ZE2-Kupfermatrix."],
+  ["S3 · SAGA-ECM · Repository","https://github.com/saga-ecm/VW-Golf-MK2-VR6-AAA-ZE2-ABS-Custom-Wheelspeed","Dateiverzeichnis und README abgerufen. Repository-Beschreibung: only for testing. sg-daten.js und graph-kanten.js sind in diesem Ausbau nicht inhaltlich ausgewertet."],
+  ["S4 · Original mermaid.mermaid","https://raw.githubusercontent.com/saga-ecm/VW-Golf-MK2-VR6-AAA-ZE2-ABS-Custom-Wheelspeed/main/mermaid.mermaid","VSS-Graphtext abgerufen. Gerichteter Signalweg, kein vollständiger interner ZE2-Netzplan. Keine elektrische Validierung der genannten Pins."],
+  ["S5 · mindmap.txt","https://raw.githubusercontent.com/saga-ecm/VW-Golf-MK2-VR6-AAA-ZE2-ABS-Custom-Wheelspeed/main/mindmap.txt","Abgerufener Anfang behandelt Strategie und Algorithmen eines VR6-XDF-Editors. Kein ZE2-Kontaktinventar."],
+  ["S6 · mindmapv01.txt","https://raw.githubusercontent.com/saga-ecm/VW-Golf-MK2-VR6-AAA-ZE2-ABS-Custom-Wheelspeed/main/mindmapv01.txt","Abgerufener Anfang behandelt den Phase-1-Stand desselben XDF-Themas. Dortige Fertigmeldungen nicht unabhängig geprüft."],
+  ["S7 · T3-Pedia · Zentralelektrik","https://www.t3-pedia.de/index.php?title=Zentralelektrik","Teiltext abgerufen. Beschreibt T3-Generationen. Keine interne Verbindung für Zielgrundträger 357 937 039 daraus übernommen. Generationsbezeichnungen nicht modellübergreifend gleichsetzen."],
+  ["S8 · Club 80–90 · Late Fuse Box Internal Wiring Diagram","https://club8090.co.uk/forum/viewtopic.php?t=175168","Threadanfang abgerufen. Fragestellung zielt ausdrücklich auf interne Verbindung statt Relaisfunktion. Tabellen und Schaltbilder im verfügbaren Ausschnitt nicht enthalten; Grundträgerzuordnung offen."],
+  ["S9 · Scribd · fuse box ce2","https://www.scribd.com/document/520017984/fuse-box-ce2","Dokumenthülle abgerufen, zehn Seiten angegeben. Titel/Beschreibung ausdrücklich AI-enhanced. Der eigentliche Dokumentinhalt war nicht verfügbar; daher kein Verbindungsbeleg."],
+  ["S10 · VW Golf Mk2 Owners Club · CE2","https://www.vwgolfmk2.co.uk/clubforum/index.php?topic=57.0","Threadanfang mit Sicherungsfunktionen abgerufen. Aus diesem Teil keine interne Sockelkontaktverbindung extrahiert."],
+  ["S11 · VW T4 Forum · Fusebox connections","https://www.vwt4forum.co.uk/threads/fusebox-connections-how-does-it-actually-connect.451643/","Threadanfang abgerufen. Fragt nach G1-Anschlüssen und internen Messingverbindungen. Keine vollständige Matrix im verfügbaren Ausschnitt."],
+  ["S12 · VWVortex · Golf GTI Vr6 fuse box","https://www.vwvortex.com/threads/golf-gti-vr6-fuse-box.9254819/","Threadanfang abgerufen, Vergleich 1996/1998 und Verweis auf A2Resource. Spätere Aussagen zu internen Kontakten noch nicht geprüft."],
+  ["S13 · VWVortex · CE2 Help needed","https://www.vwvortex.com/threads/ce2-help-needed.9227061/","Threadanfang abgerufen, betrifft Z1 und Y4. Keine Kontaktbrücke aus dem unvollständigen Ausschnitt übernommen."],
+  ["S14 · Mikrocontroller.net · Drehzahlsignal Adapter","https://www.mikrocontroller.net/topic/438686","Nur Suchtreffer. Kontext Golf 2, alte ZE und Signaladapter. Kein Nachweis einer internen CE2-Matrix. Weitere Mikrocontroller-Forenrecherche offen."]
+];
+const mindSource=`mindmap
+  root((ZE2 CE2))
+    Ziel
+      Grundtraeger 357 937 039
+      Index und Hersteller offen
+      Interne Kontakte statt Funktionen
+    Quellenbefund
+      A2Resource
+        Inside und Outside getrennt
+        16 interne Beschreibungen
+        6 vorlaeufige Gruppen
+        4 externe Verbindungen
+      GitHub
+        VSS Graph getrennt pruefen
+        XDF Mindmaps archiviert belassen
+      T3
+        Hardwarezuordnung vor Uebernahme
+    Kontaktinventar
+      Rueckseitige Kammern
+      Relaissockelkammern
+      Beide Sicherungskontakte
+      Einzelanschluesse
+    Topologie
+      Feste Leiterverbindungen
+      Interne Bauteile
+      Gesteckte Sicherungen
+      Relais Schaltzustaende
+      Externe Leitungen
+    Verifikation
+      Quelle und Fundstelle
+      Hardwarevariante
+      Messprotokoll
+      Unbekannt ist nicht offen
+    Noch offen
+      Sockelkontaktpaare
+      Vollstaendige Stromschienen
+      Gesamtes Kontaktinventar
+      Vollstaendigkeitsnachweis`;
+let netSource='flowchart LR\n';
+contacts.forEach((c,i)=>{netSource+=`  P${i}["${c.pin}"]\n`;});
+groups.forEach(g=>{
+  netSource+=`  ${g.id}["${g.label}"]\n`;
+  contacts.forEach((c,i)=>{
+    if(c.group===g.id) netSource+=`  P${i} -.-> ${g.id}\n`;
+  });
+});
+netSource+='  classDef provisional fill:#fff1d6,stroke:#ac7519,color:#38290d\n';
+netSource+='  class '+groups.map(g=>g.id).join(',')+' provisional\n';
+document.getElementById("mindCode").value=mindSource;
+document.getElementById("netCode").value=netSource;
+const groupMap=Object.fromEntries(groups.map(g=>[g.id,g]));
+function cell(tag,text){const e=document.createElement(tag);e.textContent=text;return e;}
+function evidence(){
+  const q=document.getElementById("filter").value.toLowerCase();
+  const subset=contacts.filter(c=>JSON.stringify(c).toLowerCase().includes(q)||groupMap[c.group].label.toLowerCase().includes(q));
+  const body=document.getElementById("evidenceRows");body.replaceChildren();
+  subset.forEach(c=>{
+    const tr=document.createElement("tr");
+    tr.append(cell("td",c.pin+" · S1, Zeile "+c.pin),cell("td",c.outside),cell("td",c.inside),cell("td",groupMap[c.group].label+" — "+groupMap[c.group].note));
+    body.append(tr);
+  });
+  document.getElementById("filterCount").textContent=subset.length+" von "+contacts.length+" Datensätzen";
+}
+evidence();
+document.getElementById("filter").addEventListener("input",evidence);
+const matrix=document.getElementById("matrixTable");
+const head=document.createElement("thead"),hr=document.createElement("tr");
+hr.append(cell("th","Kontakt"));
+contacts.forEach(c=>hr.append(cell("th",c.pin)));
+head.append(hr);matrix.append(head);
+const mb=document.createElement("tbody");
+contacts.forEach((a,i)=>{
+  const tr=document.createElement("tr");const label=cell("th",a.pin);label.scope="row";tr.append(label);
+  contacts.forEach((b,j)=>{
+    const isSelf=i===j,isCandidate=!isSelf&&a.group===b.group;
+    const td=cell("td",isSelf?"—":isCandidate?"K":"?");
+    td.className=isSelf?"self":isCandidate?"candidate":"unknown";
+    td.title=a.pin+" ↔ "+b.pin+": "+(isSelf?"identischer Kontakt":isCandidate?"gemeinsamer Zuordnungskandidat; keine bestätigte Kupferbrücke":"unbekannt; keine Aussage über Trennung");
+    tr.append(td);
+  });mb.append(tr);
+});matrix.append(mb);
+const sourceBox=document.getElementById("sources");
+sources.forEach(([name,url,description])=>{
+  const p=document.createElement("div");p.className="panel";
+  const a=document.createElement("a");a.href=url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=name;
+  p.append(a,cell("p",description));sourceBox.append(p);
+});
+const workData={
+  schema:"ze2-research-0.2",
+  target:{part_number:"357 937 039",basis:"user_target",index:null,manufacturer:null},
+  complete:false,
+  direct_relay_socket_pairs_verified:0,
+  groups:groups.map(g=>({...g,status:"provisional_group",members:contacts.filter(c=>c.group===g.id).map(c=>c.pin)})),
+  claims:contacts.map(c=>({...c,source:sourceURL,locator:"Fuse Box / "+c.pin+" / Inside Fusebox",type:"source_description",physical_topology_verified:false})),
+  external_edges:external,
+  semantics:{K:"description_candidate","?":"unknown","—":"same_contact"}
+};
+document.getElementById("jsonData").value=JSON.stringify(workData,null,2);
+
+let mermaidLib=null;
+const rendered=new Set();
+async function draw(id,source){
+  if(rendered.has(id))return;
+  const box=document.getElementById(id);
+  if(!mermaidLib){
+    box.replaceChildren(cell("pre",source));
+    box.firstChild.className="fallback";return;
+  }
+  try{
+    const result=await mermaidLib.render("svg_"+id,source);
+    box.innerHTML=result.svg;
+    if(result.bindFunctions)result.bindFunctions(box);
+    rendered.add(id);
+  }catch(error){
+    box.replaceChildren(cell("p","Diagramm konnte nicht gerendert werden. Der vollständige Quelltext bleibt verfügbar."),cell("pre",source));
+  }
+}
+function activate(id){
+  document.querySelectorAll("[data-tab]").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===id)));
+  document.querySelectorAll('[role="tabpanel"]').forEach(s=>s.hidden=s.id!==id);
+  if(id==="mind")draw("mindGraph",mindSource);
+  if(id==="net")draw("netGraph",netSource);
+}
+document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>activate(b.dataset.tab)));
+draw("mindGraph",mindSource);
+import("https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs").then(module=>{
+  mermaidLib=module.default;
+  mermaidLib.initialize({startOnLoad:false,securityLevel:"strict",theme:"default",flowchart:{useMaxWidth:false},mindmap:{useMaxWidth:false}});
+  const current=document.querySelector('[data-tab][aria-selected="true"]').dataset.tab;
+  if(current==="mind")draw("mindGraph",mindSource);
+  if(current==="net")draw("netGraph",netSource);
+}).catch(()=>{});
+</script>
+</body>
+</html>

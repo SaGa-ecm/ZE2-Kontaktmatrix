@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZE2 – interne Sockelkontaktmatrix: Belegstand</title>
+<style>
+  :root{color-scheme:dark;--bg:#10151d;--panel:#19222e;--border:#344255;--text:#e6edf5;--muted:#adbbcc;--accent:#82c6ff;--warn:#ffd08a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,sans-serif}
+  main{max-width:1180px;margin:auto;padding:28px 20px 60px}
+  h1{font-size:clamp(25px,4vw,38px);line-height:1.2;margin:10px 0 18px}
+  h2{font-size:21px}h3{font-size:17px}
+  p{max-width:95ch}
+  .eyebrow{letter-spacing:.12em;color:var(--accent);font-size:12px;text-transform:uppercase}
+  .panel,.stat{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:20px;margin:18px 0}
+  .warning{border-left:4px solid var(--warn)}
+  .warning strong,.tag{color:var(--warn)}
+  .muted,small{color:var(--muted)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+  .stat{margin:0}.number{font-size:28px;font-weight:750;display:block}
+  nav{display:flex;gap:8px;flex-wrap:wrap;margin:25px 0}
+  button,input{font:inherit;border:1px solid var(--border);border-radius:7px;padding:10px 14px;background:#121b27;color:var(--text)}
+  button{cursor:pointer}button[aria-selected="true"]{background:#234563;border-color:var(--accent)}
+  button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  input{width:100%;margin:5px 0 16px}
+  a{color:var(--accent);overflow-wrap:anywhere}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--border);padding:13px 10px}
+  th{color:var(--muted);font-weight:600}
+  .scroll{overflow:auto}.scroll table{min-width:720px}
+  .tag{font-size:12px;border:1px solid #655136;border-radius:5px;padding:3px 7px;display:inline-block}
+  code{color:#b8dfff;background:#111a25;border-radius:4px;padding:2px 5px}
+  li{margin:7px 0}
+  [hidden]{display:none!important}
+  .empty{padding:35px 20px;text-align:center;border:1px dashed var(--border);border-radius:8px}
+  footer{margin-top:30px;color:var(--muted);font-size:13px}
+  @media print{
+    :root{color-scheme:light}
+    body{background:white;color:black}
+    .panel,.stat{background:white;border-color:#aaa}
+    nav,input,.print{display:none}
+    section[hidden]{display:block!important}
+    a,.muted,small,th{color:#333}
+    .scroll{overflow:visible}.scroll table{min-width:0}
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">VW Golf 2 · ZE2 / CE2 · interne Elektrik</div>
+    <h1>Interne Sockelkontaktmatrix</h1>
+    <p class="muted">Quellenprüfung und Abdeckungsstatus — keine Relaisfunktions- oder Sicherungsbelegungsliste.</p>
+  </header>
+
+  <div class="panel warning">
+    <strong>Status: nicht vollständig ermittelt — nicht als Verdrahtungsgrundlage verwenden.</strong>
+    <p>Im vorliegenden Rechercheergebnis ist keine einzelne interne Kontaktverbindung mit einer ausreichend präzisen Fundstelle verifiziert. Deshalb enthält dieses Artefakt keine behaupteten Verbindungen. Das bedeutet ausdrücklich nicht, dass die ZE2 keine internen Verbindungen besitzt.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="number">0</span>hier verifizierte interne Verbindungen</div>
+    <div class="stat"><span class="number">Unbekannt</span>vollständiger physischer Kontaktbestand</div>
+    <div class="stat"><span class="number">Offen</span>Abdeckung aller internen Netze</div>
+    <div class="stat"><span class="number">Ungeklärt</span>konkrete Teilenummer / Index</div>
+  </div>
+
+  <nav role="tablist" aria-label="Ansichten">
+    <button id="tab-matrix" role="tab" aria-controls="matrix" aria-selected="true" data-view="matrix">Kontaktmatrix</button>
+    <button id="tab-sources" role="tab" aria-controls="sources" aria-selected="false" data-view="sources">Quellen & Fundstellen</button>
+    <button id="tab-scope" role="tab" aria-controls="scope" aria-selected="false" data-view="scope">Vollständigkeitskriterien</button>
+    <button id="tab-gaps" role="tab" aria-controls="gaps" aria-selected="false" data-view="gaps">Offene Recherche</button>
+  </nav>
+
+  <section id="matrix" role="tabpanel" aria-labelledby="tab-matrix">
+    <h2>Interne Verbindungen</h2>
+    <p>Erforderlich ist die Zuordnung physischer Kontakte zu internen elektrischen Netzen. Relaisaufdruck, Relaisfunktion und Verbraucherbezeichnung ersetzen diese Zuordnung nicht.</p>
+    <div class="scroll panel">
+      <table>
+        <thead><tr><th>Kontakt A</th><th>Kontakt B / Netz</th><th>Verbindungsart</th><th>Bauteilzustand</th><th>Exakter Beleg</th></tr></thead>
+        <tbody><tr><td colspan="5" class="empty">Keine ausreichend belegten Datensätze verfügbar.<br>Keine Platzhalterkontakte und keine geschätzten Brücken eingefügt.</td></tr></tbody>
+      </table>
+    </div>
+    <div class="panel">
+      <h3>Entscheidende Unterscheidungen</h3>
+      <ul>
+        <li><strong>Direkte interne Verbindung:</strong> leitende Verbindung innerhalb des Grundträgers ohne gestecktes Relais, Sicherung oder externe Leitung.</li>
+        <li><strong>Verbindung über Sicherung:</strong> zwei physische Sicherungskontakte und eine separate, vom Bestückungszustand abhängige Verbindung.</li>
+        <li><strong>Verbindung über Relais:</strong> separate Kontakte und zustandsabhängige Verbindungen des gesteckten Bauteils, keine feste Brücke des Grundträgers.</li>
+        <li><strong>Externe Verbindung:</strong> Kabelbaum, externe Brücke oder Zusatzträger; nicht als Leiterbahn innerhalb der ZE2 auszugeben.</li>
+      </ul>
+      <p class="muted">Fehlender Eintrag = unbekannt. Fehlender Eintrag ≠ nachgewiesen offen. Eine binäre Matrix aus unvollständigen Daten würde eine falsche Sicherheit erzeugen.</p>
+    </div>
+  </section>
+
+  <section id="sources" role="tabpanel" aria-labelledby="tab-sources" hidden>
+    <h2>Quellenregister</h2>
+    <p>„Abgerufen“ bezeichnet nur den tatsächlich verfügbaren Inhalt. Ein Suchtreffer ist kein vollständig gelesener oder technisch bestätigter Beleg.</p>
+    <label for="filter">Quellen durchsuchen</label>
+    <input id="filter" type="search" placeholder="Zum Beispiel: GitHub, intern, Forum, abgeschnitten">
+    <p id="count" class="muted" aria-live="polite"></p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Quelle</th><th>Prüfstatus</th><th>Tatsächlicher Befund</th><th>Beleggrenze</th></tr></thead>
+        <tbody id="sourceRows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="scope" role="tabpanel" aria-labelledby="tab-scope" hidden>
+    <h2>Was „vollständig und belegbar“ hier voraussetzt</h2>
+    <div class="panel">
+      <ol>
+        <li><strong>Hardware identifizieren:</strong> Teilenummer, Index und gegebenenfalls Herstellerstand dokumentieren. Übertragbarkeit anderer CE2-Anwendungen separat belegen.</li>
+        <li><strong>Kontaktinventar erfassen:</strong> jeden tatsächlich vorhandenen Kontakt der rückseitigen Stecker, der integrierten Relaissockel, der Sicherungshalter und weiterer Grundträgeranschlüsse aufnehmen.</li>
+        <li><strong>Ansicht festlegen:</strong> Blickrichtung und Orientierung dokumentieren; Front- und Rückansicht nicht ungekennzeichnet spiegeln.</li>
+        <li><strong>Kontaktbezeichnungen zuordnen:</strong> physische Kammernummer, Stromlaufplanbezeichnung und gegebenenfalls DIN-Anschlusskennzeichnung getrennt erfassen und ihre Zuordnung belegen.</li>
+        <li><strong>Grundzustand definieren:</strong> für die reine Trägermatrix alle abziehbaren Bauteile, Brücken und externen Kabelverbindungen entfernen; verbleibende interne Bauteile gesondert dokumentieren.</li>
+        <li><strong>Interne Netze vollständig erfassen:</strong> alle Kontakte eines zusammenhängenden leitenden Netzes aufführen — nicht nur ausgewählte Signalpfade.</li>
+        <li><strong>Jede Aussage referenzieren:</strong> Quelle, Seite beziehungsweise Abbildung oder Messprotokoll sowie betroffener Hardwarestand.</li>
+        <li><strong>Offene Kontakte prüfen:</strong> „nicht verbunden“ benötigt ebenfalls eine vollständige Prüfung im definierten Grundzustand. Unbekannte Paare bleiben unbekannt.</li>
+      </ol>
+    </div>
+    <h3>Geeignete Datensatzstruktur</h3>
+    <div class="scroll panel">
+      <table>
+        <thead><tr><th>Feld</th><th>Inhalt</th></tr></thead>
+        <tbody>
+          <tr><td><code>hardware</code></td><td>Teilenummer, Index, Hersteller, Identifikationsfoto</td></tr>
+          <tr><td><code>contact</code></td><td>Eindeutige physische Kontakt-ID, Ansicht und Positionsbeleg</td></tr>
+          <tr><td><code>net</code></td><td>Vollständige Kontaktmenge eines festen internen Netzes</td></tr>
+          <tr><td><code>conditional_edge</code></td><td>Separat erfasste Verbindung durch Sicherung, Relais oder Brücke samt Zustand</td></tr>
+          <tr><td><code>evidence</code></td><td>URL oder Dokument-ID, genaue Fundstelle, Belegart und Geltungsbereich</td></tr>
+          <tr><td><code>status</code></td><td>Belegt / abgeleitet / widersprüchlich / unbekannt; Messungen mit Protokoll</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Aus vollständigen Kontaktmengen je Netz lässt sich anschließend eine paarweise Kontaktmatrix erzeugen. Voraussetzung bleibt ein vollständiges und nachgewiesenes Kontaktinventar.</p>
+  </section>
+
+  <section id="gaps" role="tabpanel" aria-labelledby="tab-gaps" hidden>
+    <h2>Offene Recherche — nicht als erledigt dargestellt</h2>
+    <div class="panel warning">
+      <p><strong>Keine abgeschlossene weltweite Vollrecherche.</strong> Durchgeführt wurden Quellenabrufe zur genannten GitHub-Seite sowie deutsch- und englischsprachige Websuchen. Mikrocontroller-Foren, andere Sprachräume und sämtliche relevanten GitHub-Projekte wurden nicht systematisch vollständig geprüft.</p>
+    </div>
+    <ul>
+      <li>Vollständige Dateien des genannten Repositorys auswerten und interne ZE2-Kanten von externen Fahrzeugverbindungen trennen.</li>
+      <li>Quellen hinter den Datensätzen bis zu konkreten Stromlaufplanseiten oder nachvollziehbaren Messungen zurückverfolgen.</li>
+      <li>Die aufgeführten Forenthemen vollständig lesen und verlinkte Pläne, Bilder sowie Anhänge prüfen.</li>
+      <li>Weitere Suchräume: deutschsprachige Elektronik- und VW-Foren, englischsprachige CE2-Umbauforen, polnische und russischsprachige Reparaturforen sowie GitHub-Code- und Dokumentensuche.</li>
+      <li>Hersteller-Stromlaufpläne auf interne Kontaktverbindungen prüfen. Ein einzelner fahrzeugbezogener Stromlaufplan beweist nicht automatisch sämtliche vorhandenen Kontakte und internen Netze.</li>
+      <li>Falls Dokumentation unvollständig bleibt: isolierten, spannungsfreien Grundträger kontaktweise vermessen und Hardwarestand, Kontaktansicht, Messwerte und Netzgruppen protokollieren.</li>
+    </ul>
+    <p class="muted">Eine Durchgangsprüfung darf nicht am angeschlossenen oder unter Spannung stehenden Fahrzeugnetz erfolgen. Eine vollständige Verbindungstopologie belegt zudem nicht die Strombelastbarkeit einzelner Kontakte.</p>
+  </section>
+
+  <footer>
+    Belegstand dieses Artefakts: keine verifizierte interne Vollmatrix.
+    Quellenzahlen oder Pinzahlen eines Gesamtfahrzeugprojekts werden nicht als ZE2-Abdeckungsquote verwendet.
+    <p><button class="print" id="print">Belegstand drucken</button></p>
+  </footer>
+</main>
+<script>
+  const sources=[
+    {
+      name:"SAGA-ECM · Live-Pinout-Referenz",
+      url:"https://saga-ecm.github.io/VW-Golf-MK2-VR6-AAA-ZE2-ABS-Custom-Wheelspeed/",
+      status:"Startseite abgerufen",
+      finding:"Fahrzeug-/Steuergeräte-Assistent; nennt 27 Steuergeräte, 755 Pins, 467 Knoten und 135 Kanten.",
+      limit:"Im abgerufenen Startseitentext keine interne Sockelkontaktmatrix. Gesamtprojektzahlen beweisen keine vollständige ZE2-Topologie."
+    },
+    {
+      name:"SAGA-ECM · GitHub-Repository / README",
+      url:"https://github.com/saga-ecm/VW-Golf-MK2-VR6-AAA-ZE2-ABS-Custom-Wheelspeed",
+      status:"Repository-Übersicht abgerufen",
+      finding:"Nennt Steckeransichten, Sicherungs-/Relaislisten, Steuergerätedaten und einen Herkunft-/Verlauf-Graphen. Beschreibung: „only for testing“.",
+      limit:"Ein Verzeichnis oder README belegt keine konkrete interne Verbindung. „Alle Pins“ im Projektumfang ist kein Nachweis aller physischen Grundträgerkontakte."
+    },
+    {
+      name:"SAGA-ECM · sg-daten.js",
+      url:"https://raw.githubusercontent.com/saga-ecm/VW-Golf-MK2-VR6-AAA-ZE2-ABS-Custom-Wheelspeed/main/sg-daten.js",
+      status:"Dateiausschnitt abgerufen",
+      finding:"Sichtbarer Anfang enthält Projektmetadaten und mehrere Steuergerätebeschreibungen.",
+      limit:"Ausgabe abgeschnitten; vollständiger ZE2-Datenteil nicht geprüft. Keine Aussage, die komplette Datei enthalte oder enthalte nicht die gesuchte Matrix."
+    },
+    {
+      name:"SAGA-ECM · graph-kanten.js",
+      url:"https://raw.githubusercontent.com/saga-ecm/VW-Golf-MK2-VR6-AAA-ZE2-ABS-Custom-Wheelspeed/main/graph-kanten.js",
+      status:"Dateiausschnitt abgerufen",
+      finding:"Sichtbarer Anfang enthält unter anderem ABS-Knoten mit Signal- und Anschlussbeschreibungen.",
+      limit:"Ausgabe abgeschnitten, Kantenbestand nicht vollständig geprüft. Keine belastbare interne ZE2-Kante aus diesem Ausschnitt extrahiert."
+    },
+    {
+      name:"VW Golf Mk1 Owners Club · Has anyone removed/rewired the fusebox",
+      url:"https://vwgolfmk1.org.uk/forum/index.php?page=topicview&id=electrics_2%2Fhas-anyone-removed",
+      status:"Nur Suchtreffer",
+      finding:"Suchauszug erwähnt „internal traces on the fusebox“ im Umfeld eines CE1-/CE2-Vergleichs.",
+      limit:"Thread und Anhänge nicht gelesen. Unklar, welcher Grundträger und welcher Dokumentationsumfang tatsächlich gemeint sind."
+    },
+    {
+      name:"VW Golf Mk1 Owners Club · Ceramic to CE2 fusebox conversion, indicator wiring",
+      url:"https://vwgolfmk1.org.uk/forum/index.php?page=topicview&id=electrics_2%2Fceramic-to-ce2-fusebox",
+      status:"Nur Suchtreffer",
+      finding:"Suchauszug erwähnt eine interne Verbindung eines älteren Sicherungskastens und einen CE2-Anschluss im Umbaukontext.",
+      limit:"Kein Beleg für eine vollständige CE2-Matrix. Anschlussangaben unterschiedlicher Sicherungskastengenerationen dürfen nicht vermischt werden."
+    },
+    {
+      name:"Club GTI · SEAT Ibiza AQX/AYP 20v → CE2 + general fusebox plug reference guide",
+      url:"https://www.clubgti.com/forums/index.php?threads/seat-ibiza-aqx-ayp-20v-ce2-general-fusebox-plug-reference-guide.285928/",
+      status:"Nur Suchtreffer",
+      finding:"CE2-Steckerreferenz im Kontext eines Motorumbaus.",
+      limit:"Thread nicht gelesen; eine Steckerreferenz ist nicht automatisch eine interne Grundträgermatrix."
+    }
+  ];
+  const rows=document.getElementById("sourceRows");
+  function render(){
+    const q=document.getElementById("filter").value.toLocaleLowerCase("de");
+    rows.replaceChildren();
+    const filtered=sources.filter(s=>Object.values(s).join(" ").toLocaleLowerCase("de").includes(q));
+    for(const s of filtered){
+      const tr=document.createElement("tr");
+      const name=document.createElement("td");
+      const a=document.createElement("a");
+      a.textContent=s.name;a.href=s.url;a.target="_blank";a.rel="noopener noreferrer";
+      name.append(a);tr.append(name);
+      for(const field of ["status","finding","limit"]){
+        const td=document.createElement("td");
+        if(field==="status"){
+          const badge=document.createElement("span");
+          badge.className="tag";badge.textContent=s[field];td.append(badge);
+        }else td.textContent=s[field];
+        tr.append(td);
+      }
+      rows.append(tr);
+    }
+    document.getElementById("count").textContent=filtered.length+" von "+sources.length+" Quellenansätzen angezeigt";
+  }
+  document.querySelectorAll("[data-view]").forEach(button=>{
+    button.addEventListener("click",()=>{
+      document.querySelectorAll("[data-view]").forEach(b=>b.setAttribute("aria-selected",String(b===button)));
+      document.querySelectorAll('[role="tabpanel"]').forEach(s=>s.hidden=s.id!==button.dataset.view);
+    });
+  });
+  document.getElementById("filter").addEventListener("input",render);
+  document.getElementById("print").addEventListener("click",()=>window.print());
+  render();
+</script>
+</body>
+</html>

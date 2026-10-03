@@ -967,3 +967,1194 @@ Nächster notwendiger Schritt: das gespeicherte JPEG hier als Bildanhang hinzuf�
 Die aktualisierte Mindmap und das Mermaid-Diagramm bleiben fachlich gültig: Bildquelle lokalisiert, visuelle Prüfung offen; Variantenfrage getrennt; keine neue bestätigte Sockelkante.
 
 ze2 matrix fertigstellen
+
+Monica
+GPT-6 Astra
+25 Sekunden nachgedacht
+Linkleser
+3 Sekunden nachgedacht
+Linkleser
+0 Sekunden nachgedacht
+Denkprozess
+
+
+Monica
+GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+Searching: CE2 fusebox internal connections pin relay fuse internal diagram
+Basierend auf 9 Suchquellen
+
+13 Sekunden nachgedacht
+Call Skill: Google Search
+0 Sekunden nachgedacht
+Denkprozess
+
+Eine vollständige interne ZE2-Matrix kann ich mit den vorliegenden Belegen nicht seriös als „fertig“ freigeben. Es fehlen weiterhin die physischen Relaissockelzuordnungen, die Sicherungskontakte und große Teile der internen Leiterverbindungen. Die zuletzt geprüften Tabellen liefern überwiegend Steckerfunktionen und Relaisbestückungen, nicht diese Verbindungen.
+
+Hier ist die konsolidierte Arbeitsmatrix – mit eindeutigen Statuswerten statt erfundener Verbindungen. Sie ersetzt die bisherige schematische Darstellung nicht durch eine vermeintlich fertige Verdrahtung.
+
+Was zum tatsächlichen Fertigstellen fehlt, ist nicht die Darstellung, sondern der elektrische Nachweis. Dafür braucht es entweder einen passenden vollständigen internen Schaltplan oder ein systematisches Messprotokoll des identifizierten, spannungsfreien Grundträgers. Das einzelne J17-Bild könnte einen Teilbereich ergänzen – es würde die gesamte ZE2-Matrix nicht vervollständigen.
+
+## Neue Belege für die ZE2-Arbeitsmatrix
+
+Ich habe die verfügbaren Quellen weiter geprüft. **Neu hinzugekommen ist vor allem ein ausdrücklicher Bezug der T4-Dokumentation zur Zielteilenummer `357 937 039`.** Außerdem konnte ich die beiden internen Tabellenreferenzen erneut selbst lesen.
+
+Eine vollständige interne Verdrahtung oder eine eindeutig nummerierte Sockelkontaktzeichnung habe ich dabei **nicht erschlossen**.
+
+### 1. Zielteilenummer: T4-Quellen sind jetzt konkreter zuzuordnen
+
+Im Abschnitt **„Teilenummer“** der T4-Wiki steht ausdrücklich:
+
+> „Die ZE wurde während der Bauzeit des T4 nicht verändert.“
+
+Die folgende Tabelle nennt **`357 937 039` – Zentralelektrik**. Anschließend heißt es:
+
+> „Einige andere VW-Modelle (z.B. Passat) besitzen eine baugleiche Zentralelektrik.“
+
+**Quelle:** [T4-Wiki, Abschnitt „Teilenummer“, direkt abgerufener Quelltext](https://www.t4-wiki.de/w/index.php?title=Zentralelektrik&action=raw&section=5)
+
+**Auswirkung auf die Arbeitsmatrix:**
+
+- Die T4-Unterlagen sind nicht mehr nur ein unspezifischer CE2-Vergleich: Die Quelle nennt die **Zielteilenummer ausdrücklich**.
+- Das ist ein **quellenseitiger Hardwarebezug**, keine Prüfung deines konkreten Grundträgers.
+- Die frühere Forumsbehauptung einer internen Änderung bleibt separat offen. Die Wiki-Aussage widerlegt keine außerhalb ihres T4-Geltungsbereichs liegende Variante.
+
+### 2. Q1 und Q2 erneut direkt gelesen
+
+Im diesmal längeren A2Resource-Abruf waren folgende Zeilen tatsächlich enthalten:
+
+| Kontakt | Originalinhalt „Inside Fusebox“ | Ergebnis |
+|---|---|---|
+| `E/02` | `U2/1` | Q1 erneut gelesen |
+| `F/02` | `G1/1` | Erste Richtung von Q2 erneut gelesen |
+| `G1/01` | `F/2` | Gegenrichtung von Q2 erneut gelesen |
+| `F/10` | `(no pin)` | Fehlender Pin ausdrücklich in der Tabelle bezeichnet |
+| `G1/03` | `Fuel Pump Relay Power` | Funktionsangabe, **keine physische Kammernummer** |
+
+Bei `G1/03` nennt die Außenspalte unter anderem:
+
+> „ECU- Fuel Pump Relay Turn-On (gas)“
+
+**Quelle:** [A2Resource – CE2, abgerufene Tabelle](https://www.a2resource.com/electrical/CE2.html#G1)
+
+Damit kann bei **Q2** die bisherige Einschränkung „im letzten verkürzten Abruf nicht erneut sichtbar“ ersetzt werden durch:
+
+> **Beide Tabellenrichtungen in diesem Recherchelauf erneut gelesen; keine Messung am Zielgrundträger.**
+
+**Weiterhin offen:** Die eigene Tabellenzeile `U2/01`. Der Abruf endet innerhalb von `G1/05`; spätere Zeilen behaupte ich nicht als geprüft.
+
+### 3. Orientierung und Sicherungsanzahl textlich belegt
+
+Die T4-Wiki beschreibt ausdrücklich:
+
+- **Relaisplätze:** von links oben **1** nach rechts unten **12**.
+- **Sicherungsplätze:** auf der Vorderseite von links **1** nach rechts **22**.
+
+**Quelle:** [T4-Wiki – Zentralelektrik, „Aufbau und Innenleben“](https://www.t4-wiki.de/wiki/Zentralelektrik)
+
+Damit ist die Zahl **22 Sicherungsplätze im T4-Quellenkontext** belegt. Für die Matrix ergibt sich daraus ein Sollregister von **44 getrennt zu erfassenden Halterkontaktpositionen**. Das ist noch keine Sichtprüfung der tatsächlichen Kontaktbestückung und keine Zuordnung zu internen Leitern.
+
+Die Mehrfachstecker-Seite unterscheidet außerdem ausdrücklich:
+
+- **Vorderansicht:** Blick gedanklich durch die Relaisplatte auf die rückseitigen Stecker.
+- **Rückansicht:** tatsächlicher Blick von hinten auf die ZE.
+
+**Quelle:** [T4-Wiki – Mehrfachstecker, „Steckerübersicht“](https://www.t4-wiki.de/wiki/Mehrfachstecker)
+
+**Wichtige Variantenbegrenzung:** Die dortige detaillierte Belegung beschreibt überwiegend einen **TDI ab Modelljahr 2001**, bei nicht motorbezogener Elektrik meist Stand August 1998. Diese Funktionsbelegung darf nicht pauschal auf sämtliche CE2-Fahrzeuge übertragen werden.
+
+### 4. Zusätzliche Originalabbildungen lokalisiert
+
+Die Dateiseiten liefern diese Originaldateien und Auflösungen:
+
+| Abbildung | Originaldatei | Auflösung |
+|---|---|---:|
+| Vorderansicht | [JPEG öffnen](https://www.t4-wiki.de/w/images/Zentralelektrik_Vorderansicht.jpg) | 500 × 265 |
+| Innenansicht 1 | [JPEG öffnen](https://www.t4-wiki.de/w/images/Zentralelektrik_Innenansicht_1.jpg) | 500 × 258 |
+| Innenansicht 2 | [JPEG öffnen](https://www.t4-wiki.de/w/images/Zentralelektrik_Innenansicht_2.jpg) | 500 × 274 |
+| Innenansicht 3 | [JPEG öffnen](https://www.t4-wiki.de/w/images/Zentralelektrik_Innenansicht_3.jpg) | 500 × 247 |
+
+**Prüfstatus:** Dateiseiten und Metadaten gelesen; Bilder **nicht visuell ausgewertet**. Die Dateiseiten geben jeweils an, dass keine höhere Auflösung vorhanden ist. Daraus ist keine vollständige Leiterrekonstruktion ableitbar.
+
+Auch der J17-Artikel wurde als Text erneut gelesen: **Steckplatz 12**, Ansteuerung durch das Motorsteuergerät **nach Masse**, Verweis auf das G23/J17-Schaltbild. **Sockelkontaktziffern stehen im gelesenen Text nicht.**
+
+Quelle: [T4-Wiki – J17, Artikelquelltext](https://www.t4-wiki.de/w/index.php?title=Relais_J17_(Kraftstoffpumpe)&action=raw)
+
+## Notwendige Korrektur deiner Matrixlegende
+
+Die bisherige Definition von `0` ist missverständlich:
+
+> „Keine direkte feste Verbindung … nachgewiesen“
+
+Das kann auch bloß „noch nicht untersucht“ bedeuten. Richtig wäre:
+
+| Wert | Eindeutige Definition |
+|---|---|
+| `1` | Feste leitende Verbindung ohne eingesetzte Bauteile am identifizierten Grundträger nachgewiesen |
+| `0` | Fehlen einer solchen Verbindung durch geeignete Prüfung am identifizierten Grundträger nachgewiesen |
+| `?` | Weder Verbindung noch Trennung nachgewiesen |
+
+Ein bloß ausbleibender Durchgangspiepser sollte ohne dokumentierte Messbedingungen nicht automatisch `0` ergeben.
+
+## Ergebnis dieses Recherchelaufs
+
+**Übernehmbar sind jetzt:**
+
+- expliziter Quellenbezug **T4-ZE ↔ `357 937 039`**;
+- erneute eigene Textprüfung von **Q1 und beiden Richtungen von Q2**;
+- textlich belegte Nummerierungsrichtung der **12 Relais- und 22 Sicherungsplätze**;
+- zusätzliche Originalbild-Fundstellen mit bekannten Auflösungen;
+- klare Einschränkung des Geltungsbereichs der T4-Steckerbelegung.
+
+**Nicht hinzugekommen sind:** neue bestätigte interne Leiterkanten, physische Relaissockelzuordnungen oder Sicherungsseitenzuordnungen. Die elektrische Kantenliste bleibt daher unverändert — **der Quellen- und Hardwarebezug ist aber konkret verbessert.**
+
+Monica
+GPT-6 Astra
+34 Sekunden nachgedacht
+Linkleser
+0 Sekunden nachgedacht
+Denkprozess
+
+Die neuen Belege verbessern den Hardware- und Quellenbezug deutlich. Die Kantenliste bleibt unverändert; die missverständliche Definition von 0 wird ersetzt.
+
+Aktualisierter Belegstand
+Ich habe die verlinkten Quellen zusätzlich abgerufen. Dabei unterscheide ich deinen Recherchebericht vom Ergebnis meines eigenen Abrufs:
+
+Punkt	Aktualisierter Status
+T4-ZE ↔ 357 937 039	Jetzt auch selbst im Quelltext bestätigt. Die T4-Wiki nennt die Teilenummer ausdrücklich sowie eine während der T4-Bauzeit unveränderte ZE und baugleiche Ausführungen anderer VW-Modelle.
+Q1: E/02 ↔ U2/01	Laut deinem neuen Recherchebericht erneut gelesen. Mein aktueller A2Resource-Ausschnitt endet schon bei A1; daher keine erneute eigene Bestätigung. Gegenzeile U2/01 weiterhin offen.
+Q2: F/02 ↔ G1/01	Beide Richtungen laut deinem Recherchebericht erneut gelesen. Der veraltete Hinweis „im letzten Recherchelauf nicht erneut sichtbar“ entfällt; keine Messung am Zielteil.
+F/10: (no pin)	Laut deinem Recherchebericht erneut bestätigt; keine Sichtprüfung am Zielteil.
+12 Relais- und 22 Sicherungsplätze	Textbeleg aus deinem Recherchebericht übernommen. Daraus folgen 44 zu erfassende Sicherungshalterpositionen, nicht 44 bereits geprüfte Kontakte.
+Vorder-/Rückansicht der Mehrfachstecker	Jetzt auch selbst textlich bestätigt. Durchsicht von vorn und tatsächliche Rückansicht müssen getrennt bezeichnet werden.
+T4-Steckerbelegung: Modell-/Zeitstand	Einschränkung aus deinem Bericht übernommen; nicht pauschal als universelle CE2-Belegung verwenden.
+J17: Steckplatz 12, ECU schaltet nach Masse	Erneut selbst im Artikelquelltext bestätigt. Keine Sockelkammerzuordnung daraus ableitbar.
+Verbindliche Matrixlegende
+Wert	Definition
+1	Feste leitende Verbindung ohne eingesetzte Bauteile am identifizierten Grundträger nachgewiesen
+0	Fehlen einer solchen Verbindung durch geeignete Prüfung am identifizierten Grundträger nachgewiesen
+?	Weder Verbindung noch Trennung nachgewiesen
+Q1 / Q2	Explizite interne Quellenreferenz; noch keine physische Verifizierung am Zielgrundträger
+Kein Durchgangspiepsen allein ist kein ausreichender 0-Nachweis. Messbedingungen und gegebenenfalls Bauteileinflüsse müssen dokumentiert sein.
+
+Bildstatus: zusätzliche Präzisierung
+Mein Abruf der vier JPEGs lieferte diesmal automatisch erzeugte Bildbeschreibungen, keine unmittelbar prüfbaren Bilddarstellungen mit lesbaren Kontaktziffern.
+
+Diese Beschreibungen sind keine Leiterbelege. Insbesondere übernehme ich ihre spekulativen Aussagen über bewegliche Kontakte, Schaltmechanismen oder Metallbeschichtungen nicht.
+
+Elektrischer Stand
+Kontakt	E/02	U2/01	F/02	G1/01
+E/02	—	Q1	?	?
+U2/01	Q1	—	?	?
+F/02	?	?	—	Q2
+G1/01	?	?	Q2	—
+Ergebnis: T4-Unterlagen haben jetzt einen ausdrücklichen Bezug zur Zielteilenummer. Das rechtfertigt ihre gezielte weitere Auswertung, aber noch keine neuen internen Kanten. Die Variantenfrage bleibt separat offen; ebenso sämtliche physischen Sockel- und Sicherungsseitenzuordnungen.
+
+# Nächster Rechercheauftrag: ZE2 / CE2 – 357 937 039
+
+## Aufgabe
+Führe die Recherche unmittelbar aus und liefere anschließend einen neuen,
+konkreten Folgeauftrag für Monica.
+Priorisiere neue Originalbelege statt wiederholter gekürzter Abrufe.
+
+## Priorität 1: Neuer Treffer zu Sockel 12
+URL:
+https://the-corrado.net/topic/72158-vr6-fuel-pump-not-priming/
+
+Titel: VR6 Fuel Pump not priming
+Im Suchergebnis angegebenes Datum: 17. März 2014.
+
+Im übergebenen Recherchelauf tatsächlich gelesener Suchauszug:
+“Got a multimeter onto relay socket 12 and used the CE2 list/diagram.
+Got 12v across pins 2&4 and 4&6 but nothing from 3&4.”
+
+Danach beginnt im Auszug „2 Main Fusebox …“, der Rest fehlt.
+
+Der Originalthread wurde in diesem Recherchelauf NICHT abgerufen.
+Behandle den Inhalt zunächst ausschließlich als übergebenen Suchhinweis.
+
+Arbeitsschritte:
+1. Originalthread lesen.
+2. Autor, Datum und Beitragsnummer der Aussage erfassen.
+3. Vollständige Kontaktliste hinter „2 Main Fusebox …“ suchen.
+4. Verlinkte „CE2 list/diagram“ identifizieren und Originalquelle verfolgen.
+5. Prüfen, was 2, 3, 4 und 6 tatsächlich bezeichnen.
+6. Blickrichtung, Kammergeometrie und DIN-Klemmen getrennt erfassen.
+7. Fahrzeug, Baujahr, Relais und Grundträgeridentität dokumentieren.
+8. Spannungsdiagnose am Fahrzeug nicht als nackte interne Leiterkante werten.
+
+Kontakt 3 dieses Threads nicht automatisch mit „pin 3“ anderer Foren gleichsetzen.
+
+## Priorität 2: Q1-Gegenbeleg
+URL:
+https://www.vagboard.de/threads/125305-kombiinstrument-golf-2-vr6-geht-nicht
+
+Aus einem früher übergebenen Suchauszug:
+„Beim Golf 3 geht Klemme 15 auch in U2/1 und von dort intern auf E/2 …“
+
+Die Originalabrufe endeten bisher nach Beitrag #3 am Beginn eines weiteren Beitrags.
+Erschließe den konkreten Beitrag nur mit einer tatsächlich verfügbaren
+alternativen Ansicht oder einem passenden Beitragslink.
+Keine erfundenen Beitragsnummern oder behauptete vollständige Lektüre.
+Falls nicht erreichbar: Grenze dokumentieren und weiterarbeiten.
+
+## Priorität 3: U2/01 und physische Sicherungsseiten
+https://www.a2resource.com/electrical/CE2.html
+
+Der jüngste Originalabruf zeigte:
+- E/02 innen: U2/1
+- F/02 innen: G1/1
+- G1/01 innen: F/2
+- F/10: (no pin)
+Er endete innerhalb G1/05.
+Die eigene U2/01-Zeile bleibt ungelesen.
+
+Wiederhole den identischen Abruf nicht als neuen Erkenntnisgewinn.
+Suche bei Bedarf eine andere zugängliche Darstellung; Herkunft und Abhängigkeit prüfen.
+Suche anschließend passende Pläne oder dokumentierte Messungen,
+die beide Seiten eines Sicherungshalters eindeutig benennen.
+
+## Verbindliche Belegregeln
+- Übergebener Bericht, Suchauszug, selbst gelesener Originaltext,
+  sichtbares Bild und physische Messung bleiben getrennte Kategorien.
+- Automatische Bildbeschreibungen sind keine visuelle Kontaktprüfung.
+- Gleiche Funktionsnamen ergeben keine interne Verbindung.
+- Wiederholte Abrufe sind keine unabhängigen Zweitbelege.
+- Kabelbaum, Relais, Sicherungen und herausnehmbare Brücken separat führen.
+- Variantenfrage und Zielteilenummer gesondert dokumentieren.
+
+## Matrixwerte
+1: Feste leitende Verbindung am identifizierten nackten Grundträger nachgewiesen.
+0: Fehlen einer solchen Verbindung durch geeignete Prüfung nachgewiesen.
+?: Weder Verbindung noch Trennung nachgewiesen.
+Q1/Q2: Explizite interne Quellenreferenz ohne physische Zielteilverifizierung.
+
+## Erwartete Ausgabe
+1. Neu selbst geprüfte Originalbelege mit genauer Fundstelle.
+2. Suchhinweise und übernommene Berichte separat.
+3. Kontaktinventar-Änderungen getrennt von elektrischen Kantenänderungen.
+4. Abrufgrenzen und ungelöste Widersprüche.
+5. Nächster konkreter Auftrag für Monica.
+
+Falls keine neuen Leiterbelege entstehen, ausdrücklich schreiben:
+„Elektrische Kantenliste unverändert.“
+
+Monica
+GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+34 Sekunden nachgedacht
+Linkleser
+24 Sekunden nachgedacht
+Searching: site:the-corrado.net/topic/72158 "2" "Main"
+11 Sekunden nachgedacht
+Call Skill: Google Search
+3 Sekunden nachgedacht
+Call Skill: Google Search
+0 Sekunden nachgedacht
+Ergebnis des Recherchelaufs
+Der Corrado-Originalthread ist erreichbar, die gesuchte Kontaktliste wurde jedoch nicht erschlossen. Neu selbst gelesen wurden der Threadbeginn mit eindeutigem Beitragslink sowie der Fahrzeugkontext des VAGBoard-Themas. Die entscheidenden späteren Beiträge bleiben ungelesen.
+
+Elektrische Kantenliste unverändert.
+
+1. Neu selbst geprüfte Originalbelege
+Corrado: „VR6 Fuel Pump not priming“
+Fundstelle: Eröffnungsbeitrag, Kommentar-ID 877405
+
+Autor: Bast
+
+Beitragsdatum: 17. März 2014
+
+Fortlaufende Beitragsnummer: Im gelesenen Ausschnitt nicht ausgewiesen.
+
+Im Originaltext des Eröffnungsbeitrags tatsächlich gelesen:
+
+Das Fahrzeug sei nach etwa zehn Minuten Lauf ausgegangen und zunächst nicht wieder angesprungen.
+Geprüft worden seien unter anderem ECU-/Kraftstoffpumpenrelais, Sicherungen, ECU-Stecker und der Anschluss am kürzlich ersetzten Zündanlassschalter.
+Die Kraftstoffpumpe laufe beim Einschalten der Zündung nicht vor.
+Das Fahrzeug starte dennoch, zunächst mit berichteten Zündaussetzern.
+Eine probeweise angeschlossene andere Pumpe habe das Verhalten nicht geändert.
+Wichtige Abgrenzung: Das ist nicht der gesuchte Beitrag mit „Got a multimeter onto relay socket 12 …“. Autor und Datum des Eröffnungsbeitrags dürfen nicht auf diesen späteren Messbericht übertragen werden.
+
+Gesuchtes Merkmal	Ergebnis
+Fahrzeugkontext	VR6 laut Threadtitel; Corrado-Forum
+Genaues Fahrzeug/Baujahr	Im gelesenen Beitrag nicht angegeben
+Eingesetztes Kraftstoffpumpenrelais	Keine Nummer oder Teilenummer gelesen
+Grundträger 357 937 039	Im gelesenen Beitrag nicht genannt
+Kontaktliste hinter „2 Main Fusebox …“	Nicht erreicht
+Verlinkte „CE2 list/diagram“	Nicht identifiziert
+Sockelkammern, Blickrichtung, DIN-Klemmen	Nicht geklärt
+VAGBoard: „Kombiinstrument Golf 2 VR6 geht nicht“
+Fundstelle: Originalthread, Beitrag #1
+
+Autor: Reznick
+
+Datum: 29. April 2011, 12:47 Uhr.
+
+Neu selbst gelesen:
+
+„ZE und KI-Kabelbaum ist aus dem Golf 3 übernommen.“
+
+Der Verfasser beschreibt einen VR6-AAA-Umbau vom Golf 3 in einen Golf 2. Das grenzt den Fahrzeug- und Kabelbaumkontext ein.
+
+Nicht gelesen: die gesuchte Aussage zur internen Verbindung U2/1 → E/2. Im ausgegebenen Ausschnitt erschien auch kein belastbarer Direktlink zu diesem späteren Beitrag. Deshalb keine Ergänzung einer Beitragsnummer oder eines Autors.
+
+2. Suchhinweise und übergebene Berichte — separat
+Kategorie	Inhalt	Aussagegrenze
+Übergebener Suchhinweis	„Got a multimeter onto relay socket 12 … Got 12v across pins 2&4 and 4&6 but nothing from 3&4.“	Gesuchter Originalbeitrag weiterhin ungelesen; Autor, Beitragsdatum und Kommentar-ID unbekannt
+Neu selbst gelesener Suchauszug zum Corrado-Thread	„… the pump ran fine when I bridged conections 4 & 6 on the fuel pump relay …“	Hinweis auf eine berichtete Überbrückung im Fahrzeug; keine interne Leiterkante
+Weiterer selbst gelesener Suchauszug	„Car still starts (eventually) and runs (without the misfire now …)“	Späterer Diagnoseverlauf angedeutet; Beitrag nicht identifiziert
+Übergebener VAGBoard-Suchhinweis	„Beim Golf 3 geht Klemme 15 auch in U2/1 und von dort intern auf E/2 …“	Noch kein selbst gelesener Originalbeleg dieses Beitrags
+Das in den Suchtreffern angegebene Datum 17. März 2014 ist nicht als gesichertes Datum der späteren Mess- oder Überbrückungsaussage zu behandeln.
+
+Kontakt 3 bleibt ausschließlich eine ungeklärte Bezeichnung dieses Corrado-Suchhinweises. Keine Gleichsetzung mit „pin 3“ anderer Threads.
+
+3. Änderungen an Inventar und Kanten
+Bereich	Änderung
+Physisch bestätigtes Kontaktinventar	Keine
+Rechercheverweise für Kontaktbezeichnungen 2/3/4/6	Corrado-Suchhinweis ergänzt; keine verifizierte Kammeransicht
+Q1: E/02 ↔ U2/01	Unverändert; gesuchter VAGBoard-Gegenbeleg nicht erschlossen
+Q2: F/02 ↔ G1/01	Unverändert
+Eigene A2Resource-Zeile U2/01	Weiterhin ungelesen
+Sicherungshalterseiten	Keine neue eindeutige Zuordnung
+Matrixwerte 1 oder 0	Keine neuen Einträge
+Varianten-/Teilenummernbezug	Keine Ergänzung aus den neu gelesenen Forenbeiträgen
+Eine berichtete Brücke zwischen 4 und 6 gehört gegebenenfalls als temporäre externe Diagnoseverbindung ins Register — nicht als feste interne Verbindung. Sie ist hier weder eine Einbauempfehlung noch ausreichend dokumentiert, um daraus DIN-Klemmen abzuleiten.
+
+4. Abrufgrenzen und offene Punkte
+Corrado: Der Originalabruf endete nach dem Eröffnungsbeitrag in den Teilen-/Navigationslinks. Der Zielbeitrag wurde nicht erreicht.
+VAGBoard: Der aktuelle Ausschnitt reichte nur bis Beitrag #1. Eine alternative Ansicht oder ein Direktlink zum gesuchten Beitrag wurde nicht erschlossen.
+A2Resource: Der identische Abruf wurde entgegen der gewünschten Priorisierung nochmals ausgeführt. Er endete bereits innerhalb D/12 und brachte keinen neuen Erkenntnisgewinn. Er zählt weder als Gegenbeleg noch als unabhängige Quelle.
+Sicherungsseiten: In diesem Lauf wurde kein neuer passender Plan und kein dokumentiertes Messprotokoll erschlossen. Diese Teilaufgabe bleibt unerledigt.
+Widersprüche: Es entstand kein neuer belegter elektrischer Widerspruch. Die ungeklärte Nummerierung verhindert weiterhin einen belastbaren Vergleich der verschiedenen „Pin“-Angaben.
+5. Konkreter Folgeauftrag für Monica
+Recherchefortsetzung: Zielbeiträge statt Threadanfänge
+Ausgangsstand: Elektrische Kantenliste unverändert. Corrado-Eröffnungsbeitrag ist Kommentar-ID 877405, Autor Bast, Datum 17.03.2014. Dieser Beitrag enthält die gesuchte Kontaktliste nicht.
+
+1. Corrado-Zielbeitrag identifizieren
+
+Thread:
+
+https://the-corrado.net/topic/72158-vr6-fuel-pump-not-priming/
+
+Suche gezielt nach diesen Textstellen:
+
+"Got a multimeter" "72158"
+"2 Main Fusebox" "Fuel Pump"
+"CE2" "3&4" "priming"
+"bridged conections" "4" "6"
+Ziel ist ein tatsächlich aufgefundener Kommentarlink, eine zugängliche alternative Threadansicht oder eine weitere Seite, nicht ein erneuter unveränderter Abruf des Threadanfangs. Keine Kommentar-IDs oder Seitenzahlen erraten.
+
+Erfasse beim Zielbeitrag: Autor, eigenes Beitragsdatum, Kommentar-ID, vollständige Kontaktliste und den tatsächlichen Link zur „CE2 list/diagram“. Prüfe diese Quelle anschließend separat. Halte Sockelnummer, Kontaktbezeichnung, DIN-Klemme und geometrische Lage auseinander.
+
+2. VAGBoard-Q1-Aussage lokalisieren
+
+https://www.vagboard.de/threads/125305-kombiinstrument-golf-2-vr6-geht-nicht
+
+Suche nach "U2/1" "E/2" und "von dort intern" in Verbindung mit dem Thread. Folge nur tatsächlich gefundenen Beitragslinks oder verfügbaren alternativen Ansichten. Erfasse Autor, Datum, Beitragsnummer und den vollständigen Kontext. Kläre insbesondere, ob der Verfasser einen Plan auswertet, selbst gemessen hat oder eine unbelegte Aussage macht.
+
+3. A2Resource-U2-Zeile über anderen Zugang
+
+Keine Wiederholung desselben gekürzten Abrufs. Suche eine zugängliche vollständige Darstellung oder dokumentierte Spiegelung von:
+https://www.a2resource.com/electrical/CE2.html
+
+Benötigt wird die eigene Zeile U2/01, einschließlich Spaltenüberschriften. Eine Kopie von A2Resource ist als abhängige Wiedergabe zu kennzeichnen, nicht als unabhängige Zweitquelle.
+
+4. Einen Sicherungshalter exemplarisch erschließen
+
+Suche zunächst zu Sicherung 1 / linkes Abblendlicht einen zur 357 937 039 passenden Plan oder ein nachvollziehbares Messprotokoll. Ziel: beide Halterkontakte separat, mit eindeutiger Orientierung oder Originalbezeichnung, und deren jeweilige Gegenkontakte. Die Funktionsangaben bei A1/01 und D/02 allein reichen nicht.
+
+Abgabe: Originalbelege, Suchhinweise und Fremdberichte getrennt; Inventaränderungen getrennt von Kantenänderungen. Ohne neue geeignete Leiterbelege ausdrücklich: „Elektrische Kantenliste unverändert.“
+
+# ZE2 / CE2 357 937 039 – nächster Rechercheauftrag
+
+## Auftrag
+Führe die folgenden Schritte aus und erstelle danach wieder einen konkreten
+Folgeauftrag für Monica. Liefere neue Belege statt bloßer Wiederholung des Stands.
+
+## Neuer übergebener Befund
+Im Suchindex des Corrado-Threads wurden diese Angaben gelesen:
+- 2 Main Fusebox Start/Run Power
+- 3 To ECU (Fuel Pump Turn-On)
+- 4 To Fuse 18, Fuel Pump, Oxygen Sensor Heater
+- 6 Main Fusebox Battery Power From 30B
+
+Quelle:
+https://the-corrado.net/topic/72158-vr6-fuel-pump-not-priming/
+
+Status: übergebene Suchauszüge, NICHT vollständig gelesener Originalbeitrag.
+Autor, eigenes Beitragsdatum und Kommentar-ID der Liste sind unbekannt.
+Elektrische Kantenliste unverändert.
+
+## 1. Originalquelle der Kontaktliste finden
+Suche gezielt mit den oben genannten charakteristischen Wortfolgen.
+Prüfe auch, ob dieselbe Liste auf einer technischen CE2-Seite vorhanden ist.
+Eine wortgleiche Wiedergabe ist nicht automatisch ein unabhängiger Beleg.
+
+Benötigt:
+- Vollständiger Originalbeitrag mit Autor, Datum und Kommentar-ID.
+- Überschrift und Kontext der Liste: Bezieht sie sich ausdrücklich auf Sockel 12?
+- Tatsächlicher Link zur dort erwähnten „CE2 list/diagram“.
+- Erläuterung des Nummerierungssystems.
+- Fahrzeug- und Grundträgerzuordnung.
+
+Keine Kommentar-IDs oder Seitenzahlen erfinden.
+Wiederholte Suchauszüge nicht als vollständige Originallektüre darstellen.
+
+## 2. Bekannte Originalbeiträge korrekt abgrenzen
+Eröffnungsbeitrag:
+https://the-corrado.net/topic/72158-vr6-fuel-pump-not-priming/?do=findComment&comment=877405
+Bast, 17. März 2014. Keine Kontaktliste.
+
+Weiterer tatsächlich aufgefundener Beitrag:
+https://the-corrado.net/topic/72158-vr6-fuel-pump-not-priming/?do=findComment&comment=878891
+jimbobbalooba, 27. März 2014.
+Allgemeiner Rat zur Multimeter-Fehlersuche, keine Kontaktliste.
+
+Nutze vorhandene Navigation oder tatsächlich gefundene alternative Ansichten,
+sofern verfügbar. Ein Kommentarlink garantiert nicht, dass die Textausgabe
+am betreffenden Kommentar beginnt.
+
+## 3. Sicherungspfad gezielt prüfen
+Priorisiere wegen des neuen Hinweises zunächst Sicherung 18.
+Suche einen zur Zielhardware passenden Plan mit:
+- Sockelkontaktbezeichnung,
+- beiden Sicherungshalterseiten,
+- rückseitigen Gegenkontakten,
+- eindeutig abgegrenzten äußeren Leitungen und Bauteilen.
+
+Die Suchauszug-Zeile „4 To Fuse 18, Fuel Pump, Oxygen Sensor Heater“
+beweist keine gemeinsame ungesicherte Verbindung aller genannten Anschlüsse.
+
+Falls Sicherung 18 nicht erschließbar ist, bearbeite alternativ Sicherung 1.
+A1/01 und D/02 mit gleicher Funktionsangabe reichen nicht als Leiterbeleg.
+
+## 4. Q1 separat weiterverfolgen
+VAGBoard:
+https://www.vagboard.de/threads/125305-kombiinstrument-golf-2-vr6-geht-nicht
+
+Gesuchte Originalaussage aus früherem Suchhinweis:
+„Beim Golf 3 geht Klemme 15 auch in U2/1 und von dort intern auf E/2 …“
+
+A2Resource:
+https://www.a2resource.com/electrical/CE2.html
+
+Eigene Zeile U2/01 weiterhin ungelesen.
+Kein erneuter identischer gekürzter Abruf ohne begründeten neuen Zugangsweg.
+Fehlende Suchtreffer sind kein Nachweis einer fehlenden Tabellenzeile.
+
+## Belegregeln
+- Übergebene Berichte, Suchauszüge und eigene Originallektüre getrennt.
+- Sichtbare Bilder und automatische Bildbeschreibungen getrennt.
+- Steckplatz, Kammer, DIN-Klemme und Strompfadnummer nicht gleichsetzen.
+- Spannungsdiagnose am Fahrzeug ist kein Durchgangsbeleg am nackten Grundträger.
+- Keine aus Relais oder Sicherungen entstehenden Verbindungen als feste Kanten.
+- 1 und 0 nur bei geeignetem Nachweis am identifizierten Grundträger.
+- Unbekannte Beziehungen bleiben ?.
+
+## Ausgabe
+1. Neu selbst geprüfte Originalbelege.
+2. Neue Suchhinweise separat.
+3. Änderungen an Inventar und Kanten getrennt.
+4. Abrufgrenzen und unerledigte Aufgaben.
+5. Neuer ausführbarer Folgeauftrag für Monica.
+
+Ohne geeignete neue Leiterbelege:
+„Elektrische Kantenliste unverändert.“
+
+Monica
+GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+11 Sekunden nachgedacht
+Linkleser
+Searching: "CE2" "6" "Main Fusebox Battery Power From 30B"
+Basierend auf 5 Suchquellen
+
+2 Sekunden nachgedacht
+Denkprozess
+
+
+Monica
+GPT-6 Astra
+Call Skill: Google Search
+1 Sekunden nachgedacht
+Denkprozess
+
+
+Monica
+GPT-6 Astra
+Linkleser
+8 Sekunden nachgedacht
+Call Skill: Google Search
+Linkleser
+0 Sekunden nachgedacht
+1. Neuer Originalbeleg: vollständige Liste unter „12 Fuel Pump Relay“
+Die gesuchte Liste wurde in einem anderen Corrado-Thread vollständig im Originaltext gefunden. Damit liegt erstmals mehr als ein Suchauszug zu diesen Kontaktbezeichnungen vor. Der gesuchte Beitrag im ursprünglichen Thread 72158 bleibt hingegen unerschlossen.
+
+Fundstelle
+Thread: „M/02 Fuel Pumps Power – no power :(“
+Autor: Moshiko Levi
+Datum des Beitrags: 26. Oktober 2014
+Kommentar-ID: 907721
+Position: Eröffnungsbeitrag; keine ausgeschriebene fortlaufende Beitragsnummer im Abruf
+Direktlink zum Beitrag
+Der Verfasser berichtet, dass die Pumpe bei eingeschalteter Zündung nicht anlaufe, bei direkter Versorgung aber funktioniere. Er habe Relais und Sicherungskasten ausgetauscht. Danach folgt ausdrücklich:
+
+12 Fuel Pump Relay (80, 67 or 167)
+
+Die vollständige, selbst gelesene Liste:
+
+Nummer	Originalangabe	Hinzugefügte Diagnose des Verfassers
+1	Main Fusebox Starter Power (not used)	—
+2	Main Fusebox Start/Run Power	connected correctly
+3	To ECU (Fuel Pump Turn-On)	connected correctly
+4	To Fuse 18, Fuel Pump, Oxygen Sensor Heater	Do not get anything
+5	G2/6 (not used)	—
+6	Main Fusebox Battery Power From 30B	connected correctly
+7	G2/7, T1 (not used)	—
+8	Main Fusebox Ground (not used)	—
+9	M/4, U1/8, G2/5 (not used)	—
+Was dieser Fund belegt — und was nicht
+Belegt: Die Nummern 1 bis 9 stehen im Originalbeitrag unter einer ausdrücklich mit 12 bezeichneten Kraftstoffpumpenrelais-Liste. Die vier übergebenen Zeilen 2, 3, 4 und 6 stimmen damit überein.
+
+Nicht geklärt:
+
+Herkunft der Liste und tatsächlicher Link zur „CE2 list/diagram“;
+geometrische Anordnung und Blickrichtung;
+Gleichsetzung mit eingeprägten Sockelkammernummern;
+Zuordnung zu DIN-Klemmen;
+Fahrzeugbaujahr, tatsächlich eingesetzte Relaisnummer und Grundträgerteilenummer.
+„Not used“ bedeutet hier nicht „kein Metallkontakt vorhanden“. Ebenso ist „connected correctly“ eine Diagnosebehauptung ohne dokumentierte Messbedingungen.
+
+Die Listenzeilen 5, 7 und 9 liefern zusätzliche Gegenkontaktangaben als Rechercheansätze. Sie werden noch nicht als feste interne Verbindungen freigegeben.
+
+2. Technische Parallelquelle gefunden
+SEATCUPRA.NET: CE2-Tabellenwiedergabe
+Beitrag #1, Post-ID 2433959
+
+Autor: ibiza_95
+
+Datum: 12. Mai 2009
+
+Bereich: Mk2 Ibiza/Cordoba Guides, 1993–1999.
+
+Im Original selbst gelesen:
+
+Überschrift „Central Electric 2“;
+derselbe einleitende Fahrzeugumfang wie bei A2Resource;
+Tabellenstruktur Connector / Outside Fusebox / Inside Fusebox / Color;
+zahlreiche übereinstimmende Anfangszeilen.
+Abrufgrenze: Der Originaltext endet bei B/03. Die Relaisliste und U2/01 wurden dort nicht im Original erreicht.
+
+Der Suchauszug dieser Seite enthält jedoch ebenfalls:
+
+„4 To Fuse 18, Fuel Pump, Oxygen Sensor Heater … 5 G2/6 (not used) …“
+
+Einordnung: Ein konkreter älterer Fundort derselben Listenform ist vorhanden. Die Übereinstimmungen sprechen für eine gemeinsame Textgrundlage oder Übernahme. Übernahmerichtung und ursprünglicher Urheber sind nicht geklärt; keine unabhängige Zweitbestätigung zählen.
+
+3. Neue Suchhinweise — getrennt von Originallektüre
+Fundort	Selbst gelesener Suchauszug	Status
+Corrado-Thread 72158	Zeilen 4 und 6 sowie anschließende Vermutung eines fehlenden ECU-Signals	Zielbeitrag weiterhin nicht erreicht
+Scribd: Central Electric 2	Zeilen 4 bis 8 derselben Relaisliste	Originalabruf liefert Ladefehler
+Scribd: fuse box ce2	„U2/01 E/2 Black“, danach U2/02	Neuer konkreter Hinweis auf die Gegenzeile; Spaltenkontext und Herkunft nicht geprüft
+VAGBoard	„Beim Golf 3 geht Klemme 15 auch in U2/1 und von dort intern auf E/2 auf TV4 …“	Selbst gelesener Suchauszug, nicht der Originalbeitrag
+Die VAGBoard-Passage darf insbesondere nicht zu einer internen Dreierverbindung U2/01–E/02–TV4 erweitert werden. Der vollständige Kontext zur äußeren Weiterführung fehlt.
+
+4. Inventaränderungen und elektrische Kanten getrennt
+Kontakt- und Quellenregister
+Neu einzutragen ist:
+
+R12-LIST-907721 — neun nummerierte Positionen einer textlichen Kraftstoffpumpenrelais-Liste.
+
+Quellenkontext: „12 Fuel Pump Relay“.
+Nummern: 1–9.
+Physische Kammeridentifikation: offen.
+Neue Suchansätze: G2/06, G2/07, T1, M/04, U1/08, G2/05; Originalschreibweisen separat erhalten.
+Keine Erhöhung der Zahl physisch bestätigter Kontakte.
+Sicherung 18
+Jetzt im Originaltext belegt ist die Funktionsreferenz:
+
+Listenposition 4 → „To Fuse 18, Fuel Pump, Oxygen Sensor Heater“.
+
+Weiterhin fehlen:
+
+beide eindeutig bezeichneten Sicherungshalterseiten;
+deren jeweilige rückseitige Gegenkontakte;
+Trennung zwischen ungesichertem Relaisausgang und abgesichertem Abgang;
+ein geeigneter Plan oder Messbeleg für die Zielhardware.
+Der im selben Beitrag genannte Anschluss M/02 ist ein zusätzlicher Rechercheansatz, aber kein Beweis einer direkten Verbindung zu Listenposition 4.
+
+Elektrische Kantenliste unverändert.
+
+Keine neuen Werte 1 oder 0; Q1 und Q2 bleiben unverändert.
+
+5. Abrufgrenzen und unerledigte Aufgaben
+Thread 72158: Originalausgabe endet erneut nach den bekannten ersten beiden Beiträgen. Der Kommentarlink 878891 beginnt ebenfalls am Threadanfang. Autor, Datum und Kommentar-ID der gesuchten Liste bleiben unbekannt.
+VAGBoard: Ausgabe endet am Beginn von Beitrag #3. Kein neuer Zielbeitragslink gefunden.
+A2Resource: Kein erneuter identischer gekürzter Abruf durchgeführt.
+Sicherung 18: Neue Original-Funktionsreferenz, aber noch kein Halterseitenplan.
+Sicherung 1: Alternative in diesem Lauf nicht erschlossen.
+Variantenfrage: Keine neuen Belege. Keiner der neu gelesenen Listenbeiträge nennt 357 937 039.
+6. Konkreter Folgeauftrag für Monica
+Ziel: Herkunft der Neuner-Liste und Sicherung-18-Pfad erschließen
+1. Bekannten vollständigen Listenbeleg verwenden
+
+Corrado-Kommentar 907721, Moshiko Levi, 26.10.2014, enthält die gesamte Liste unter „12 Fuel Pump Relay (80, 67 or 167)“. Nicht erneut nach deren bloßer Existenz suchen.
+
+2. Technische Tabellenquelle gezielt erschließen
+
+SEATCUPRA.NET, Beitrag 2433959, ibiza_95, 12.05.2009, enthält eine umfangreiche CE2-Tabelle. Der bisherige Originalabruf endet bei B/03. Suche eine tatsächlich zugängliche Volltext-/Druckdarstellung oder einen vorhandenen Quellenlink. Benötigt werden die Abschnitte U2, Relaisplatz 12 und eine gegebenenfalls zugehörige Nummerierungsabbildung. Keine alternativen URLs als bereits vorhanden behaupten.
+
+3. Q1-Gegenzeile verfolgen
+
+Der Suchindex von Scribd-Dokument 520017984 zeigt „U2/01 E/2 Black“. Erschließe die vollständige Zeile samt Spaltenüberschriften und Quellenangabe. Kennzeichne eine A2Resource-Kopie als abhängig. Q1 bleibt bis dahin einseitig im A2Resource-Original gelesen.
+
+4. Sicherung 18 priorisieren
+
+Suche einen passenden Stromlaufplan mit J17, S18 und M/02, ergänzend mit G1/03, Z1 und 30B. Erfasse ausschließlich tatsächlich eingezeichnete Anschlüsse. Unterscheide Relaisausgang, beide Sicherungsseiten, Pumpenleitung und Lambdasondenheizung. Die Listenposition 4 allein definiert kein gemeinsames Netz.
+
+5. Ursprünglichen Corrado-Zielbeitrag nur über neuen Zugang verfolgen
+
+In Thread 72158 nach einem tatsächlich auffindbaren Kommentarlink zur Formulierung „Got a multimeter onto relay socket 12“ suchen. Ohne neuen Zugang nicht erneut den Threadanfang abrufen.
+
+Abgabe: Neue Originalbelege mit Fundstellen; abhängige Wiedergaben separat; physisches Inventar nicht mit Listenpositionen vermischen. Ohne geeignete Leiterbelege: „Elektrische Kantenliste unverändert.“
+
+# Rechercheauftrag: ZE2 / CE2 – 357 937 039
+
+## 1. Verbindlicher Sprachumfang
+Recherchiere zusätzlich zu Deutsch und Englisch ausdrücklich in:
+- Russisch
+- Polnisch
+- Chinesisch: vereinfachte und bei Bedarf traditionelle Schrift
+- Japanisch
+- Koreanisch
+- Thai
+
+Übernimm diesen Sprachumfang in jeden folgenden Übergabeauftrag.
+Eine andere Chatinstanz muss die Vorgabe ausdrücklich mitgeteilt bekommen.
+
+Nutze echte landessprachliche Suchbegriffe, nicht nur eine Änderung
+der Suchmaschinenregion. Teile komplexe Suchen in kurze Kombinationen auf.
+Behalte Teilenummern und Anschlusskennungen unverändert bei.
+
+Nicht jede Sprache muss in jedem einzelnen Durchlauf vollständig bearbeitet werden.
+Führe jedoch ein Sprachprotokoll und arbeite offene Sprachen systematisch ab.
+Fehlende Treffer sind kein Beweis, dass passende Unterlagen nicht existieren.
+
+## 2. Suchbegriffe als Ausgangspunkt
+Deutsch:
+Zentralelektrik, interne Verdrahtung, Stromlaufplan, Relaissockel, Sicherungshalter.
+
+Englisch:
+central electrics, fusebox internal wiring, relay socket pinout, fuse panel diagram.
+
+Russisch:
+монтажный блок, блок предохранителей, внутренняя схема,
+распиновка, гнездо реле, реле бензонасоса.
+
+Polnisch:
+skrzynka bezpieczników, schemat połączeń wewnętrznych,
+rozpiska pinów, gniazdo przekaźnika, przekaźnik pompy paliwa.
+
+Chinesisch:
+保险丝盒, 中央电器盒, 内部接线图, 针脚定义, 继电器插座, 燃油泵继电器.
+Ergänzend traditionell: 保險絲盒, 內部接線圖, 繼電器.
+
+Japanisch:
+ヒューズボックス, 内部配線図, 端子配列,
+リレーソケット, 燃料ポンプリレー.
+
+Koreanisch:
+퓨즈 박스, 내부 배선도, 핀 배열,
+릴레이 소켓, 연료 펌프 릴레이.
+
+Thai:
+กล่องฟิวส์, แผนผังวงจร, การเดินสายภายใน,
+ขารีเลย์, ซ็อกเก็ตรีเลย์, รีเลย์ปั๊มน้ำมันเชื้อเพลิง.
+
+Kombiniere diese Begriffe gezielt mit:
+"357 937 039", "357937039", CE2, ZE2, Golf, Corrado, Passat, T4.
+Suche Varianten oder andere Teilenummern separat; nicht ungeprüft gleichsetzen.
+
+## 3. Übergebener neuer Belegstand
+Corrado-Thread:
+https://the-corrado.net/topic/75097-m02%09fuel-pumps-power-no-power/?do=findComment&comment=907721
+
+Laut übergebenem Bericht:
+Autor Moshiko Levi, 26.10.2014, Kommentar-ID 907721.
+Vollständige Liste unter „12 Fuel Pump Relay (80, 67 or 167)“:
+
+1 Main Fusebox Starter Power (not used)
+2 Main Fusebox Start/Run Power
+3 To ECU (Fuel Pump Turn-On)
+4 To Fuse 18, Fuel Pump, Oxygen Sensor Heater
+5 G2/6 (not used)
+6 Main Fusebox Battery Power From 30B
+7 G2/7, T1 (not used)
+8 Main Fusebox Ground (not used)
+9 M/4, U1/8, G2/5 (not used)
+
+Register-ID: R12-LIST-907721.
+Dies sind neun Listenpositionen, keine physisch verifizierten Sockelkammern.
+„Not used“ bedeutet nicht „kein Metallkontakt“.
+Diagnosezusätze des Verfassers sind keine dokumentierten Durchgangsmessungen.
+Für eine neue Instanz ist dies zunächst ein übergebener Bericht.
+
+## 4. Priorität A: Herkunft und Nummerierung der Liste
+Bekannte Parallelquelle:
+https://www.seatcupra.net/forums/threads/fusebox-fuse-location-relay-location-plug-locations-destinations-wiring-colours.219953/post-2433959
+
+Laut Bericht: ibiza_95, 12.05.2009, Beitrag 2433959.
+Bisheriger Abruf endet bei B/03.
+
+Erschließe einen tatsächlich verfügbaren vollständigen Zugang.
+Gesucht: Abschnitt U2, Relaisplatz 12, Nummerierungsabbildung, Quellenverweis.
+Keine alternativen URLs oder erfolgreichen Abrufe erfinden.
+Mehrsprachige Wiedergaben derselben Tabelle auf gemeinsame Herkunft prüfen.
+
+## 5. Priorität B: Q1-Gegenzeile
+https://www.scribd.com/document/520017984/fuse-box-ce2
+
+Übergebener Suchhinweis: „U2/01 E/2 Black“.
+Benötigt: vollständige Zeile, Spaltenüberschriften und Quellenherkunft.
+Eine A2Resource-Kopie ist abhängig und keine unabhängige Zweitbestätigung.
+Keine Zugangsbeschränkungen umgehen.
+
+Q1 bleibt bis zu geeigneter Ergänzung:
+E/02 nennt U2/1 im A2Resource-Original;
+eigene Gegenzeile dort nicht gelesen.
+
+## 6. Priorität C: Sicherung 18 und Relaisplatz 12
+Suche mehrsprachig nach passenden Plänen mit:
+J17, S18, M/02, G1/03, Z1 und 30B.
+
+Kennungen auch einzeln und in kleinen Kombinationen suchen.
+Erfasse:
+- Relaisausgang,
+- beide getrennten Sicherungshalterseiten,
+- rückseitige Gegenkontakte,
+- Pumpenleitung und Lambdasondenheizung,
+- äußere Leitungen und eingesetzte Bauteile.
+
+Die Listenposition 4 definiert kein gemeinsames festes Netz.
+M/02 nicht allein aufgrund des Threadtitels mit Position 4 verbinden.
+
+## 7. Nachrangig: ursprünglicher Corrado-Zielbeitrag
+https://the-corrado.net/topic/72158-vr6-fuel-pump-not-priming/
+
+Gesuchte Formulierung:
+„Got a multimeter onto relay socket 12“.
+
+Nur über einen neuen tatsächlich gefundenen Zugang weiterverfolgen.
+Nicht erneut denselben gekürzten Threadanfang als Fortschritt zählen.
+
+## 8. Sprach- und Quellenprotokoll
+Je bearbeiteter Sprache dokumentieren:
+- Sprache und konkrete Suchanfrage,
+- gefundene Quelle,
+- Suchauszug oder selbst gelesener Originalinhalt,
+- relevante Originalpassage und deutsche Übersetzung,
+- Hardware- und Variantenbezug,
+- Herkunftsabhängigkeit,
+- Ergebnis oder Abrufgrenze.
+
+Nicht bearbeitete Sprachen ausdrücklich als offen markieren.
+Zahlen, Schrägstriche und Anschlusskennungen nicht stillschweigend übersetzen.
+Unsichere Übersetzungen und OCR-Lesarten kennzeichnen.
+
+## 9. Verbindliche elektrische Belegregeln
+Originallektüre, Suchauszug, Fremdbericht, Bildprüfung und Messung trennen.
+Automatische Bildbeschreibungen sind keine visuelle Kontaktprüfung.
+Steckplatz, Listenposition, Kammer, DIN-Klemme und Strompfadnummer trennen.
+Gleiche Funktionen beweisen keine interne Leiterverbindung.
+Kabelbaum, Relais, Sicherungen und herausnehmbare Brücken separat behandeln.
+Variantenfrage getrennt offenhalten.
+
+Matrix:
+1 = feste leitende Verbindung am identifizierten nackten Grundträger nachgewiesen.
+0 = Fehlen einer solchen Verbindung durch geeignete Prüfung nachgewiesen.
+? = weder Verbindung noch Trennung nachgewiesen.
+Q1/Q2 = interne Quellenreferenz ohne physische Zielteilverifizierung.
+
+## 10. Abgabe und Weitergabe
+Liefere:
+1. Neue Originalbelege mit genauen Fundstellen.
+2. Suchhinweise und übernommene Berichte separat.
+3. Sprachprotokoll einschließlich noch offener Sprachen.
+4. Inventaränderungen getrennt von elektrischen Kantenänderungen.
+5. Abrufgrenzen und unerledigte Aufgaben.
+6. Einen neuen ausführbaren Folgeauftrag einschließlich aller acht Suchsprachen.
+
+Ohne geeignete neue Leiterbelege ausdrücklich:
+„Elektrische Kantenliste unverändert.“
+
+Monica
+GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+37 Sekunden nachgedacht
+Linkleser
+Searching: "357937039" внутренняя схема
+Basierend auf 9 Suchquellen
+
+20 Sekunden nachgedacht
+Searching: CE2 schemat wewnętrzny przekaźnik pompy paliwa 18
+Basierend auf 9 Suchquellen
+
+9 Sekunden nachgedacht
+Call Skill: Google Search
+3 Sekunden nachgedacht
+Denkprozess
+
+
+Monica
+GPT-6 Astra
+Call Skill: Google Search
+Linkleser
+0 Sekunden nachgedacht
+Ergebnis
+Neu sind ein gezielter polnischer Quellenhinweis auf interne CE2-Verbindungen und ein weiter reichender Originalabruf der SEATCUPRA-Tabelle. Der Scribd-Abruf zeigt dagegen eine beschädigte Textausgabe, die nicht zur zuverlässigen Übernahme von Anschlusskennungen geeignet ist.
+
+Die Herkunft und geometrische Nummerierung der Neuner-Liste sowie der vollständige Sicherung-18-Pfad bleiben offen.
+
+Elektrische Kantenliste unverändert.
+
+1. Neu selbst geprüfte Originalinhalte
+A. SEATCUPRA: Tabelle diesmal bis E/05 lesbar
+Fundstelle: Beitrag #1, Post-ID 2433959
+
+Autor: ibiza_95
+
+Datum: 12. Mai 2009.
+
+Der aktuelle Abruf reicht über die bisherige Grenze B/03 hinaus bis E/05; anschließend beginnt F/01 und wird abgeschnitten.
+
+Selbst gelesen wurden die Spaltenüberschriften:
+
+Connector Outside Fusebox Inside Fusebox Color
+
+Deutsch: Anschluss – außerhalb des Sicherungskastens – innerhalb des Sicherungskastens – Farbe.
+
+Die Zeile E/02 lässt sich unter diesen Überschriften wie folgt wiedergeben:
+
+Spalte	Originalinhalt
+Connector	E/02
+Outside Fusebox	D/11 or D/8 (Start/Run Power for cluster, 1991+ Corrado, Passat, all other models), Immobilizer Module
+Inside Fusebox	U2/1
+Color	Black
+Übersetzung: Außerhalb werden D/11 oder D/8 für die Versorgung des Kombiinstruments bei Start/Fahrt sowie das Wegfahrsperrenmodul genannt; innerhalb steht U2/1; Farbe Schwarz.
+
+Bedeutung für Q1: Die bereits übergebene Quellenreferenz von E/02 auf U2/1 ist nun auch in dieser Tabellenwiedergabe selbst gelesen. Die eigene Gegenzeile U2/01 wurde weiterhin nicht erreicht.
+
+Hardware und Herkunft:
+
+Überschrift: „Central Electric 2“.
+Genannter Umfang: Golf/Jetta 1989–1999, Passat 1990–1997, Cabrios, Corrados und EuroVans.
+Die Teilenummer 357 937 039 steht im gelesenen Abschnitt nicht.
+Aufbau und Formulierungen stimmen mit der übergebenen Beschreibung der A2Resource-Tabelle überein. Deshalb nicht als unabhängige Zweitbestätigung zählen.
+Ein ausdrücklicher Herkunftsverweis wurde im gelesenen Ausschnitt nicht gefunden.
+CE2.gif erscheint lediglich als Text. Keine Bildprüfung und keine daraus abgeleitete Kammernummerierung.
+Nicht erschlossen: vollständiger Zugang, Abschnitt U2, Relaisplatz 12 und Nummerierungsabbildung. Der längere Ausschnitt ist kein vollständiger Abruf und kein neuer alternativer Zugangsweg.
+
+B. Scribd: Originalabruf vorhanden, Text jedoch unzuverlässig
+Fundstelle: Dokument 520017984, „fuse box ce2“
+
+Selbst gelesen:
+
+Anzeige: 10 Seiten;
+Uploader: Mohamed Anter El-khouly;
+angezeigter Titel: „MK2 Golf CE2 Fuse Box Wiring Guide“;
+ausdrücklicher Hinweis: „AI-enhanced title and description“.
+Der Titel ist somit kein belastbarer Originaltitel oder Herkunftsnachweis.
+
+Die extrahierte Tabelle enthält erhebliche Zeichenverfälschungen, beispielsweise:
+
+Cnmmhctnr N u t s l ...
+
+Auch Zahlen und Anschlussbezeichnungen sind betroffen. Ob die Ursache OCR, Schriftkodierung oder eine andere Extraktionsstörung ist, lässt sich aus dem Abruf nicht bestimmen.
+
+Folge: Keine stillschweigende Rekonstruktion von Kennungen. Die gesuchte Zeile U2/01 wurde in der Originalausgabe nicht erreicht. Der übergebene Suchhinweis U2/01 E/2 Black bleibt ein Suchhinweis.
+
+Es wurde keine Zugangsbeschränkung umgangen.
+
+C. Polnische Fachquelle: passender Thread identifiziert
+Fundstelle: Elektroda, Thema 3201928
+
+Im Originalabruf tatsächlich gelesen wurde der Titel:
+
+„VW all - Połączenia wewnętrzne skrzynki bezpieczników CE2“
+
+Deutsch:
+
+„VW allgemein – interne Verbindungen des CE2-Sicherungskastens“
+
+Das ist ein unmittelbar zum Rechercheproblem passender Quellenpfad.
+
+Grenze: Der Abruf endet nach Navigation und Teilen des Seitenkopfes. Kein Beitragskörper, kein Autor, kein Plan und keine Messung wurden im Original gelesen. Eine konkrete Grundträgerteilenummer ist damit nicht belegt.
+
+2. Neue Suchhinweise und übernommene Berichte
+Neu selbst gelesene Suchauszüge
+Polnisch: ausdrücklich interne Verbindungen gesucht
+Zum Elektroda-Thema liefert der Suchindex:
+
+„Jak w tytule - szukam schematu WEWNĘTRZNEGO połączeń. Na necie jest wieele opisów co pod który pin w złączkach z tyłu, co na którym …“
+
+Übersetzung:
+
+„Wie im Titel – ich suche einen Plan der INTERNEN Verbindungen. Im Netz gibt es viele Beschreibungen, was an welchen Pin der rückseitigen Stecker gehört, was an welchem …“
+
+Der Auszug ist unvollständig. Das Suchergebnis nennt 10. Mai 2016; dieses Datum wurde nicht am Originalbeitrag geprüft.
+
+Einordnung: Ein sehr passender Rechercheansatz, aber bislang nur die Suche eines anderen Nutzers nach einem internen Plan, nicht dessen Auffindung.
+
+Polnisch: ausdrückliche A2Resource-Verweise
+Die Suche fand außerdem:
+
+VWGolf.pl: „Schemat/fotka bezpieczników golf 2 1.6D“ – Suchauszug mit A2Resource-CE2-Verweis.
+Passat-Forum: „schemat przkaźników“ – Suchauszug mit http://www.a2resource.com/electrical/CE2.html.
+Diese Verweise zeigen konkrete mögliche Herkunftsabhängigkeiten. Die dortigen Beiträge wurden nicht im Original gelesen; zusätzliche eigenständige Inhalte sind deshalb weder bestätigt noch ausgeschlossen.
+
+Russisch: Teilenummer im Katalogkontext
+Die russische Suche fand einen T4-Katalogeintrag bei avto.pro. Der Suchauszug enthält:
+
+357937039, Центральный блок электрообор.
+
+Deutsch, mit beibehaltener Kürzung:
+
+357937039, zentraler Block der elektrischen Ausrüstung …
+
+Einordnung: Kataloghinweis mit Zielteilenummer und T4-Kontext. Keine interne Schaltung und keine Variantenverifizierung. Originalseite nicht gelesen.
+
+Unverändert übernommener Bericht
+R12-LIST-907721 bleibt in diesem Durchlauf ein übergebener Bericht:
+
+Moshiko Levi, 26.10.2014, Kommentar-ID 907721;
+neun Listenpositionen unter „12 Fuel Pump Relay (80, 67 or 167)“;
+keine physisch bestätigten Sockelkammern.
+Der Beitrag wurde hier nicht erneut abgerufen. Seine Listenposition 4 wird insbesondere nicht als gemeinsames ungesichertes Netz aus Relaisausgang, S18, Kraftstoffpumpe und Lambdasondenheizung interpretiert.
+
+3. Sprachprotokoll
+Die acht verbindlichen Suchsprachen sind registriert. Chinesisch umfasst vereinfachte und bei Bedarf traditionelle Schrift.
+
+Sprache	Tatsächlich ausgeführte Anfrage / Arbeit	Ergebnis und Status
+Deutsch	Keine neue deutschsprachige Suche	Offen für nächsten Durchlauf
+Englisch	Direkte Originalabrufe von SEATCUPRA und Scribd; keine neue Suchanfrage	E/02 gelesen; U2 und Relaisliste nicht erreicht. Teilbearbeitet
+Russisch	"357937039" внутренняя схема	Katalog-/Handelstreffer, darunter T4 mit Zielteilenummer; kein interner Plan erschlossen. Teilbearbeitet
+Polnisch	CE2 schemat wewnętrzny przekaźnik pompy paliwa 18	Thematisch unbrauchbare Ergebnisse; nicht als negative Sachauskunft gewertet
+Polnisch	"CE2" "schemat" "bezpieczników"	Elektroda-Thema zu internen Verbindungen und A2Resource-Verweise gefunden. Teilbearbeitet
+Chinesisch, vereinfacht	"CE2" "保险丝盒"	Unter anderem chinesisch dargestellte Reddit-Treffer und Handel; kein geeigneter Leiterbeleg. Teilbearbeitet
+Chinesisch, traditionell	Keine eigene Anfrage	Offen
+Japanisch	Keine Anfrage	Offen
+Koreanisch	Keine Anfrage	Offen
+Thai	Keine Anfrage	Offen
+Die chinesischen Reddit-Treffer verwenden ?tl=zh-hans. Sie sind daher nicht als eigenständige chinesische Originalquellen gezählt. Außerdem erzeugt CE2 ohne Fahrzeugbezug viele Treffer zu anderen elektrischen Produkten.
+
+Keine erfolglose oder unergiebige Suche belegt die Nichtexistenz passender Unterlagen.
+
+4. Inventar und elektrische Kanten
+Quellenregister
+Neu beziehungsweise ergänzt:
+
+Registereintrag	Änderung
+SEATCUPRA 2433959	Lesbarer Bereich bis E/05; E/02 → U2/1 als Tabellenreferenz erfasst
+Scribd 520017984	Extraktionsstörung dokumentiert; keine Kennungen daraus übernommen
+Elektroda 3201928	Neuer Quellenpfad speziell zu internen CE2-Verbindungen
+Mehrsprachige Herkunftsprüfung	Polnische A2Resource-Verweise und chinesische Übersetzungsansichten erkannt
+Physisches Inventar
+Keine Änderung. Keine neue Kammer geometrisch identifiziert, keine Sicherungshalterseite eindeutig bezeichnet und kein Metallkontakt visuell geprüft.
+
+Kanten und Matrix
+Q1: zusätzliche abhängige Tabellenwiedergabe gelesen; eigene U2/01-Gegenzeile weiterhin offen.
+Q2: unverändert.
+S18/R12: keine neue interne Kante.
+Matrix: keine neuen 1 oder 0; unbekannte Beziehungen bleiben ?.
+Elektrische Kantenliste unverändert.
+
+5. Unerledigte Aufgaben
+Vollständiger Zugang zur SEATCUPRA-Tabelle einschließlich Quellenverweis.
+Unverfälschte U2/01-Zeile mit Spaltenzuordnung.
+Originalbeiträge und mögliche Anhänge des polnischen Elektroda-Themas.
+Nummerierungsabbildung zu R12-LIST-907721.
+S18 mit beiden getrennten Halterseiten und rückseitigen Gegenkontakten.
+Zielteilnachweis 357 937 039 bei technischen Plänen und Messberichten.
+Japanische, koreanische, thailändische und traditionell-chinesische Suche.
+Ursprünglicher Corrado-Zielbeitrag: bewusst nicht erneut über denselben gekürzten Threadanfang verfolgt.
+6. Ausführbarer Folgeauftrag für Monica
+Verbindlicher Sprachumfang – bei jeder weiteren Übergabe vollständig mitgeben
+Recherchiere in Deutsch, Englisch, Russisch, Polnisch, Chinesisch, Japanisch, Koreanisch und Thai. Chinesisch zunächst vereinfacht, ergänzend traditionell. Verwende echte landessprachliche Begriffe; protokolliere konkrete Anfragen, Ergebnisse und offene Sprachen. Nicht jede Sprache muss in jedem Durchlauf abgeschlossen werden.
+
+A. Zuerst den neuen polnischen Quellenpfad bearbeiten
+https://www.elektroda.pl/rtvforum/topic3201928.html
+
+Titel: „VW all - Połączenia wewnętrzne skrzynki bezpieczników CE2“.
+
+Bisher ist nur der Titel im Original gelesen. Der Suchauszug enthält die ausdrückliche Suche nach einem internen Verbindungsplan.
+
+Suche gezielt:
+site:elektroda.pl/rtvforum/topic3201928.html "CE2"
+"CE2" "połączenia wewnętrzne"
+"357937039" "schemat"
+Erschließe nur tatsächlich gefundene Beitragslinks, öffentlich zugängliche Ansichten oder Anhänge.
+Erfasse Autor, Datum, Beitragsnummer und etwaige Planherkunft.
+Unterscheide eine bloße Plananfrage von Antworten mit Plan oder Messung.
+Keine Zugangsbeschränkungen umgehen.
+B. Offene Sprachen systematisch vorziehen
+Die folgenden Anfragen sind vorgeschlagene nächste Suchen, noch nicht ausgeführt. Jede Zeile getrennt suchen:
+
+Sprache	Kurze Suchanfragen
+Deutsch	"357 937 039" interne Verdrahtung · CE2 Sicherung 18 Stromlaufplan
+Englisch	CE2 relay socket 12 pin numbering · CE2 S18 M/02
+Russisch	CE2 внутренняя схема · Golf J17 реле бензонасоса
+Polnisch	CE2 połączenia wewnętrzne · Golf S18 przekaźnik pompy paliwa
+Chinesisch, vereinfacht	"357937039" 保险丝盒 · Golf 内部接线图 燃油泵继电器
+Chinesisch, traditionell	Golf 保險絲盒 內部接線圖
+Japanisch	"357937039" ヒューズボックス · Golf 燃料ポンプリレー 端子配列
+Koreanisch	"357937039" 퓨즈 박스 · Golf 연료 펌프 릴레이 핀 배열
+Thai	"357937039" กล่องฟิวส์ · Golf ขารีเลย์ ปั๊มน้ำมันเชื้อเพลิง
+Ergänze bei Bedarf einzeln J17, S18, M/02, G1/03, Z1 oder 30B. Keine überladenen Anfragen. Übersetzungsansichten englischer Quellen sind keine unabhängigen landessprachlichen Belege.
+
+C. Q1 und Listenherkunft weiterführen
+SEATCUPRA, Post 2433959: Jetzt bis E/05 lesbar; E/02 nennt intern U2/1. U2, Relaisplatz 12, Bild und Quellenverweis fehlen weiterhin. Kein erneuter identischer Abruf ohne begründeten neuen Zugangsweg.
+Scribd 520017984: Textausgabe stark verfälscht. Keine Kennungen daraus rekonstruieren. Nur lesbare öffentliche Darstellung oder nachvollziehbare andere Wiedergabe verwenden.
+R12-LIST-907721: Übergebener vollständiger Listenbericht; neun Listenpositionen, keine verifizierten Kammern. Herkunft und Blickrichtung offen.
+D. Sicherung 18 als getrennten Topologieauftrag behandeln
+Benötigt werden Relaisausgang, beide S18-Halterkontakte und rückseitige Gegenkontakte. Äußere Leitungen, Relais, Sicherung und herausnehmbare Brücken separat erfassen. Listenposition 4 und M/02 nicht allein aufgrund gleicher Funktion verbinden.
+
+E. Verbindliche Abgabe- und Belegregeln
+Originallektüre, Suchauszug, Fremdbericht, Bildprüfung und Messung getrennt ausweisen. Originalpassagen mit deutscher Übersetzung dokumentieren; Kennungen unverändert lassen.
+
+Matrix: 1 nur für nachgewiesene feste Verbindung am identifizierten nackten Grundträger; 0 nur für geeignet nachgewiesene Trennung; sonst ?. Q1/Q2 bleiben Quellenreferenzen ohne physische Zielteilverifizierung.
+
+Abschluss mit Quellenregister, Sprachprotokoll, Inventaränderungen, Kantenänderungen und nächstem Auftrag einschließlich aller acht Suchsprachen. Ohne geeignete neue Leiterbelege: „Elektrische Kantenliste unverändert.“
+
+# ZE2 / CE2 357 937 039 – Recherchefortsetzung
+
+## Verbindlicher Sprachumfang
+Deutsch, Englisch, Russisch, Polnisch, Chinesisch, Japanisch, Koreanisch und Thai.
+Chinesisch vereinfacht und ergänzend traditionell.
+Diesen Sprachumfang in jede weitere Übergabe übernehmen.
+Tatsächliche Suchanfragen und offene Sprachen protokollieren.
+
+## Ausgangsstand
+Elektrische Kantenliste unverändert.
+Keine neuen physisch identifizierten Kontakte oder Sicherungshalterseiten.
+Q1 und Q2 bleiben Quellenreferenzen ohne physische Zielteilverifizierung.
+R12-LIST-907721 enthält laut übergebenem Bericht neun Listenpositionen;
+keine bestätigte Kammergeometrie oder DIN-Zuordnung.
+
+## A. Neue polnische Antwortpassagen gezielt verfolgen
+Originalthread:
+https://www.elektroda.pl/rtvforum/topic3201928.html
+
+Originalabruf weiterhin nur bis Seitenkopf.
+Keine Autoren, Beitragsnummern oder Anhänge erschlossen.
+
+Neue übergebene Suchauszüge:
+
+1. „Weź dowolny schemat VW, szare pole na górze, to właśnie
+   skrzynka bezpieczników/przekaźników.“
+
+Fundort:
+https://poszukaj.elektroda.pl/szukaj,skrzynka-bezpiecznik%C3%B3w-vw.html
+
+2. „a,b... to linie, które są powiązane z dalszą częścią schematu.
+   Na przykład na 1 stronie znajduje …“
+
+Fundort:
+https://poszukaj.elektroda.pl/szukaj,schematy-poziomu-paliwa.html
+
+Aufgaben:
+- Exakte charakteristische Wortfolgen suchen.
+- Die gefundenen Suchübersichten auf tatsächliche Beitragslinks prüfen.
+- Nur vorhandenen öffentlichen Links, Ansichten und Anhängen folgen.
+- Autor, Datum, Beitragsnummer und vollständigen Kontext erfassen.
+- Prüfen, ob ein konkreter Plan verlinkt oder angehängt ist.
+- Plananfrage, allgemeine Erklärung und tatsächlichen Planbeleg trennen.
+
+Die Hinweise auf ein graues Feld und auf Fortsetzungslinien sind
+keine Leiterkanten und noch kein Nachweis eines vorhandenen Anhangs.
+
+## B. Noch nicht bearbeitete Sprachen vorziehen
+Folgende Anfragen sind Vorschläge, nicht bereits ausgeführt:
+
+Koreanisch:
+- "357937039" 퓨즈 박스
+- Volkswagen Golf 내부 배선도 퓨즈 박스
+
+Thai:
+- "357937039" กล่องฟิวส์
+- Volkswagen Golf แผนผังวงจร กล่องฟิวส์
+
+Chinesisch, traditionell:
+- "357937039" 保險絲盒
+- Volkswagen Golf 保險絲盒 內部接線圖
+
+Danach japanische technische Suche vertiefen:
+- Golf CE2 内部配線図
+- Golf 燃料ポンプリレー 端子配列
+
+Reine Handelsangebote und automatisch übersetzte Seiten gesondert führen.
+Fehlende Treffer sind keine elektrische Negativaussage.
+
+## C. Japanische Hardware-Fundorte nur bei Bedarf prüfen
+https://paypayfleamarket.yahoo.co.jp/item/j1071882954
+Suchauszug: Golf 3, gebrauchter Sicherungskasten, 357937039.
+
+https://item.rakuten.co.jp/e-cle/3310070100-0000y0752967800/
+Suchauszug: Vanagon 70AAF, Zentralelektrik, Originalteilenummer 357937039.
+
+Bisher keine Originallektüre oder Bildprüfung.
+Verkäuferzuordnung nicht als Variantenverifizierung übernehmen.
+Yahoo-Angebote mit gleicher Kennung nicht doppelt zählen.
+
+Nur bei tatsächlich zugänglichen Fotos:
+Teilenummer, Vorder-/Rückseite, Blickrichtung und sichtbare Kennungen erfassen.
+Fotos geschlossener Gehäuse beweisen keine internen Leiterverbindungen.
+
+## D. Technische Kernaufgaben bleiben bestehen
+1. U2/01 vollständig und unverfälscht mit Spaltenüberschriften erschließen.
+2. Herkunft und geometrische Nummerierung der Neuner-Liste ermitteln.
+3. S18 mit beiden getrennten Halterseiten und Gegenkontakten dokumentieren.
+4. Hardwarebezug auf 357 937 039 prüfen.
+
+SEATCUPRA 2433959:
+Laut übergebenem Stand bis E/05 gelesen; E/02 nennt intern U2/1.
+Vermutlich abhängige Tabellenwiedergabe, keine unabhängige Bestätigung.
+
+Scribd 520017984:
+Extraktionsfehler dokumentiert. Kennungen nicht stillschweigend rekonstruieren.
+
+S18:
+Relaisausgang, Sicherung, Pumpenleitung und Lambdasondenheizung trennen.
+Listenposition 4 und M/02 nicht allein aufgrund gleicher Funktion verbinden.
+
+## E. Beleg- und Abgaberegeln
+Übergebener Bericht, Suchauszug, Originallektüre, Bildprüfung und Messung trennen.
+Originalpassagen plus deutsche Übersetzung; Anschlusskennungen unverändert.
+Keine erratenen Kommentar-IDs, URLs oder Seitenzahlen.
+Keine Zugangsbeschränkungen umgehen.
+
+Matrix:
+1 = feste Verbindung am identifizierten nackten Grundträger nachgewiesen.
+0 = Trennung geeignet nachgewiesen.
+? = ungeklärt.
+
+Ausgabe:
+- Neue Originalbelege und Suchhinweise getrennt.
+- Quellenabhängigkeiten.
+- Sprachprotokoll.
+- Inventaränderungen getrennt von Kantenänderungen.
+- Abrufgrenzen.
+- Neuer Folgeauftrag mit allen acht Suchsprachen.
+
+Ohne geeignete neue Leiterbelege:
+„Elektrische Kantenliste unverändert.“
+
+Monica
+GPT-6 Astra
