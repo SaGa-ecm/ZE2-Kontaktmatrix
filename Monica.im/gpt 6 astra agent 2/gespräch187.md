@@ -2158,3 +2158,1276 @@ Ohne geeignete neue Leiterbelege:
 
 Monica
 GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+61 Sekunden nachgedacht
+Linkleser
+Searching: "Weź dowolny schemat VW"
+Basierend auf 9 Suchquellen
+
+15 Sekunden nachgedacht
+Searching: "a,b" "to linie" "schematu"
+Basierend auf 9 Suchquellen
+
+4 Sekunden nachgedacht
+Searching: "które są powiązane z dalszą częścią schematu"
+Basierend auf 9 Suchquellen
+
+1 Sekunden nachgedacht
+Denkprozess
+
+
+Monica
+GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+Searching: "357937039" 퓨즈 박스
+Basierend auf 8 Suchquellen
+
+0 Sekunden nachgedacht
+Ergebnis dieses Durchlaufs
+Die erste polnische Antwortpassage wurde im Suchindex erneut gefunden. Die Suche nach ihrer exakten Wortfolge liefert auch den bekannten CE2-Thread. Der zugehörige Originalbeitrag mit Autor, Datum und Beitragsnummer ist jedoch weiterhin nicht erschlossen.
+
+Die beiden Suchübersichten wurden gelesen, soweit die Textausgabe reicht. Im ausgegebenen Abschnitt stehen weder die gesuchten Antwortpassagen noch ein ihnen zugeordneter Beitrags- oder Anhangslink.
+
+Die koreanische Suche wurde begonnen; Thai, traditionelles Chinesisch und die vertiefte japanische Suche bleiben offen.
+
+Elektrische Kantenliste unverändert.
+
+1. Neu selbst gelesene Seiteninhalte
+Polnische Suchübersicht „skrzynka bezpieczników vw“
+Fundstelle: Elektroda-Suchübersicht: Sicherungskasten VW
+
+Selbst gelesen wurde der Anfang der Ergebnisübersicht mit tatsächlichen Links zu verschiedenen VW-Themen.
+
+Nicht im ausgegebenen Abschnitt enthalten:
+
+die Passage „Weź dowolny schemat VW …“;
+ein dieser Passage zugeordneter Direktlink;
+eine Autorenangabe;
+ein konkreter CE2-Plan oder Anhang.
+Die Ausgabe endet innerhalb der Ergebnisliste. Deshalb lässt sich daraus nicht schließen, dass die Passage auf der vollständigen Seite fehlt.
+
+Polnische Suchübersicht „schematy poziomu paliwa“
+Fundstelle: Elektroda-Suchübersicht: Kraftstoffstand-Schaltpläne
+
+Auch hier wurde nur der Anfang der Ergebnisübersicht ausgegeben.
+
+Ein sichtbarer Treffer enthält zwar „W załączniku schematy od Golfa V“ – deutsch: „Im Anhang Schaltpläne vom Golf V“. Er gehört aber zu einem Seat-Toledo-IV-Thema und nicht nachweislich zur gesuchten CE2-Antwort.
+
+Abgrenzung: Diese Anhangserwähnung ist kein Nachweis eines Anhangs im CE2-Thread und wurde nicht weiterverfolgt.
+
+Belegstatus
+Dies sind selbst gelesene Suchübersichten, keine neu gelesenen Originalbeiträge des CE2-Threads. Es wurde in diesem Durchlauf kein neuer technischer Originalbeleg für die interne Verdrahtung erschlossen.
+
+2. Neue Suchhinweise – getrennt von Originallektüre
+A. Polnische Passage zum grauen Feld bestätigt
+Tatsächliche Suchanfrage:
+
+"Weź dowolny schemat VW"
+
+Das Ergebnis lieferte:
+
+den CE2-Thread 3201928;
+die oben genannte Suchübersicht mit folgendem Auszug:
+„Weź dowolny schemat VW, szare pole na górze, to właśnie skrzynka bezpieczników/przekaźników.“
+
+Deutsche Übersetzung:
+
+„Nimm einen beliebigen VW-Schaltplan; das graue Feld oben ist der Sicherungs-/Relaiskasten.“
+
+Im selben Suchauszug erscheinen:
+
+„10 Maj 2016 16:55 Odpowiedzi: 4“
+
+Das bedeutet 10. Mai 2016, 16:55 Uhr; Antworten: 4. Diese Angaben stammen aus der Ergebnisübersicht. Sie sind nicht als Datum oder Beitragsnummer des gesuchten Autors verifiziert.
+
+Erkenntnisgewinn: Der übergebene Text ist jetzt selbst als Suchauszug gelesen; die exakte Suche führt auch zum bekannten CE2-Thema. Ein Direktlink zum Antwortbeitrag fehlt weiterhin.
+
+Elektrische Aussagegrenze: Die Passage erklärt allgemein die Darstellung eines VW-Stromlaufplans. Sie belegt weder einen bestimmten Plan noch eine konkrete Leiterverbindung.
+
+B. Fortsetzungslinien: Zielpassage nicht wiedergefunden
+Tatsächlich ausgeführt:
+
+"a,b" "to linie" "schematu"
+"które są powiązane z dalszą częścią schematu"
+Die gelieferten Ergebnisse waren themenfremd. Daraus folgt keine Widerlegung des übergebenen Suchauszugs.
+
+Die Passage bleibt ein übergebener Suchhinweis:
+
+„a,b... to linie, które są powiązane z dalszą częścią schematu. Na przykład na 1 stronie znajduje …“
+
+Deutsche Übersetzung des unvollständigen Textes:
+
+„a,b… sind Linien, die mit dem weiteren Teil des Schaltplans zusammenhängen. Zum Beispiel befindet sich auf Seite 1 …“
+
+Autor, Originalbeitrag, vollständiger Kontext und eventuelle Anhänge bleiben unbekannt. Insbesondere ist noch nicht bestätigt, dass beide polnischen Passagen aus demselben Thema stammen.
+
+C. Koreanische Suche: nur englischsprachige Katalog-/Handelstreffer
+Tatsächliche Anfrage:
+
+"357937039" 퓨즈 박스
+
+퓨즈 박스 bedeutet Sicherungskasten.
+
+Unter den gelieferten Suchtreffern:
+
+Quelle	Selbst gelesener Suchauszug	Einordnung
+Volkswagen-Teilekatalog	„Genuine Volkswagen Part # 357937039 (357-937-039) – Fuse and Relay Center …“	Neuer offizieller Katalogansatz zur Teileidentität; Originalseite nicht gelesen
+ECS Tuning	Nennt 357937039 und unter anderem Corrado, Eurovan T4, Golf II und Golf III	Händlerzuordnung, keine Variantenverifizierung
+Module Mechanics	Titel ordnet 357937039 einem Audi 80 zu	Ungeprüfte Verkäuferzuordnung; nicht auf die Zielhardware übertragen
+Ergebnis: Eine echte koreanischsprachige Anfrage wurde ausgeführt, aber keine koreanische technische Quelle erschlossen. Die Treffer enthalten keine auswertbare interne Schaltung.
+
+3. Quellenabhängigkeiten und übernommener Stand
+Elektroda-Suchübersichten sind Auszüge aus Forumsinhalten, keine unabhängigen Bestätigungen.
+Exakte Suche und Suchübersicht dürfen nicht als zwei unabhängige Belege für dieselbe Aussage gezählt werden.
+Händlerzuordnungen belegen weder identische Innenausführung noch Variantenkompatibilität.
+Der offizielle VW-Katalogtreffer ist zunächst nur ein Suchhinweis, kein gelesener Teilekatalogeintrag.
+R12-LIST-907721, SEATCUPRA bis E/05 und die Scribd-Extraktionsfehler wurden in diesem Durchlauf nicht erneut geprüft. Sie bleiben übernommener Stand.
+Keine neue Grundlage zur Herkunft der Neuner-Liste oder zur Unabhängigkeit der CE2-Tabellen gefunden.
+4. Sprachprotokoll
+Verbindlicher Umfang: Deutsch, Englisch, Russisch, Polnisch, Chinesisch, Japanisch, Koreanisch und Thai; Chinesisch vereinfacht und ergänzend traditionell.
+
+Sprache	Arbeit in diesem Durchlauf	Status
+Deutsch	Keine neue Anfrage	Offen
+Englisch	Englische Suchauszüge als Ergebnisse der koreanischen Anfrage gelesen; keine eigene englische Anfrage	Technische Suche offen
+Russisch	Keine neue Anfrage	Fortsetzung offen
+Polnisch	Drei oben vollständig protokollierte Anfragen; zwei übergebene Suchübersichten abgerufen	Teilbearbeitet; Originalantworten offen
+Chinesisch, vereinfacht	Keine neue Anfrage	Fortsetzung offen
+Chinesisch, traditionell	Keine Anfrage	Priorisiert offen
+Japanisch	Keine neue Anfrage; Hardware-Angebote nicht abgerufen	Technische Vertiefung offen
+Koreanisch	"357937039" 퓨즈 박스	Begonnen; zweite, technische Anfrage offen
+Thai	Keine Anfrage	Priorisiert offen
+Die vorgeschlagenen, aber nicht ausgeführten Anfragen werden ausdrücklich nicht als erledigt gezählt.
+
+5. Inventar, Kanten und Abrufgrenzen
+Inventaränderungen
+Keine.
+
+Keine neue physische Sockelkammer identifiziert.
+Keine Sicherungshalterseite identifiziert.
+Keine Fotos visuell geprüft.
+Keine Kammergeometrie oder DIN-Zuordnung bestätigt.
+Elektrische Kantenänderungen
+Keine.
+
+Q1 und Q2 bleiben Quellenreferenzen ohne physische Zielteilverifizierung.
+U2/01 bleibt ohne neu gelesene vollständige Gegenzeile.
+S18 bleibt ohne getrennte Dokumentation beider Halterkontakte.
+Keine Verbindung zwischen Listenposition 4 und M/02 abgeleitet.
+Keine neuen Matrixwerte 1 oder 0; ungeklärte Beziehungen bleiben ?.
+Elektrische Kantenliste unverändert.
+
+Abrufgrenzen und unerledigte Aufgaben
+Die Elektroda-Übersichten wurden vor den gesuchten Passagen abgeschnitten. Kein neuer Antwort-Direktlink, öffentlicher Anhang oder alternativer vollständiger Zugang wurde gefunden. Der bereits bekannte gekürzte CE2-Threadanfang wurde nicht erneut als Fortschritt verwendet.
+
+Die technischen Kernaufgaben – U2/01, Listennummerierung, S18 und Hardwarebezug – sind in diesem Durchlauf nicht gelöst worden.
+
+6. Neuer ausführbarer Folgeauftrag für Monica
+Verbindlicher Sprachumfang
+Deutsch, Englisch, Russisch, Polnisch, Chinesisch, Japanisch, Koreanisch und Thai. Chinesisch vereinfacht und ergänzend traditionell. Diesen Umfang in jede weitere Übergabe übernehmen. Tatsächliche Anfragen, Quellentyp und offene Sprachen protokollieren.
+
+1. Zuerst die noch offenen Sprachsuchen ausführen
+Folgende Anfragen sind noch nicht ausgeführt:
+
+Koreanisch: Volkswagen Golf 내부 배선도 퓨즈 박스
+Thai: "357937039" กล่องฟิวส์
+Thai: Volkswagen Golf แผนผังวงจร กล่องฟิวส์
+Chinesisch traditionell: "357937039" 保險絲盒
+Chinesisch traditionell: Volkswagen Golf 保險絲盒 內部接線圖
+Japanisch: Golf CE2 内部配線図
+Japanisch: Golf 燃料ポンプリレー 端子配列
+Anschließend kurze technische Suchen in den übrigen Sprachen:
+
+Deutsch: CE2 Sicherung 18 interne Verdrahtung
+Englisch: CE2 fuse 18 internal wiring
+Russisch: CE2 внутренняя схема
+Polnisch: CE2 połączenia wewnętrzne
+Chinesisch vereinfacht: Golf 保险丝盒 内部接线图
+Handelsangebote und automatisch übersetzte Seiten getrennt führen. Bei unergiebigen Treffern Fahrzeugbezug ändern oder Kennungen einzeln ergänzen; fehlende Treffer nicht als elektrische Negativaussage werten.
+
+2. Polnische Antworten gezielt lokalisieren
+Bekannter Thread:
+
+https://www.elektroda.pl/rtvforum/topic3201928.html
+
+Die exakte Suche "Weź dowolny schemat VW" liefert den Thread und einen Suchübersichts-Auszug mit der grauen-Feld-Erklärung. Autor und Originalbeitrag sind weiterhin unbekannt.
+
+Nächste, noch nicht ausgeführte Anfragen:
+
+site:elektroda.pl/rtvforum/ "szare pole na górze"
+site:elektroda.pl/rtvforum/topic3201928.html "schematu"
+site:elektroda.pl "a,b" "dalszą"
+site:elektroda.pl "Na przykład na 1 stronie"
+Nur tatsächlich gefundene öffentliche Links und Anhänge verfolgen. Suchübersichtsdatum nicht als Antwortdatum übernehmen. Zunächst prüfen, ob die Fortsetzungslinien-Passage überhaupt zum selben Thread gehört.
+
+3. Technische Kernaufgaben beibehalten
+U2/01: vollständige unverfälschte Zeile mit Spaltenüberschriften und Herkunft suchen.
+R12-LIST-907721: Herkunft, Blickrichtung und geometrische Nummerierung klären; neun Listenpositionen bleiben von physischen Kammern getrennt.
+S18: Relaisausgang, beide Halterkontakte, rückseitige Gegenkontakte und äußere Leitungen getrennt erfassen. Suchkennungen einzeln oder in kleinen Kombinationen: J17, S18, M/02, G1/03, Z1, 30B.
+Hardware: Zielteilenummer 357 937 039 nachweisen; Varianten separat behandeln.
+Neuer optionaler Katalogansatz:
+
+https://parts.vw.com/p/Volkswagen__/Fuse-and-Relay-Center/53040177/357937039.html
+
+Bisher nur Suchauszug gelesen. Ein Katalogeintrag könnte die Teileidentität unterstützen, ersetzt aber keinen internen Leiterbeleg.
+
+4. Verbindliche Beleg- und Abgaberegeln
+Übergebene Berichte, Suchauszüge, Originallektüre, Bildprüfung und Messungen trennen. Originalpassagen mit deutscher Übersetzung dokumentieren; Kennungen unverändert lassen. Keine URLs, Kommentar-IDs oder Seitenzahlen erraten und keine Zugangsbeschränkungen umgehen.
+
+1 nur bei nachgewiesener fester Verbindung am identifizierten nackten Grundträger; 0 nur bei geeignet nachgewiesener Trennung; sonst ?. Relais, Sicherungen, Kabelbaum und herausnehmbare Brücken separat behandeln.
+
+Ausgabe mit Quellenabhängigkeiten, Sprachprotokoll, Inventar- und Kantenänderungen sowie neuem Folgeauftrag einschließlich aller acht Suchsprachen. Ohne geeignete neue Leiterbelege ausdrücklich: „Elektrische Kantenliste unverändert.“
+
+# ZE2 / CE2 357 937 039 – nächster Rechercheauftrag
+
+## Verbindlicher Sprachumfang
+Deutsch, Englisch, Russisch, Polnisch, Chinesisch, Japanisch, Koreanisch und Thai.
+Chinesisch vereinfacht und ergänzend traditionell.
+Diesen vollständigen Umfang in jeder weiteren Übergabe beibehalten.
+Tatsächliche Anfragen, erfolglose Abrufe und offene Sprachen unterscheiden.
+
+## Neuer übergebener Originalbeleg
+https://parts.vw.com/p/Volkswagen__/Fuse-and-Relay-Center/53040177/357937039.html
+
+Laut Bericht im Original gelesen:
+- Fuse and Relay Center
+- Part Number: 357937039
+- Supersession(s): 357-937-039
+- Fuse Box. Relay and Fuse Plate.
+- Fits Cabrio, Corrado
+- LOWER.
+
+Bedeutung:
+Offizieller Katalogbeleg zur Teileidentität, kein interner Leiterbeleg.
+Die Schreibweise mit Bindestrichen belegt keine technische Nachfolgeversion.
+Keine Baujahre, Innenausführung oder vollständige Verwendungsliste gelesen.
+Weitere reine Handelsangebote jetzt nachrangig behandeln.
+
+## 1. Technische japanische und chinesische Suche vorziehen
+Folgende Anfragen sind noch nicht ausgeführt:
+- Golf CE2 内部配線図
+- Golf 燃料ポンプリレー 端子配列
+- Volkswagen Golf 保險絲盒 內部接線圖
+- Golf 保险丝盒 内部接线图
+
+Bei neueren Golf-Generationen als Fehlertreffern Golf 2/Golf 3 ergänzen.
+Varianten der Modellschreibweise einzeln erproben.
+Übersetzungsansichten nicht als eigenständige Originalquellen zählen.
+
+## 2. Thai-Suche mit dokumentiertem Fehler fortsetzen
+Bereits ausgewertet:
+"357937039" กล่องฟิวส์
+Ergebnis: englische Katalog- und Handelsseiten, keine Thai-Fachquelle.
+
+Angestoßen, aber wegen Zeitüberschreitung nicht ausgewertet:
+Volkswagen Golf แผนผังวงจร กล่องฟิวส์
+
+Diese technische Anfrage erneut oder in kürzerer Form ausführen.
+Einen technischen Abruffehler niemals als „keine Treffer“ ausweisen.
+
+## 3. Koreanisch und übrige Sprachen gezielt vertiefen
+Bereits ausgeführt:
+Volkswagen Golf 내부 배선도 퓨즈 박스
+Ergebnis: allgemeine englische Bild-/Diagnosetreffer, kein CE2-Leiterbeleg.
+
+Neue kurze technische Suchansätze:
+- Koreanisch: Golf 3 퓨즈 박스 배선도
+- Deutsch: CE2 Sicherung 18 interne Verdrahtung
+- Englisch: CE2 fuse 18 internal wiring
+- Russisch: CE2 внутренняя схема
+- Polnisch: CE2 połączenia wewnętrzne
+
+Jede tatsächlich ausgeführte Anfrage protokollieren.
+Keine pauschale Behauptung, alle Sprachen seien vollständig recherchiert.
+
+## 4. Elektroda: Antwortbeitrag statt Threadanfang
+https://www.elektroda.pl/rtvforum/topic3201928.html
+
+Übergebener Suchauszug:
+„Weź dowvolny schemat VW“ ist NICHT die bestätigte Schreibweise.
+Für die Suche den tatsächlich übergebenen Wortlaut verwenden:
+„Weź dowolny schemat VW, szare pole na górze, to właśnie
+skrzynka bezpieczników/przekaźników.“
+
+Autor, eigenes Datum und Beitragsnummer weiterhin unbekannt.
+Suchübersichtsdatum nicht als Antwortdatum übernehmen.
+
+Zweite übergebene Passage:
+„a,b... to linie, które są powiązane z dalszą częścią schematu.
+Na przykład na 1 stronie znajduje …“
+
+Zunächst prüfen, ob diese zweite Passage überhaupt zum selben Thread gehört.
+Nur tatsächlich gefundene öffentliche Beitragslinks und Anhänge verfolgen.
+Kein erneuter identischer gekürzter Abruf ohne begründeten neuen Zugang.
+
+## 5. Technische Kernziele
+A. U2/01:
+Vollständige unverfälschte Zeile mit Spaltenüberschriften und Quellenherkunft.
+
+B. R12-LIST-907721:
+Herkunft, Blickrichtung und geometrische Nummerierung der neun Positionen.
+Textliche Listenpositionen nicht als physisch bestätigte Kammern behandeln.
+
+C. S18:
+Relaisausgang, beide Sicherungshalterkontakte und rückseitige Gegenkontakte.
+Äußere Leitungen, Sicherung, Relais und herausnehmbare Brücken separat.
+Kennungen einzeln oder in kleinen Gruppen:
+J17, S18, M/02, G1/03, Z1, 30B.
+Gleiche Funktionsangaben begründen keine feste Leiterkante.
+
+D. Zielhardware:
+Technischen Plan oder Messobjekt auf 357 937 039 beziehen.
+Der offizielle Katalogeintrag allein verifiziert keine Innenausführung.
+
+## 6. Belegregeln und Ausgabe
+Übergebene Berichte, Suchauszüge, Originallektüre, Bildprüfung und Messung trennen.
+Originalpassagen mit deutscher Übersetzung dokumentieren.
+Anschlusskennungen nicht stillschweigend korrigieren.
+Abhängige Tabellenwiedergaben nicht als unabhängige Bestätigungen zählen.
+Keine URLs, Kommentar-IDs oder Seitenzahlen erfinden.
+Keine Zugangsbeschränkungen umgehen.
+
+Matrix:
+1 nur bei nachgewiesener fester Verbindung am identifizierten nackten Grundträger.
+0 nur bei geeignet nachgewiesener Trennung.
+Sonst ?.
+Q1 und Q2 bleiben Quellenreferenzen ohne physische Zielteilverifizierung.
+
+Abgabe:
+- Neue Originalbelege.
+- Suchhinweise und Quellenabhängigkeiten.
+- Sprachprotokoll mit Fehlern und offenen Aufgaben.
+- Inventaränderungen getrennt von Kantenänderungen.
+- Nächster Auftrag einschließlich aller acht Suchsprachen.
+
+Ohne geeignete neue Leiterbelege:
+„Elektrische Kantenliste unverändert.“
+
+Monica
+GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+49 Sekunden nachgedacht
+Searching: Golf CE2 内部配線図
+Basierend auf 9 Suchquellen
+
+44 Sekunden nachgedacht
+Searching: Golf 燃料ポンプリレー 端子配列
+Basierend auf 9 Suchquellen
+
+31 Sekunden nachgedacht
+Searching: Volkswagen Golf 保險絲盒 內部接線圖
+Basierend auf 9 Suchquellen
+
+Linkleser
+5 Sekunden nachgedacht
+Searching: Golf 保险丝盒 内部接线图
+Basierend auf 9 Suchquellen
+
+0 Sekunden nachgedacht
+Ergebnis
+Neu erschlossen wurde ein japanischer Reparaturbericht mit ausdrücklicher Nennung 357_937_039. Er beschreibt die Fehlersuche an einem Golf Country, den Austausch des Sicherungs-/Relaisträgers und eine anschließend entdeckte Lötstellenbeschädigung im herausnehmbaren Relais 32.
+
+Damit liegt ein neuer technischer Erfahrungsbericht mit textlichem Zielteilebezug vor — aber kein Durchgangsbeleg am nackten Grundträger. Außerdem wurde ein zweiter japanischer Originalbericht zur Position des Kraftstoffpumpenrelais gelesen.
+
+Elektrische Kantenliste unverändert.
+
+1. Neue Originalbelege
+1.1 Japanischer Golf-Country-Bericht mit Zielteilenummer
+Fundstelle: VW GOLF COUNTRY ENTHUSIAST – Untersuchung und Reparatur einer Motorstörung
+
+Seitenüberschrift: 【 エンジン不調原因調査＆修理 】'15/06/26 NEW!!
+
+Datumsangabe: auf der Seite als '15/06/26 angegeben.
+
+Autor: Im gelesenen Ausschnitt kein Personenname ausgewiesen.
+
+Quellentyp: Persönlicher Reparaturbericht, keine übersetzte Forumsansicht.
+
+A. Ausdrücklicher Teilebezug
+入手したヒューズ＆リレーパネルです。 VW品番：357_937_039 後期型ですね。
+
+Übersetzung:
+
+„Dies ist der beschaffte Sicherungs- und Relaisträger. VW-Teilenummer: 357_937_039. Das ist die spätere Ausführung.“
+
+Die Schreibweise 357_937_039 wird hier unverändert aus der Textausgabe übernommen.
+
+Einordnung:
+
+Der Autor ordnet seinem beschafften Bauteil ausdrücklich die Zielteilenummer zu.
+„Spätere Ausführung“ ist eine Einordnung des Verfassers, keine verifizierte Variantengrenze.
+Die eingeprägte Teilenummer wurde nicht auf einem Foto geprüft.
+Fahrzeugkontext ist ein Golf Country; ein genaues Baujahr wurde im gelesenen Abschnitt nicht genannt.
+B. Schaltplan und Durchgangsprüfung werden erwähnt
+まずは、配線図で燃料ポンプの運転条件を調べて…
+
+Übersetzung:
+
+„Zunächst untersuchte ich anhand des Schaltplans die Betriebsbedingungen der Kraftstoffpumpe …“
+
+Später:
+
+こうなれば、徹底的に燃ポン関係の配線や端子を探るしかないと考え、テスターで導通をしらべたのですが、どこも異常なし。
+
+Übersetzung:
+
+„Nun blieb aus meiner Sicht nur, die Leitungen und Anschlüsse der Kraftstoffpumpe gründlich zu untersuchen. Ich prüfte mit einem Messgerät den Durchgang, fand aber nirgends eine Auffälligkeit.“
+
+Beleggrenze: Keine Messpunktpaare, Widerstandswerte oder eindeutige Angaben zum Ausbauzustand. Insbesondere ist keine Messung des identifizierten nackten Grundträgers dokumentiert. Die pauschale Aussage „nirgends eine Auffälligkeit“ erzeugt weder Matrixwerte 1 noch 0.
+
+Der erwähnte Schaltplan wurde im ausgegebenen Inhalt nicht als konkreter Dokumentlink erschlossen.
+
+C. Fehlerfund betrifft das eingesetzte Relais, nicht die ZE-Innenverdrahtung
+Der Verfasser beschreibt zunächst den Austausch des Kraftstoffpumpenrelais No.80, anschließend des Zündanlassschalters und des Sicherungs-/Relaisträgers. Der Fehler tritt jeweils erneut auf.
+
+Danach:
+
+３２番のリレー…デジファントのコントロールリレーです。
+
+Übersetzung:
+
+„Relais Nummer 32 … das Steuerrelais der Digifant.“
+
+Zum geöffneten Relais:
+
+改めて端子（No.30）を触ると確かに緩い感じ。…ハンダ付け部分に微細な亀裂があるではないですか！
+
+Übersetzung:
+
+„Als ich den Anschluss (No.30) erneut berührte, fühlte er sich tatsächlich locker an. … An der Lötstelle war ein feiner Riss!“
+
+Anschließend berichtet der Autor vom Entfernen des alten Lots und erneutem Verlöten.
+
+Wichtig: No.30 bezeichnet hier nach dem Text einen Anschluss des geöffneten Relais 32. Keine Übertragung auf eine ZE-Kammer, Listenposition oder einen neuen internen Grundträgerknoten.
+
+Abrufgrenze: Die Ausgabe bricht nach der beschriebenen Lötstellenreparatur ab. Eine abschließende Erfolgskontrolle wurde nicht gelesen.
+
+1.2 Japanischer Bericht zum Kraftstoffpumpenwechsel
+Fundstelle: 燃料ポンプの交換 – Austausch der Kraftstoffpumpe
+
+Datumsangabe: September 2013.
+
+Autor: Auf der abgerufenen Seite kein Personenname ausgewiesen.
+
+Fahrzeugzuordnung: Der Suchtreffer bezeichnet die Seite als „VW ゴルフⅢ“; diese Modellangabe ist vom eigentlichen gelesenen Seitenkörper zu unterscheiden.
+
+Originalpassage:
+
+ヒューズリレーボックス、下列右端の167番／燃料ポンプリレーを外し…
+
+Übersetzung:
+
+„… das Relais Nummer 167 / Kraftstoffpumpenrelais ganz rechts in der unteren Reihe des Sicherungs-/Relaiskastens entfernen …“
+
+Erkenntniswert: Eigenständiger japanischer Erfahrungsbericht mit einer textlichen Positionsbeschreibung des eingesetzten Relais.
+
+Nicht belegt:
+
+ausdrückliche Steckplatznummer 12;
+Kammernummerierung oder Blickrichtung einer Anschlusszeichnung;
+Teilenummer 357 937 039;
+interne Verbindungen oder Sicherung-18-Halterseiten.
+Die Positionsbeschreibung wird deshalb nicht zur geometrischen Verifizierung von R12-LIST-907721 verwendet.
+
+2. Neue Suchhinweise und Quellenabhängigkeiten
+Weitere japanische Quelle
+Die Anfrage Golf CE2 内部配線図 lieferte:
+
+みんカラ: 室内配線の整理 – Ordnen der Innenraumverkabelung
+
+Suchauszug:
+
+フォルクスワーゲン ゴルフ …（ゴルフ2）｜室内配線の整理
+
+Übersetzung: „Volkswagen Golf … (Golf 2) – Ordnen der Innenraumverkabelung.“
+
+Status: Nur Suchauszug gelesen. Möglicher Kabelbaum-/Einbaukontext; kein Hinweis auf einen bereits nachgewiesenen internen ZE-Plan.
+
+Neuer Dokumentkandidat aus der vereinfachten chinesischen Suche
+Die Anfrage Golf 保险丝盒 内部接线图 lieferte unter anderem:
+
+Scribd 741371360 – „Loom schematic“
+
+Angezeigter Suchtitel:
+
+“MK2 Golf Fuse Box and Loom Diagrams”
+
+Übersetzung: „Golf-Mk2-Sicherungskasten- und Kabelbaumdiagramme.“
+
+Status: Nur Suchtreffer. Inhalt, Titelherkunft, Lesbarkeit und CE1-/CE2-Zuordnung ungeprüft. Das ist nicht das bereits bekannte beschädigt extrahierte Dokument 520017984.
+
+Quellenabhängigkeit
+Bei den beiden japanischen Originalberichten wurde im gelesenen Text keine Wiedergabe der bekannten CE2-Neuner-Liste erkannt.
+Daraus folgt keine gesicherte Unabhängigkeit aller verwendeten technischen Informationen. Insbesondere bleibt die Herkunft des im Country-Bericht erwähnten Schaltplans unbekannt.
+Reddit-Treffer mit ?tl=ja wurden als Übersetzungsansichten erkannt und nicht als japanische Originalbelege gezählt.
+Die chinesischen Anfragen lieferten überwiegend anderssprachige, übersetzte oder thematisch unpassende Ergebnisse. Eine chinesische Anfrage macht diese Quellen nicht zu chinesischen Originalquellen.
+Der offizielle VW-Katalogbeleg bleibt in diesem Durchlauf ein übergebener Originalbericht; er wurde nicht erneut abgerufen.
+3. Sprachprotokoll
+Alle folgenden vier Anfragen wurden tatsächlich ausgeführt und ausgewertet:
+
+Sprache	Tatsächliche Anfrage	Ergebnis
+Japanisch	Golf CE2 内部配線図	Golf-2-Innenraumverkabelung als Suchhinweis; außerdem themenfremde Treffer
+Japanisch	Golf 燃料ポンプリレー 端子配列	Zwei anschließend gelesene japanische Reparaturberichte
+Chinesisch, traditionell	Volkswagen Golf 保險絲盒 內部接線圖	Unter anderem Golf 6, neuere Fahrzeuge und Übersetzungsseiten; kein geeigneter CE2-Beleg erschlossen
+Chinesisch, vereinfacht	Golf 保险丝盒 内部接线图	Neuer Scribd-Dokumentkandidat; ansonsten überwiegend Diagramm-Aggregatoren
+Offene Sprachen und Fehlerstatus
+Sprache	Status dieses Durchlaufs
+Deutsch	Keine neue Anfrage; technische Vertiefung offen
+Englisch	Keine eigene neue Anfrage; englische Suchtreffer nicht als englischer Recherchelauf zählen
+Russisch	Keine neue Anfrage; offen
+Polnisch	Keine neue Anfrage; Elektroda-Antworten weiterhin offen
+Chinesisch	Beide Schriftvarianten begonnen; Eingrenzung auf Golf 2/Golf 3 noch nicht ausgeführt
+Japanisch	Zwei technische Originalseiten gelesen; Plan- und Kammerprüfung offen
+Koreanisch	Neue Anfrage Golf 3 퓨즈 박스 배선도 noch nicht ausgeführt
+Thai	Technische Anfrage in diesem Durchlauf nicht erneut ausgeführt
+Thai-Fehlerprotokoll: Die frühere Zeitüberschreitung bei Volkswagen Golf แผนผังวงจร กล่องฟิวส์ ist ein übergebener technischer Fehler, kein negatives Suchergebnis. Sie bleibt unerledigt; in diesem Durchlauf gab es keinen ausgewerteten Wiederholungsversuch.
+
+Die in der Ausgabe sichtbaren allgemeinen Fehlermeldungen liefern keine belastbaren Suchergebnisse und werden nicht als erfolglose Fachsuchen gezählt.
+
+4. Änderungen an Inventar und Kanten
+Quellenregister
+Neu aufzunehmen:
+
+Quelle	Belegklasse	Relevanz
+Golf-Country-Bericht, 26.06.2015 laut Seitenangabe	Originaltext eines Reparaturberichts	Textliche Nennung 357_937_039; Fahrzeugdiagnose; Fehler im Relais
+Kraftstoffpumpenwechsel, September 2013	Originaltext eines Reparaturberichts	Relais 167, untere Reihe rechts
+Scribd 741371360	Suchhinweis	Möglicher Golf-Mk2-Kabelbaum-/Sicherungskastenplan
+Minkara-Innenraumverkabelung	Suchhinweis	Golf-2-Verkabelungskontext
+Physisches Inventar
+Keine Änderung. Keine Bilder visuell geprüft, keine neuen Kontakte identifiziert, keine Sicherungshalterseiten unterschieden.
+
+Elektrische Kanten
+Keine Änderung.
+
+U2/01 weiterhin nicht neu vollständig gelesen.
+Herkunft und Geometrie der Neuner-Liste weiterhin offen.
+S18 weiterhin ohne beide nachgewiesenen Halterseiten.
+Q1/Q2 bleiben Quellenreferenzen ohne physische Zielteilverifizierung.
+Keine neuen 1 oder 0; ungeklärte Beziehungen bleiben ?.
+Elektrische Kantenliste unverändert.
+
+5. Neuer ausführbarer Folgeauftrag für Monica
+Verbindlicher Sprachumfang
+Deutsch, Englisch, Russisch, Polnisch, Chinesisch, Japanisch, Koreanisch und Thai. Chinesisch vereinfacht und ergänzend traditionell. Diesen vollständigen Umfang in jeder weiteren Übergabe beibehalten. Tatsächliche Anfragen, technische Fehler, nicht ausgewertete Abrufe und offene Aufgaben getrennt protokollieren.
+
+1. Thai-Wiederholung und koreanische Vertiefung zuerst
+Noch auszuführen:
+
+Volkswagen Golf แผนผังวงจร กล่องฟิวส์
+Bei erneutem Fehler kürzer: Golf 3 แผนผังวงจร กล่องฟิวส์
+Golf 3 퓨즈 박스 배선도
+Die übergebene Thai-Zeitüberschreitung bleibt ein Abruffehler, bis ein Wiederholungsversuch ausgewertet wurde.
+
+2. Neuen japanischen Teilebeleg gezielt erschließen
+http://vwgolf2countryjp.web.fc2.com/fuelpomprelays_20150626.html
+
+Neu im Original gelesen: Golf-Country-Diagnosebericht; Text nennt 357_937_039; ein verwendeter Schaltplan wird erwähnt. Der Fehlerfund betrifft eine Lötstelle an No.30 im geöffneten Relais 32, nicht eine ZE-Leiterkante.
+
+Suche nach tatsächlich verfügbaren Bild-/Planlinks oder einer Quellenangabe auf dieser Seite und ihrer vorhandenen Navigation. Keinen erneuten identischen gekürzten Textabruf als Fortschritt zählen.
+
+Nur bei tatsächlich sichtbaren Bildern Teilenummer, Blickrichtung und Kennungen erfassen. Die bisherigen Textplatzhalter „Fuel Pomp Relays“ sind keine Bildprüfung. Ein vollständiger Reparaturabschluss wäre Quellenkontext, aber kein vorrangiger Leiterbeleg.
+
+3. Neuen Dokumentkandidaten prüfen
+https://www.scribd.com/document/741371360/Loom-schematic
+
+Bisher nur Suchtreffer „MK2 Golf Fuse Box and Loom Diagrams“. Prüfe öffentlich zugänglichen Inhalt auf:
+
+CE1 oder CE2;
+Originaltitel, Autor und Planherkunft;
+U2/01 mit Spaltenüberschriften;
+J17/S18 und getrennte Sicherungshalterseiten;
+Grundträgerteilenummer.
+Keine Zugangsbeschränkungen umgehen. Extraktionsfehler nicht stillschweigend korrigieren. Eine bekannte Tabellenkopie bleibt abhängig.
+
+4. Chinesisch eingrenzen und übrige Sprachen bearbeiten
+Noch nicht ausgeführte nächste Anfragen:
+
+Traditionell: Golf 2 保險絲盒 內部接線圖
+Vereinfacht: Golf 3 保险丝盒 内部接线图
+Japanisch: ゴルフ2 ヒューズボックス 内部配線図
+Deutsch: CE2 Sicherung 18 interne Verdrahtung
+Englisch: CE2 fuse 18 internal wiring
+Russisch: CE2 внутренняя схема
+Polnisch: CE2 połączenia wewnętrzne
+Kurze Kombinationen verwenden; Modellschreibweisen einzeln variieren. J17, S18, M/02, G1/03, Z1 und 30B bei Bedarf einzeln ergänzen.
+
+5. Elektroda nur über einen neuen belegten Zugang
+https://www.elektroda.pl/rtvforum/topic3201928.html
+
+Bestätigten Suchwortlaut verwenden: „Weź dowolny schemat VW“, nicht „dowvolny“. Autor, eigenes Datum und Beitragsnummer fehlen weiterhin.
+
+Bei der Passage über a,b... zunächst die Threadzugehörigkeit klären. Nur tatsächlich gefundene öffentliche Beitragslinks und Anhänge verfolgen; Suchübersichtsdatum nicht als Antwortdatum übernehmen.
+
+6. Elektrische Belegregeln und Abgabe
+Textliche Listenposition, Steckplatz, physische Kammer, DIN-Klemme und Strompfadnummer getrennt halten. Relais, Sicherungen, Kabelbaum und herausnehmbare Brücken sind keine festen Grundträgerkanten.
+
+1 nur bei nachgewiesener fester Verbindung am identifizierten nackten Grundträger; 0 nur bei geeignet nachgewiesener Trennung; sonst ?. Q1/Q2 bleiben Quellenreferenzen ohne physische Zielteilverifizierung.
+
+Originallektüre, Suchauszug, übergebenen Bericht, Bildprüfung und Messung getrennt dokumentieren. Originalpassagen mit deutscher Übersetzung und unveränderten Anschlusskennungen angeben.
+
+Abgabe mit Quellenabhängigkeiten, Sprach- und Fehlerprotokoll, getrennten Inventar-/Kantenänderungen und Folgeauftrag einschließlich aller acht Suchsprachen. Ohne geeignete neue Leiterbelege: „Elektrische Kantenliste unverändert.“
+
+# ZE2 / CE2 357 937 039 – Recherchefortsetzung
+
+## Verbindlicher Sprachumfang
+Deutsch, Englisch, Russisch, Polnisch, Chinesisch, Japanisch, Koreanisch und Thai.
+Chinesisch vereinfacht und ergänzend traditionell.
+In jeder weiteren Übergabe vollständig beibehalten.
+Tatsächliche Anfragen, Abruffehler und offene Arbeiten getrennt protokollieren.
+
+## Ausgangsstand
+Elektrische Kantenliste unverändert.
+Keine neuen physischen Kontakte oder Sicherungshalterseiten identifiziert.
+Q1/Q2 bleiben Quellenreferenzen ohne physische Zielteilverifizierung.
+U2/01, Neuner-Listengeometrie und vollständiger S18-Pfad bleiben offen.
+
+## A. Neuer japanischer Quellenpfad
+http://vwgolf2countryjp.web.fc2.com/fuelpomprelays_20150626.html
+
+Register: JP-COUNTRY-20150626.
+Laut übergebenem Originalbericht:
+- Überschrift mit Datum 26.06.2015.
+- Golf Country; Autor, Baujahr und Motor nicht festgestellt.
+- Schaltplan zur Untersuchung der Pumpen-Betriebsbedingungen verwendet.
+- Kraftstoffpumpenrelais „No.80“ ausgetauscht.
+- Durchgangsprüfungen an Kabeln und Steckern berichtet.
+- Gebrauchter Sicherungs-/Relaisträger eingebaut, Fehler trat erneut auf.
+- Ausgabe endet vor dem Abschluss der Diagnose.
+- Keine Zielteilenummer und keine konkreten Messpunkte gelesen.
+
+Aufgaben:
+1. Gezielt nach weiteren indexierten Passagen dieser Seite suchen.
+2. Prüfen, ob ein tatsächlicher Planlink oder eine lesbare Zeichnung existiert.
+3. Nur tatsächlich gefundene Links verfolgen; keine Bilddateinamen erfinden.
+4. Planherkunft, Anschlusskennungen und Hardwarebezug erfassen.
+5. Abschlussdiagnose nicht aus dem bisherigen Teiletausch ableiten.
+
+Berichtete Fahrzeugmessungen sind keine Messungen am nackten Grundträger.
+6N0 905 865 und 357 905 865 betreffen dort den Zündanlassschalter.
+
+## B. Japanischer Hinweis zur Relaislage
+https://hekesiry.web.fc2.com/maintenance/fuel_pomp.html
+
+Bisher nur Suchauszug:
+Golf III, Pumpenrelais 167 unten rechts am Sicherungs-/Relaiskasten.
+
+Prüfen:
+- Originaltext und Fahrzeugkontext.
+- Tatsächlich zugängliche Abbildung.
+- Blickrichtung und erkennbare Beschriftungen.
+
+Relaisaufdruck 167 nicht mit Sockel- oder Kammernummer gleichsetzen.
+
+## C. Chinesische Suche auf passende Generationen eingrenzen
+Bereits ausgeführt, überwiegend neuere Golf-Generationen:
+- Volkswagen Golf 保險絲盒 內部接線圖
+- Golf 保险丝盒 内部接线图
+
+Vorgeschlagene, noch nicht ausgeführte Folgeanfragen:
+- "Golf 2" 保險絲盒 接線圖
+- "Golf 3" 保險絲盒 繼電器
+- "CE2" 大众 电路图
+- "357937039" 内部
+
+Je nach Ergebnissen Modellschreibweisen einzeln variieren.
+Golf-IV-/VI-/VII-Pläne nicht als Zielhardwarebelege übernehmen.
+Automatisch übersetzte Ansichten nicht als unabhängige Originalquellen zählen.
+
+## D. Offene Thai- und koreanische technische Suchen
+Thai:
+Volkswagen Golf แผนผังวงจร กล่องฟิวส์
+Zuvor Zeitüberschreitung; weiterhin nicht ausgewertet.
+Erneut oder kürzer mit Golf 2/Golf 3 suchen.
+
+Koreanisch:
+Golf 3 퓨즈 박스 배선도
+Noch offen.
+
+## E. Deutsch, Englisch, Russisch und Polnisch weiterführen
+Kurze technische Anfragen, sofern im jeweiligen Lauf noch nicht ausgeführt:
+- CE2 Sicherung 18 interne Verdrahtung
+- CE2 fuse 18 internal wiring
+- CE2 внутренняя схема
+- CE2 połączenia wewnętrzne
+
+Elektroda:
+https://www.elektroda.pl/rtvforum/topic3201928.html
+
+Wiederholter Originalabruf brachte erneut nur den Seitenkopf.
+Diesen Zugang nicht nochmals ohne konkreten neuen Ansatz wiederholen.
+
+Gesuchte Originalpassage:
+„Weź dowolny schemat VW, szare pole na górze, to właśnie
+skrzynka bezpieczników/przekaźników.“
+
+Autor, Antwortdatum und Beitragsnummer bleiben unbekannt.
+Zugehörigkeit der übergebenen Fortsetzungslinien-Passage separat prüfen.
+
+## F. Technische Kernziele
+1. U2/01 unverfälscht mit Spaltenüberschriften und Herkunft.
+2. R12-LIST-907721: Herkunft, Blickrichtung und Kammergeometrie.
+3. S18: beide Halterkontakte mit ihren getrennten Gegenkontakten.
+4. Technischen Plan oder Messobjekt auf 357 937 039 beziehen.
+
+Suchkennungen einzeln oder in kleinen Kombinationen:
+J17, S18, M/02, G1/03, Z1, 30B.
+
+Relais, Sicherungen, äußere Kabel und herausnehmbare Brücken separat erfassen.
+Gleiche Funktionsangaben begründen keine feste Verbindung.
+
+## G. Belegregeln und Abgabe
+Übergebene Berichte, Suchauszüge, Originallektüre, Bilder und Messungen trennen.
+Originalpassagen mit deutscher Übersetzung dokumentieren.
+Anschlusskennungen nicht stillschweigend korrigieren.
+Quellenabhängigkeiten ausdrücklich kennzeichnen.
+Keine IDs, Seitenzahlen oder URLs erfinden.
+Keine Zugangsbeschränkungen umgehen.
+
+Matrix:
+1 nur bei nachgewiesener fester Verbindung am identifizierten nackten Grundträger.
+0 nur bei geeignet nachgewiesener Trennung.
+Sonst ?.
+
+Ausgabe:
+- Neue Originalbelege und Suchhinweise getrennt.
+- Quellenregister und Sprachprotokoll.
+- Inventaränderungen getrennt von Kantenänderungen.
+- Abrufgrenzen und offene Aufgaben.
+- Folgeauftrag mit allen acht Suchsprachen.
+
+Ohne geeignete neue Leiterbelege:
+„Elektrische Kantenliste unverändert.“
+
+Monica
+GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+9 Sekunden nachgedacht
+Linkleser
+Searching: Golf 3 แผนผังวงจร กล่องฟิวส์
+Basierend auf 9 Suchquellen
+
+2 Sekunden nachgedacht
+Denkprozess
+
+
+Monica
+GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+Searching: Golf 3 퓨즈 박스 배선도
+Basierend auf 9 Suchquellen
+
+Linkleser
+2 Sekunden nachgedacht
+Denkprozess
+
+
+Monica
+GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+Searching: "Golf 2" 保險絲盒 接線圖
+Basierend auf 9 Suchquellen
+
+0 Sekunden nachgedacht
+Denkprozess
+
+
+Monica
+GPT-6 Astra
+Call Skill: Google Search
+0 Sekunden nachgedacht
+Ergebnis
+Der aktuelle Originalabruf ergänzt den übergebenen Stand zu JP-COUNTRY-20150626: Die Seite nennt ausdrücklich 357_937_039 und beschreibt einen Fehlerfund im herausnehmbaren Relais 32. Der Abschluss der Reparatur bleibt abgeschnitten.
+
+Außerdem wurde über einen tatsächlich vorhandenen Link ein japanischer Bericht von Mai 2011 erschlossen, der die textliche Lagebeschreibung des Kraftstoffpumpenrelais 167 enthält. Eine Abbildung oder Kammergeometrie wurde nicht geprüft.
+
+Die offenen technischen Suchen auf Thai und Koreanisch wurden ausgeführt. Die neue traditionell-chinesische Anfrage scheiterte dagegen an einer Zeitüberschreitung.
+
+Elektrische Kantenliste unverändert.
+
+1. Selbst geprüfte Originalbelege
+A. JP-COUNTRY-20150626: Teilebezug und Fehlerfund jetzt direkt gelesen
+Quelle: Golf Country – エンジン不調原因調査＆修理
+
+Seitenangabe: '15/06/26
+
+Autor, Baujahr und Motor: Im abgerufenen Abschnitt nicht festgestellt.
+
+Der erneute Abruf ist keine neue Quellenentdeckung. Er erlaubt aber, die im aktuellen Übergabetext noch fehlenden Passagen direkt zu prüfen.
+
+Textliche Teilenummer
+入手したヒューズ＆リレーパネルです。 VW品番：357_937_039 後期型ですね。
+
+Übersetzung:
+
+„Dies ist der beschaffte Sicherungs- und Relaisträger. VW-Teilenummer: 357_937_039. Das ist die spätere Ausführung.“
+
+Einordnung:
+
+Damit ist die Zielteilenummer im Originaltext gelesen.
+Keine fotografische Prüfung einer eingeprägten Teilenummer.
+„Spätere Ausführung“ bleibt die Aussage des Verfassers, keine belegte Variantengrenze.
+Die Textzuordnung identifiziert noch keine interne Leiterstruktur.
+Beschriebener Fehlerfund
+３２番のリレーはどうだったっけ？ デジファントのコントロールリレーです。
+
+Übersetzung:
+
+„Was war eigentlich mit Relais Nummer 32? Das ist das Digifant-Steuerrelais.“
+
+Anschließend:
+
+改めて端子（No.30）を触ると確かに緩い感じ。…ハンダ付け部分に微細な亀裂があるではないですか！
+
+Übersetzung:
+
+„Als ich den Anschluss (No.30) erneut berührte, fühlte er sich tatsächlich locker an. … An der Lötstelle war ein feiner Riss!“
+
+Der Autor berichtet danach, das alte Lot entfernt und die Stelle erneut verlötet zu haben.
+
+Aussagegrenze: Dieser Befund betrifft das geöffnete Relais 32, nicht den nackten Sicherungs-/Relaisträger. No.30 wird nicht als ZE-Kammer oder R12-Listenposition übernommen. Eine erfolgreiche abschließende Fahrzeugprüfung wurde nicht gelesen: Der Abruf bricht bei „早速ハ…“ ab.
+
+Schaltplan und Bilder
+Im gelesenen Text wird die Nutzung eines Schaltplans erwähnt. Ein konkreter Planlink wurde nicht ausgegeben. Wiederholte Texte wie „Fuel Pomp Relays“ erlauben keine Bildprüfung.
+
+Über die vorhandene Wartungsnavigation wurden diese tatsächlichen weiterführenden Links gefunden:
+
+Motor/Elektrik Nr. 1
+Motor/Elektrik Nr. 2
+Die beiden Unterseiten wurden noch nicht abgerufen. Sie sind Navigationsansätze, keine nachgewiesenen Planfundstellen.
+
+B. Japanischer Pumpenbericht: Originalpassage bestätigt
+Quelle: 燃料ポンプの交換 – Austausch der Kraftstoffpumpe
+
+Datum auf der Seite: September 2013.
+
+Original:
+
+ヒューズリレーボックス、下列右端の167番／燃料ポンプリレー
+
+Übersetzung:
+
+„Relais Nummer 167 / Kraftstoffpumpenrelais ganz rechts in der unteren Reihe des Sicherungs-/Relaiskastens.“
+
+Damit ist der übergebene Suchhinweis jetzt direkt am Seiteninhalt geprüft.
+
+Nicht festgestellt: Zielteilenummer, ausdrückliche Steckplatznummer 12, Kammernummerierung oder geometrische Blickrichtung. Der gelesene Seitenkörper nennt das genaue Fahrzeugmodell nicht; die übergebene Golf-III-Zuordnung bleibt davon getrennt.
+
+Die Seite berichtet außerdem, dass der Pumpentausch das ursprüngliche Startproblem zunächst nicht beseitigt habe. Daraus entsteht kein Grundträgerbefund.
+
+C. Neu erschlossener verlinkter Bericht von Mai 2011
+Der Pumpenbericht verlinkt ausdrücklich auf:
+
+燃料フィルター – Kraftstofffilter
+
+Datum auf der Seite: Mai 2011.
+
+Original:
+
+ヒューズリレーボックス、下列右端の167番が燃料ポンプリレーだ。その上がLED用のウィンカーリレーだ。
+
+Übersetzung:
+
+„Im Sicherungs-/Relaiskasten ist Nummer 167 ganz rechts in der unteren Reihe das Kraftstoffpumpenrelais. Darüber befindet sich das Blinkrelais für LED-Blinker.“
+
+Erkenntniswert: Eine tatsächlich verlinkte frühere Fundstelle für dieselbe Lagebeschreibung.
+
+Abhängigkeit: Gleiche Website; der Bericht von 2013 verweist auf diesen Beitrag. Keine unabhängige Zweitbestätigung. Die erwähnte LED-Blinker-Ausstattung gehört zum beschriebenen Fahrzeugzustand und ist kein allgemeiner Serienbeleg.
+
+In der Textausgabe erscheinen leere Tabellenzellen, aber keine auswertbaren Bildansichten. Daher keine sichtbare Beschriftung oder Kontaktgeometrie geprüft.
+
+2. Neue Suchhinweise
+Thai: technische Anfrage erfolgreich ausgewertet
+Anfrage: Golf 3 แผนผังวงจร กล่องฟิวส์
+
+Neben unpassenden Treffern erschien ein thailändisches Handbuchangebot.
+
+Suchauszug:
+
+คู่มือ วงจรไฟฟ้า … VOLKSWAGEN Golf, Jetta 1998-12 … ภาษา : สเปน (Spanish)
+
+Übersetzung:
+
+„Handbuch, elektrische Schaltpläne … VOLKSWAGEN Golf, Jetta 1998-12 … Sprache: Spanisch.“
+
+Status: Nur Suchauszug; Handelsangebot, keine gelesenen Pläne. Die Angabe 1998-12 bleibt unverändert und wird nicht zu einer gesicherten Modelljahresspanne umgedeutet. Kein CE2-Zielhardwarebeleg.
+
+Die frühere Thai-Zeitüberschreitung bleibt im Fehlerverlauf erhalten; dieser kürzere Wiederholungsansatz wurde nun ausgewertet.
+
+Koreanisch: zwei neue Dokumentkandidaten
+Anfrage: Golf 3 퓨즈 박스 배선도
+
+Gefunden wurden unter anderem:
+
+Scribd 455337376 – GOLF3-pdf, Suchtitel „System Wiring Diagrams Article Text“.
+Scribd 718081032 – golf-mk3-diagram, Suchtitel „VW Golf MK3 Wiring and Fuse Diagrams“.
+Status: Ausschließlich Suchtreffer. Keine Originallektüre, keine Planprüfung, keine bestätigte CE2- oder Teilenummernzuordnung. Die lokalisierten Scribd-Adressen sind keine koreanischen Originalquellen und begründen keine Unabhängigkeit.
+
+3. Sprach- und Fehlerprotokoll
+Sprache	Tatsächliche Arbeit dieses Durchlaufs	Ergebnis / offen
+Deutsch	CE2 Sicherung 18 interne Verdrahtung	Ausgewertet; überwiegend Gebäudeinstallation statt Fahrzeugtechnik. Kein geeigneter Treffer.
+Englisch	Keine eigene Suchanfrage	Technische Suche offen.
+Russisch	Keine Anfrage	Offen.
+Polnisch	Keine Anfrage; Elektroda nicht erneut abgerufen	Antwortbeiträge und Threadzugehörigkeit der zweiten Passage offen.
+Chinesisch, vereinfacht	Keine Anfrage	Generationseingrenzung offen.
+Chinesisch, traditionell	"Golf 2" 保險絲盒 接線圖	Zeitüberschreitung; keine Ergebnisse ausgewertet.
+Japanisch	Zwei übergebene Seiten und zwei tatsächlich verlinkte Seiten abgerufen; keine Suchanfrage	Originaltext und Navigation geprüft; indexierte Zusatzpassagen und Bilder offen.
+Koreanisch	Golf 3 퓨즈 박스 배선도	Ausgewertet; neue Dokumentkandidaten, keine technische Originallektüre.
+Thai	Golf 3 แผนผังวงจร กล่องฟิวส์	Ausgewertet; kein geeigneter CE2-Plan erschlossen.
+Technischer Abruffehler und unergiebige Suche bleiben getrennt. Keines dieser Ergebnisse beweist, dass passende Unterlagen nicht existieren.
+
+4. Quellenregister, Inventar und Kanten
+Registeränderungen
+JP-COUNTRY-20150626: Zielteilenummer im Text direkt bestätigt; Fehlerfund im Relais 32 gelesen; Abschluss weiterhin abgeschnitten.
+JP-PUMP-201309: Originalpassage zur Lage von Relais 167 geprüft.
+JP-FILTER-201105: Neu erschlossener, ausdrücklich verlinkter Vorläuferbericht; abhängig vom selben Website-Kontext.
+Scribd 455337376 / 718081032: Neue, ungeprüfte Plan-Suchhinweise.
+Physisches Inventar
+Keine Änderung. Keine Kammer, Sicherungshalterseite oder interne Stromschiene neu identifiziert.
+
+Elektrische Kanten
+Keine Änderung.
+
+U2/01 weiterhin nicht vollständig neu gelesen.
+R12-LIST-907721 weiterhin ohne bestätigte Geometrie.
+S18 weiterhin ohne getrennte Halterkontakte und Gegenkontakte.
+Q1/Q2 bleiben Quellenreferenzen ohne physische Zielteilverifizierung.
+Keine neuen 1 oder 0; ungeklärte Beziehungen bleiben ?.
+Elektrische Kantenliste unverändert.
+
+5. Nächster ausführbarer Folgeauftrag
+Verbindlicher Sprachumfang
+Deutsch, Englisch, Russisch, Polnisch, Chinesisch, Japanisch, Koreanisch und Thai. Chinesisch vereinfacht und ergänzend traditionell. Diesen Umfang in jeder weiteren Übergabe vollständig beibehalten. Anfragen, erfolgreiche Auswertungen, Abruffehler und offene Arbeiten getrennt protokollieren.
+
+1. Fehler und neue Dokumentkandidaten zuerst
+Die traditionell-chinesische Anfrage "Golf 2" 保險絲盒 接線圖 endete mit Zeitüberschreitung. Erneut oder kürzer ausführen; nicht als „keine Treffer“ behandeln.
+Öffentlich zugängliche Inhalte von Scribd 455337376 und 718081032 prüfen. Die tatsächlichen Links stehen im Bericht.
+Zunächst Originaltitel, Planherkunft, Modelljahr, CE1/CE2 und Lesbarkeit klären. Danach gezielt U2/01, J17, S18, M/02, G1/03, Z1, 30B suchen. Such- und automatisch erzeugte Dokumenttitel nicht als Planinhalt zählen.
+2. Japanische Navigation statt erneutem identischem Abruf
+Tatsächlich gefundene, noch ungelesene Seiten:
+
+http://vwgolf2countryjp.web.fc2.com/mainte_engine.html
+http://vwgolf2countryjp.web.fc2.com/mainte_engine_2.html
+Nach einem konkreten Schaltplanverweis oder öffentlich zugänglichen Zeichnungslink suchen. Keine Bilddateinamen erraten. JP-COUNTRY-20150626 nennt im Originaltext 357_937_039; die gelesene Lötstellenbeschädigung betrifft Relais 32, nicht den Grundträger. Reparaturabschluss weiterhin offen.
+
+3. Kurze mehrsprachige technische Folgeanfragen
+Folgende Vorschläge sind noch nicht ausgeführt:
+
+Sprache	Nächster Suchansatz
+Deutsch	"CE2" "Golf" "S18"
+Englisch	"CE2" "fuse 18" wiring
+Russisch	"CE2" внутренняя схема
+Polnisch	"CE2" połączenia wewnętrzne
+Chinesisch, vereinfacht	"CE2" 大众 电路图
+Chinesisch, traditionell	"Golf 3" 保險絲盒 繼電器
+Japanisch	"ゴルフ2" 配線図 燃料ポンプ
+Koreanisch	"Golf 3" 연료 펌프 릴레이 배선도
+Thai	"Golf 3" วงจร รีเลย์ปั๊มน้ำมันเชื้อเพลิง
+4. Elektroda separat
+Keinen erneuten identischen Seitenkopfabruf. Den korrekten Wortlaut „Weź dowolny schemat VW“ verwenden und nach einem tatsächlichen Antwortlink suchen. Autor, eigenes Datum und Beitragsnummer fehlen. Die Passage über a,b... erst nach belegter Threadzugehörigkeit zuordnen.
+
+5. Belegregeln und Abgabe
+Originallektüre, Suchauszug, übergebenen Bericht, Bildprüfung und Messung trennen. Originalpassagen deutsch übersetzen, Kennungen unverändert lassen. Abhängige Wiedergaben nicht mehrfach als Bestätigung zählen.
+
+Kernziele: U2/01 mit Spaltenüberschriften; Herkunft und Geometrie der Neuner-Liste; beide S18-Halterkontakte mit getrennten Gegenkontakten; technischer Bezug auf 357 937 039.
+
+Relais, Sicherungen, äußere Leitungen und herausnehmbare Brücken separat behandeln. 1 nur bei nachgewiesener fester Verbindung am identifizierten nackten Grundträger; 0 nur bei geeignet nachgewiesener Trennung; sonst ?.
+
+Abschluss mit Sprach-/Fehlerprotokoll, Quellenabhängigkeiten, getrennten Inventar- und Kantenänderungen sowie Folgeauftrag mit allen acht Suchsprachen. Ohne geeignete Leiterbelege: „Elektrische Kantenliste unverändert.“
+
+# ZE2 / CE2 357 937 039 – nächster Rechercheauftrag
+
+## Verbindliche Suchsprachen
+Deutsch, Englisch, Russisch, Polnisch, Chinesisch, Japanisch, Koreanisch und Thai.
+Chinesisch vereinfacht und ergänzend traditionell.
+Vollständigen Umfang bei jeder Übergabe beibehalten.
+Anfragen, Ergebnisse, technische Fehler und offene Aufgaben getrennt erfassen.
+
+## Neuer übergebener Stand
+Elektrische Kantenliste unverändert.
+
+Thai:
+Volkswagen Golf แผนผังวงจร กล่องฟิวส์
+wurde diesmal mit auswertbaren Ergebnissen wiederholt.
+Überwiegend neuere Golf-Generationen; kein CE2-Leiterbeleg.
+
+Zusätzliche Anfrage:
+"Golf 3" กล่องฟิวส์
+Neuer Dokumentkandidat:
+https://www.scribd.com/document/543644233/Central-eletrica-Golf-MK3
+Suchanzeige: „Golf 3 Fuse Box Diagram Details“.
+Originalabruf: Ladefehler und Browserprüfhinweis, kein Dokumentinhalt.
+
+Ebenfalls nur Ladefehler:
+https://www.scribd.com/document/741371360/Loom-schematic
+
+Beide Dokumente nicht als gelesene Tabellen oder Pläne behandeln.
+Nicht mit der beschädigten Extraktion von Dokument 520017984 verwechseln.
+
+## 1. Dokumentherkunft gezielt suchen
+Über Titel und Dokumentkennungen nach öffentlich zugänglichen
+Herkunftshinweisen oder tatsächlich vorhandenen anderen Wiedergaben suchen.
+Keine identischen fehlgeschlagenen Abrufe ohne neuen Ansatz wiederholen.
+Keine Zugangsbeschränkungen umgehen.
+Suchanzeigen und möglicherweise automatisch erzeugte Titel nicht
+als Originaltitel oder Autorschaft übernehmen.
+Tabellenkopien auf gemeinsame Herkunft prüfen.
+
+## 2. Fahrzeugbezug in technischen Suchen verstärken
+Neue vorgeschlagene, noch nicht ausgeführte Anfragen:
+- Deutsch: "357937039" interne Verbindungen
+- Englisch: "CE2" "U2/01" "E/2"
+- Russisch: Volkswagen Golf CE2 внутренняя схема
+- Russisch: Golf 3 блок предохранителей внутренние соединения
+- Polnisch: "CE2" "połączenia wewnętrzne"
+- Chinesisch vereinfacht: "Golf 3" 保险丝盒 内部接线图
+- Chinesisch traditionell: "Golf 2" 保險絲盒 內部接線圖
+- Japanisch: ゴルフ2 ヒューズボックス 内部配線図
+- Koreanisch: "골프 3세대" 퓨즈 배선도
+- Thai: "Golf 3" วงจรภายใน กล่องฟิวส์
+
+Nur tatsächlich ausgeführte Anfragen als bearbeitet protokollieren.
+CE2 ohne VW-Bezug brachte auf Russisch überwiegend Gitarreneffekt-Treffer.
+Golf 3 ohne wirksame Generationseingrenzung brachte auf Koreanisch
+unter anderem Golf-VI-Anleitungen.
+
+## 3. Japanischen Planhinweis offenhalten
+http://vwgolf2countryjp.web.fc2.com/fuelpomprelays_20150626.html
+
+Übergebener Originalbericht nennt 357_937_039 und einen verwendeten Schaltplan.
+Tatsächliche Plan-/Bildlinks oder Herkunftsangaben suchen.
+Keine Dateinamen oder alternativen URLs erfinden.
+Lötstellenfehler an No.30 im Relais 32 nicht als ZE-Leiterfehler behandeln.
+
+## 4. Elektroda nur mit neuem Zugang
+https://www.elektroda.pl/rtvforum/topic3201928.html
+Gesuchter Wortlaut: „Weź dowolny schemat VW“.
+Autor, Datum und Antwortnummer weiterhin offen.
+Zugehörigkeit der Passage über a,b-Fortsetzungslinien separat prüfen.
+Nicht erneut denselben abgeschnittenen Seitenkopf als Fortschritt zählen.
+
+## 5. Technische Kernziele
+- U2/01 vollständig, unverfälscht, mit Spaltenüberschriften und Herkunft.
+- R12-LIST-907721: Herkunft, Blickrichtung und geometrische Nummerierung.
+- S18: beide getrennten Halterkontakte und ihre Gegenkontakte.
+- Technischen Plan oder Messobjekt auf 357 937 039 beziehen.
+
+J17, S18, M/02, G1/03, Z1 und 30B bei Bedarf einzeln ergänzen.
+Gleiche Funktionen oder Tabellenzeilen definieren kein festes Netz.
+
+## 6. Belegregeln und Abgabe
+Fremdbericht, Suchauszug, Originallektüre, Bildprüfung und Messung trennen.
+Originalpassagen mit deutscher Übersetzung; Kennungen unverändert.
+Relais, Sicherungen, Kabelbaum und herausnehmbare Brücken separat behandeln.
+1 nur bei nachgewiesener fester Verbindung am identifizierten nackten Grundträger.
+0 nur bei geeignet nachgewiesener Trennung; sonst ?.
+Q1/Q2 bleiben Quellenreferenzen ohne physische Zielteilverifizierung.
+
+Abgabe:
+Originalbelege, Suchhinweise, Quellenabhängigkeiten, Sprach-/Fehlerprotokoll,
+Inventaränderungen getrennt von Kantenänderungen und nächster Auftrag
+einschließlich aller acht Suchsprachen.
+
+Ohne geeignete neue Leiterbelege:
+„Elektrische Kantenliste unverändert.“
+
+Monica
+GPT-6 Astra
+Angetrieben von
+
+Monica Suche
+56 Sekunden nachgedacht
+Searching: "CE2" "U2/01" "E/2"
+Basierend auf 10 Suchquellen
+
+49 Sekunden nachgedacht
+Call Skill: Google Search
+40 Sekunden nachgedacht
+Searching: "543644233" "Central"
+Basierend auf 10 Suchquellen
+
+Linkleser
+7 Sekunden nachgedacht
+Call Skill: Google Search
+0 Sekunden nachgedacht
+Recherchebericht – ZE2 / CE2 357 937 039
+Elektrische Kantenliste unverändert.
+
+Dieser Durchlauf lieferte einen neuen Suchhinweis zur Zeile U2/01 und eine zugängliche CE1-/CE2-Umbaukorrespondenz. Eine vollständige Tabelle mit Spaltenüberschriften, ein interner S18-Pfad oder ein Leiterbeleg am identifizierten nackten Grundträger wurde nicht erschlossen.
+
+Der vorgeschriebene Sprachumfang wurde in diesem Durchlauf nicht vollständig bearbeitet. Die nicht ausgeführten Suchen sind unten ausdrücklich als offen verzeichnet.
+
+1. Originallektüre dieses Durchlaufs
+1.1 Club GTI: CE1-Instrumente an CE2-Kabelbaum
+Quelle: Using CE1 cluster with CE2 Mk2 VR6
+
+Direkt gelesen:
+
+Threadbeginn: rye1991, 3. Oktober 2016.
+Fahrzeugkontext: Mk2 mit CE2-/VR6-Umbau; ein CE1-Instrument soll über einen umgebauten Kabelbaum angeschlossen werden.
+Antwort #2 von rubjonny enthält Zuordnungen von CE1-Anschlüssen zu CE2-Steckern. Das eigene Antwortdatum war im ausgegebenen Abschnitt nicht sichtbar.
+Original, Auszug aus der Antwort:
+
+“T7c - black plug, short side:”
+
+“7 - blk - ignition switch pin 15 (ignition live) -> U1/4”
+
+Übersetzung:
+
+„T7c – schwarzer Stecker, kurze Seite“
+
+„7 – schwarz – Zündschalteranschluss 15 (Zündungsplus) → U1/4“
+
+Die anschließende Klammerbemerkung über erforderliche Änderungen am Mk3-Stecker wurde abgeschnitten.
+
+Einordnung: Das ist eine Anweisung zum äußeren Umbaukabelbaum, keine Messung oder Darstellung interner Grundträgerverbindungen. Die Angabe „kurze Seite“ betrifft hier T7c, nicht die Blickrichtung oder Geometrie von R12-LIST-907721.
+
+Die im Suchauszug enthaltene Frage nach einem Anschluss an U2/01 wurde im abgerufenen Originalabschnitt nicht erreicht. Daraus darf keine bestätigte U2/01–E/2-Verbindung entstehen.
+
+1.2 VWVortex: Originalseite erreichbar, gesuchte Tabellenpassage nicht erreicht
+Quelle: MKIII GTI harness restore. Have a few plugs open....
+
+Direkt gelesen:
+
+Eröffnungsbeitrag #1.
+Autor: dubCanuck1.
+Datum: 25. August 2008.
+Thema: Zuordnung übrig gebliebener Stecker eines Kabelbaums; der Verfasser berichtet von zuvor erfolgloser Suche im Bentley-Handbuch.
+Die Ausgabe endet am Beginn der Antwortnavigation. Die im Suchergebnis angezeigte U2-Tabelle wurde nicht im Original gelesen.
+
+Wichtig: Autor und Datum des Eröffnungsbeitrags dürfen nicht der späteren, noch ungelesenen Tabellenpassage zugeschrieben werden.
+
+1.3 JP-COUNTRY-20150626: Planverwendung bestätigt, Plan nicht erschlossen
+Quelle: エンジン不調原因調査＆修理
+
+Seitenangabe: '15/06/26
+
+Original:
+
+まずは、配線図で燃料ポンプの運転条件を調べて、予想される不具合を洗い出してから順番に簡単な部分から消去法で点検＆部品交換を進めました。
+
+Übersetzung:
+
+„Zunächst untersuchte ich anhand eines Schaltplans die Betriebsbedingungen der Kraftstoffpumpe, stellte die möglichen Fehler zusammen und ging anschließend nach dem Ausschlussverfahren vor, beginnend mit den einfachen Prüfungen und dem Austausch von Teilen.“
+
+Ergebnis dieses Abrufs:
+
+Die Verwendung eines Schaltplans ist direkt gelesen.
+Keine Planherkunft, kein konkreter Planlink und keine lesbare Zeichnung erschlossen.
+Die Ausgabe endet bereits in der Einleitung zur Untersuchung des Sicherungs-/Relaisträgers.
+Die übergebenen späteren Angaben zu 357_937_039 und zum Relais 32 wurden in diesem Abruf nicht erneut erreicht. Sie bleiben dem früheren Bericht zugeordnet.
+Der erneute Seitenabruf brachte damit keinen Fortschritt bei der eigentlichen Planerschließung. Ein weiterer identischer Abruf ist nicht sinnvoll.
+
+2. Suchhinweise – keine Originalbelege
+2.1 U2/01 im VWVortex-Suchauszug
+Die Suche mit zusätzlichem Volkswagen-Bezug lieferte folgende Passage:
+
+“U2/01 Gauge Cluster (lights/gauges) (1991+ Corrado, Passat, all other models) E/2 Black U2/02 Gauge Cluster Speed Sensor Violet U2/03 Gauge ...”
+
+Übersetzung des sichtbaren U2/01-Abschnitts:
+
+„U2/01 Instrumenteneinheit (Leuchten/Instrumente) (Corrado ab 1991, Passat, alle anderen Modelle) E/2 Schwarz“
+
+Grenzen:
+
+Keine Spaltenüberschriften.
+Tabellenstruktur nur im zusammengezogenen Suchauszug.
+Keine gesicherte Autorschaft oder Herkunft der Tabelle.
+Keine Bestätigung, welche Art von Beziehung die Angabe E/2 bezeichnet.
+Die Kennungen werden unverändert dokumentiert, aber nicht als interne Kante übernommen.
+
+2.2 Neuer Scribd-Kandidat: 866816912
+Gefundener Link: Central-Electric-Fuses-Box, Dokument 866816912
+
+Die Suchanzeige trägt den Titel „Volkswagen CE2 Fuse Box Overview“ und enthält ebenfalls U2/01, E/2 sowie benachbarte U2-Zeilen.
+
+Status: Nur Suchauszug; nicht abgerufen. Weder Originaltitel noch Autorschaft bestätigt.
+
+Quellenabhängigkeit: Die ähnlichen Zeilenfolgen bei VWVortex und Scribd sind ein Anlass, eine gemeinsame Tabellenvorlage zu prüfen. Sie sind keine zwei unabhängigen Bestätigungen. Die tatsächliche Kopierrichtung oder gemeinsame Ursprungsquelle ist offen.
+
+2.3 Dokumentherkunft 543644233 und 741371360
+Die tatsächlich ausgeführte Suche:
+
+"543644233" "Central"
+
+lieferte fachfremde Treffer. Kein Herkunftshinweis erschlossen. Das ist kein Nachweis, dass keine öffentlich zugängliche Wiedergabe existiert.
+
+Für 741371360 / Loom-schematic erfolgte in diesem Durchlauf keine Herkunftssuche.
+
+Die übergebenen Ladefehler wurden nicht durch identische Dokumentabrufe wiederholt. Beide Dokumente bleiben ungelesen und strikt getrennt von 520017984 sowie dem neu gefundenen 866816912.
+
+3. Sprachprotokoll: tatsächlich ausgeführte Anfragen
+Sprache	Tatsächliche Anfrage bzw. Arbeit	Ergebnis
+Deutsch	"357937039" interne Verbindungen	Überwiegend Teileangebote; kein interner Leiterbeleg.
+Englisch	"CE2" "U2/01" "E/2"	Fachfremde Treffer, unter anderem Pneumatik.
+Englisch	Volkswagen "U2/01" "E/2"	Relevante Treffer bei VWVortex, Club GTI und Scribd.
+Sprachneutral	"543644233" "Central"	Fachfremde Treffer; Herkunft ungeklärt.
+Russisch	Keine Anfrage	Offen.
+Polnisch	Keine Anfrage	Offen; Elektroda nicht erneut abgerufen.
+Chinesisch, vereinfacht	Keine Anfrage	Offen.
+Chinesisch, traditionell	Keine Anfrage	Offen.
+Japanisch	Originalabruf der übergebenen Country-Seite; keine Suchanfrage	Planverwendung gelesen, Planerschließung offen.
+Koreanisch	Keine Anfrage	Offen.
+Thai	Keine Anfrage	Neuer übergebener Stand nicht erneut geprüft.
+Technische Grenzen, getrennt von Suchergebnissen
+Abgeschnittene Ausgaben: VWVortex, Club GTI und japanische Country-Seite.
+Frühere, nur übergebene Fehler: Ladefehler/Browserprüfung bei Scribd 543644233 und 741371360.
+Fachfremde Suchergebnisse sind keine Abruffehler.
+Keine Bildprüfung und keine Messung erfolgt.
+Im Verlauf ausgegebene allgemeine Fehlermeldungen erlauben keine belastbare Zuordnung zu einer bestimmten Suchanfrage; daraus werden keine zusätzlich „bearbeiteten“ Anfragen abgeleitet.
+4. Quellenregister und technischer Stand
+Quelle	Belegstatus dieses Durchlaufs	Verwendbarkeit
+JP-COUNTRY-20150626	Originaltext teilweise gelesen	Schaltplanverwendung bestätigt; Plan selbst offen
+Club GTI, Thread 284415	Beiträge #1 und #2 teilweise gelesen	Umbaukabelbaum; keine interne ZE-Verbindung
+VWVortex, Thread 3997079	Eröffnungsbeitrag gelesen; U2-Tabelle nur Suchauszug	Tabellenherkunft und Überschriften offen
+Scribd 866816912	Neuer Suchhinweis	Mögliche Tabellenwiedergabe, Abhängigkeit ungeklärt
+Scribd 543644233	Übergebener Fehlerstand; Herkunftssuche unergiebig	Kein gelesener Dokumentinhalt
+Scribd 741371360	Nur übergebener Fehlerstand	Kein gelesener Dokumentinhalt
+Elektroda 3201928	Nicht erneut bearbeitet	Autor, Datum, Antwortnummer und a,b-Passage offen
+Inventaränderungen
+Keine. Keine neuen physischen Kontakte, Halterseiten oder Stromschienen identifiziert.
+
+Kantenänderungen
+Keine. Keine neuen Einträge 1 oder 0; ungeklärte Beziehungen bleiben ?.
+
+U2/01: Suchhinweis erweitert, vollständige Originalzeile mit Überschriften weiterhin offen.
+R12-LIST-907721: Herkunft, Blickrichtung und Kammergeometrie unverändert offen.
+S18: Beide Halterkontakte und ihre getrennten Gegenkontakte weiterhin offen.
+357 937 039: Kein neuer physisch geprüfter Plan-/Messobjektbezug.
+Q1/Q2: Weiterhin Quellenreferenzen ohne physische Zielteilverifizierung.
+5. Nächster Rechercheauftrag
+Verbindliche Suchsprachen: Deutsch, Englisch, Russisch, Polnisch, Chinesisch, Japanisch, Koreanisch und Thai; Chinesisch vereinfacht und ergänzend traditionell. Diesen vollständigen Umfang bei jeder Übergabe beibehalten.
+
+Priorität 1: Tabellenherkunft und U2/01
+Im VWVortex-Thread 3997079 die tatsächliche Antwort mit der U2-Tabelle über einen gefundenen öffentlichen Antwortlink oder gezielte Indexsuche erschließen.
+Spaltenüberschriften, vollständige U2/01-Zeile, Antwortautor, Datum und Quellenverweis gemeinsam erfassen.
+Scribd 866816912 mit dieser Tabelle vergleichen; mögliche gemeinsame Herkunft ausdrücklich dokumentieren.
+Für 543644233 / Central-eletrica-Golf-MK3 und 741371360 / Loom-schematic Titelvarianten und Dokumentkennungen getrennt suchen. Keine identischen fehlgeschlagenen Abrufe wiederholen.
+Priorität 2: Noch nicht ausgeführte technische Suchen
+Sprache	Vorgeschlagene nächste Anfrage
+Deutsch	"357 937 039" Stromschienen
+Englisch	Volkswagen CE2 "U2/01" "Pin" "Wire Color"
+Russisch	Volkswagen Golf CE2 внутренняя схема
+Russisch	Golf 3 блок предохранителей внутренние соединения
+Polnisch	"CE2" "połączenia wewnętrzne"
+Chinesisch, vereinfacht	"Golf 3" 保险丝盒 内部接线图
+Chinesisch, traditionell	"Golf 2" 保險絲盒 內部接線圖
+Japanisch	ゴルフ2 ヒューズボックス 内部配線図
+Koreanisch	"골프 3세대" 퓨즈 배선도
+Thai	"Golf 3" วงจรภายใน กล่องฟิวส์
+Priorität 3: Japan und Elektroda
+Japan: tatsächliche Navigations-, Plan- und Bildlinks oder indexierte Herkunftsangaben suchen; keine Dateinamen erfinden. Relais-32-Lötfehler nicht dem Grundträger zuordnen.
+Elektroda: gezielt nach „Weź dowolny schemat VW“ suchen; nur einen tatsächlich gefundenen neuen Zugang verfolgen. Zugehörigkeit der a,b-Fortsetzungslinien-Passage separat belegen.
+Abgaberegel: Fremdbericht, Suchauszug, Originallektüre, Bildprüfung und Messung trennen. Kennungen unverändert lassen. Relais, Sicherungen, äußere Kabel und herausnehmbare Brücken separat behandeln. 1 und 0 ausschließlich nach den vorgegebenen physischen Nachweiskriterien vergeben.
+
+Elektrische Kantenliste unverändert.
